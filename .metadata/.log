@@ -3615,3 +3615,887 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browse
 
 !ENTRY org.eclipse.cdt.core 1 0 2016-02-18 18:29:22.017
 !MESSAGE Indexed 'HelloWorld' (1 sources, 379 headers) in 4.17 sec: 28,377 declarations; 32,598 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52c39cfa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52c39cfa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@28770b89,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@28770b89,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f966420,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@68709d62,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@68709d62,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4a878113,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62b2c9f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62b2c9f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c7e7de2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@547ac048,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@547ac048,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46e5e24c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e6c0ff1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e6c0ff1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.declarations.in.workspace,Declaration in Workspace,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@488aa6d1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6ce088c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6ce088c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@409322d1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7bd2e875,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7bd2e875,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace,References in Workspace,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@539b98d5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:44:50.783
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c4ef2d5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c4ef2d5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13288443,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2016-02-18 18:52:34.712
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 18:52:34.712
+!MESSAGE A conflict occurred for F2:
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f0764ca,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.showInformation,Show Tooltip Description,
+		Displays information for the current caret location in a focused hover,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4bee3f0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(F2,
+	ParameterizedCommand(Command(org.tizen.common.connection.rename,Rename,
+		Rename a file or folder on the connected target,
+		Category(org.tizen.common.connection.category,Connection Explorer,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1066a3ff,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.tizen.common.connection.rename.context,,,system)
+!SESSION 2016-02-18 18:52:54.980 -----------------------------------------------
+eclipse.buildId=2.4.0 Rev3
+java.version=1.7.0_80
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2016-02-18 18:53:04.424
+!MESSAGE SDK Information: Path [/home/clm/tizen-sdk], Data Path [/home/clm/tizen-sdk-data], Platform Path [/home/clm/tizen-sdk/platforms/tizen-2.4/mobile]
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:04:12.432
+!MESSAGE [2016.02.18 19:04:12][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:04:42.713
+!MESSAGE [2016.02.18 19:04:42][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:05:10.258
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.helloworld-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1187)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:979)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:05:54.285
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.helloworld-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1187)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:979)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon.launch.LaunchUtils 4 0 2016-02-18 19:07:14.308
+!MESSAGE [2016.02.18 19:07:14][ERROR] LaunchUtils.java(145) - Failed to run a command /usr/bin/pkginfo --app org.example.helloworld | grep Package: 
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: closed
+	at org.tizen.sdblib.command.Command.sendRequest(Command.java:237)
+	at org.tizen.sdblib.command.Command.in(Command.java:127)
+	at org.tizen.sdblib.command.Command.in(Command.java:104)
+	at org.tizen.sdblib.Device.executeShellCommand(Device.java:491)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:92)
+	at org.tizen.nativecommon.launch.LaunchUtils.getPkgId(LaunchUtils.java:143)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.verifyAppId(TizenLaunchDelegate2.java:582)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1198)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:979)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon.launch.TizenLaunchDelegate2 4 0 2016-02-18 19:07:14.308
+!MESSAGE [2016.02.18 19:07:14][ERROR] TizenLaunchDelegate2.java(584) - Failed to verify appId
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: closed
+	at org.tizen.sdblib.command.Command.sendRequest(Command.java:237)
+	at org.tizen.sdblib.command.Command.in(Command.java:127)
+	at org.tizen.sdblib.command.Command.in(Command.java:104)
+	at org.tizen.sdblib.Device.executeShellCommand(Device.java:491)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:92)
+	at org.tizen.nativecommon.launch.LaunchUtils.getPkgId(LaunchUtils.java:143)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.verifyAppId(TizenLaunchDelegate2.java:582)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1198)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:979)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:07:14.312
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.helloworld-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1187)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:979)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:07:14.318
+!MESSAGE [2016.02.18 19:07:14][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+!SESSION 2016-02-18 19:09:50.605 -----------------------------------------------
+eclipse.buildId=2.4.0 Rev3
+java.version=1.7.0_80
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -clean -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.eclipse.update.configurator 4 0 2016-02-18 19:09:53.004
+!MESSAGE Bundle-Version attribute not found in manifest for bundle "org.tizen.sbilib".  Bundle will be ignored.
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2016-02-18 19:10:02.439
+!MESSAGE SDK Information: Path [/home/clm/tizen-sdk], Data Path [/home/clm/tizen-sdk-data], Platform Path [/home/clm/tizen-sdk/platforms/tizen-2.4/mobile]
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:10:02.830
+!MESSAGE [2016.02.18 19:10:02][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:10:03.069
+!MESSAGE [2016.02.18 19:10:03][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:10:58.829
+!MESSAGE There is no target to launch.
+Please select an emulator or a device in Connection Explorer.
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:11:13.590
+!MESSAGE [2016.02.18 19:11:13][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:11:28.031
+!MESSAGE [2016.02.18 19:11:28][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:11:28.818
+!MESSAGE Cannot transfer file.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot transfer file to '/opt/usr/apps/tmp/org.example.helloworld-1.0.0-arm.tpk'.
+	at org.tizen.nativecommon.launch.LaunchUtils.newCoreException(LaunchUtils.java:216)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.transferPackage(TizenLaunchDelegate2.java:1068)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:974)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.tizen.nativecommon 4 0 2016-02-18 19:11:28.818
+!MESSAGE Cannot transfer file to '/opt/usr/apps/tmp/org.example.helloworld-1.0.0-arm.tpk'.
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:11:35.045
+!MESSAGE [2016.02.18 19:11:35][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:11:51.973
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.helloworld-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1187)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:979)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:11:52.833
+!MESSAGE [2016.02.18 19:11:52][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:12:53.090
+!MESSAGE [2016.02.18 19:12:53][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:17:28.106
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: SIGNATURE_VERIFICATION_FAILED
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.helloworld-1.0.0-arm.tpk"
+Management: Check whether the package is modified illegally.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1187)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:979)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:18:16.922
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: SIGNATURE_VERIFICATION_FAILED
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.helloworld-1.0.0-arm.tpk"
+Management: Check whether the package is modified illegally.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1187)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:979)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 19:19:30.060
+!MESSAGE [2016.02.18 19:19:30][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.rds.RdsDeployer 4 0 2016-02-18 19:20:10.542
+!MESSAGE [2016.02.18 19:20:10][ERROR] RdsDeployer.java(291) - Cannot partially upload or reinstall
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:720)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:655)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:587)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:914)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.example.helloworld
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:650)
+	... 10 more
+!SUBENTRY 1 org.tizen.common 4 0 2016-02-18 19:20:10.543
+!MESSAGE [RDS] Cannot install application
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.example.helloworld
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:650)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:587)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:914)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:20:15.197
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: SIGNATURE_VERIFICATION_FAILED
+Error message: Signature Verification Failed
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.helloworld-1.0.0-i386.tpk"
+Management: Check whether the package is modified illegally.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:91)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1187)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:979)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:915)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c780edd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c780edd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e17f663,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5e17f663,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77310dd7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@404dab0d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@404dab0d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3583db63,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63b85c07,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@63b85c07,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ca202b6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10602a3d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10602a3d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19751331,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@553f0305,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@553f0305,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.declarations.in.workspace,Declaration in Workspace,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1bdf68fc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@686586af,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@686586af,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@616d80b4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5c1cdb64,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5c1cdb64,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace,References in Workspace,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a87b17a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 19:24:40.285
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7294f739,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7294f739,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@11f2f9f4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-18 19:35:35.882
+!MESSAGE Indexed 'helloWorldUIBuilder' (2 sources, 379 headers) in 4.73 sec: 28,419 declarations; 32,526 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:51:42.849
+!MESSAGE Starting the application on an emulator has been canceled.
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:51:50.466
+!MESSAGE Starting the application on an emulator has been canceled.
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:52:09.007
+!MESSAGE Starting the application on an emulator has been canceled.
+
+!ENTRY org.tizen.nativecommon 4 0 2016-02-18 19:52:23.096
+!MESSAGE Starting the application on an emulator has been canceled.
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-18 20:17:44.100
+!MESSAGE Indexed 'RotaryInputExample' (1 sources, 379 headers) in 2.58 sec: 28,377 declarations; 32,598 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.jface 2 0 2016-02-18 20:29:39.155
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-02-18 20:29:39.155
+!MESSAGE A conflict occurred for F2:
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f6067a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F2,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.showInformation,Show Tooltip Description,
+		Displays information for the current caret location in a focused hover,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b398303,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(F2,
+	ParameterizedCommand(Command(org.tizen.common.connection.rename,Rename,
+		Rename a file or folder on the connected target,
+		Category(org.tizen.common.connection.category,Connection Explorer,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5cc847eb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.tizen.common.connection.rename.context,,,system)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-02-18 21:09:58.937
+!MESSAGE [2016.02.18 21:09:58][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profiles version="3.0">
+<profile name="aransena">
+<profileitem ca="" distributor="0" key="/home/clm/tizen-sdk-data/keystore/aransena/author.p12" password="t2wTorkLaeg=" rootca=""/>
+<profileitem ca="" distributor="1" key="/home/clm/tizen-sdk-data/keystore/aransena/distributor.p12" password="lZzL+MYY19TGYRytc+XWyw==" rootca=""/>
+<profileitem ca="" distributor="2" key="" password="xmEcrXPl1ss=" rootca=""/>
+</profile>
+</profiles>

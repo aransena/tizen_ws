@@ -1,4 +1,5 @@
 #include "helloworld.h"
+#include <watch_app.h>
 
 typedef struct appdata {
 	Evas_Object *win;
@@ -32,6 +33,7 @@ create_base_gui(appdata_s *ad)
 		elm_win_wm_rotation_available_rotations_set(ad->win, (const int *)(&rots), 4);
 	}
 
+
 	evas_object_smart_callback_add(ad->win, "delete,request", win_delete_request_cb, NULL);
 	eext_object_event_callback_add(ad->win, EEXT_CALLBACK_BACK, win_back_cb, ad);
 
@@ -52,6 +54,7 @@ create_base_gui(appdata_s *ad)
 	/* Show window after base gui is set up */
 	evas_object_show(ad->win);
 }
+
 
 static bool
 app_create(void *data)
@@ -85,10 +88,12 @@ app_resume(void *data)
 	/* Take necessary actions when application becomes visible. */
 }
 
+
 static void
 app_terminate(void *data)
 {
 	/* Release all resources. */
+	eext_rotary_event_handler_del(_rotary_handler_cb);
 }
 
 static void
