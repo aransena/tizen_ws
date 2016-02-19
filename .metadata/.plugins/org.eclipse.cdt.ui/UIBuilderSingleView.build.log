@@ -1,0 +1,11 @@
+15:36:35 **** Incremental Build of configuration Debug for project UIBuilderSingleView ****
+ninja all 
+[1/6] Building src/app_main.o
+[2/6] Building src/managed/src/uib_common.o
+[3/6] Building src/managed/src/uib_view1_view.o
+[4/6] Building src/uibuildersingleview.o
+[5/6] Building src/managed/src/connection/uib_view1_connection.o
+[6/6] Linking uibuildersingleview
+
+15:36:35 Build Finished (took 259ms)
+

@@ -1,0 +1,12 @@
+17:54:00 **** Incremental Build of configuration Debug for project UDPTest ****
+ninja all 
+[1/7] Building src/app_main.o
+[2/7] Building src/managed/src/uib_common.o
+[3/7] Building src/managed/src/uib_view1_view.o
+[4/7] Building src/udptest.o
+[5/7] Building src/managed/src/connection/uib_view1_connection.o
+[6/7] Building src/event_handler/uib_view1_event_handler.o
+[7/7] Linking udptest
+
+17:54:01 Build Finished (took 259ms)
+

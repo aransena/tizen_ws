@@ -1,0 +1,34 @@
+#include "app_main.h"
+#include<dlog.h>
+#include <tizen.h>
+
+
+int main(int argc, char **argv)
+{
+	int result = 0;
+	app_data *app = app_create();
+	dlog_print(DLOG_DEBUG, LOG_TAG, "Running updtest.c");
+
+	ui_app_lifecycle_callback_s event_callback = {0,};
+	app_event_handler_h handlers[5] = {NULL, };
+	event_callback.terminate = app_terminate;
+	event_callback.pause = app_pause;
+	event_callback.resume = app_resume;
+	event_callback.app_control = app_control;
+
+	ui_app_add_event_handler(&handlers[APP_EVENT_LOW_BATTERY], APP_EVENT_LOW_BATTERY, ui_app_low_battery, &ad);
+	ui_app_add_event_handler(&handlers[APP_EVENT_LOW_MEMORY], APP_EVENT_LOW_MEMORY, ui_app_low_memory, &ad);
+	ui_app_add_event_handler(&handlers[APP_EVENT_DEVICE_ORIENTATION_CHANGED], APP_EVENT_DEVICE_ORIENTATION_CHANGED, ui_app_orient_changed, &ad);
+	ui_app_add_event_handler(&handlers[APP_EVENT_LANGUAGE_CHANGED], APP_EVENT_LANGUAGE_CHANGED, ui_app_lang_changed, &ad);
+	ui_app_add_event_handler(&handlers[APP_EVENT_REGION_FORMAT_CHANGED], APP_EVENT_REGION_FORMAT_CHANGED, ui_app_region_changed, &ad);
+	ui_app_remove_event_handler(handlers[APP_EVENT_LOW_MEMORY]);
+
+	if (app)
+	{
+		result = app_run(app, argc, argv);
+		app_destroy(app);
+	}
+
+	return result;
+}
+

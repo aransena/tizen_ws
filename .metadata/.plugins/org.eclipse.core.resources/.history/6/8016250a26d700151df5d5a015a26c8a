@@ -1,0 +1,27 @@
+#include "app_main.h"
+#include<dlog.h>
+#include <tizen.h>
+
+
+int main(int argc, char **argv)
+{
+	int result = 0;
+	app_data *app = app_create();
+	dlog_print(DLOG_DEBUG, LOG_TAG, "Running updtest.c");
+
+	ui_app_lifecycle_callback_s event_callback = {0,};
+	app_event_handler_h handlers[5] = {NULL, };
+	event_callback.terminate = app_terminate;
+	event_callback.pause = app_pause;
+	event_callback.resume = app_resume;
+	event_callback.app_control = app_control;
+
+	if (app)
+	{
+		result = app_run(app, argc, argv);
+		app_destroy(app);
+	}
+
+	return result;
+}
+

@@ -1,6 +1,6 @@
-21:15:58 **** Incremental Build of configuration Debug for project RotaryInputExample ****
+16:28:58 **** Incremental Build of configuration Debug for project RotaryInputExample ****
 ninja all 
 ninja: no work to do.
 
-21:15:58 Build Finished (took 61ms)
+16:28:58 Build Finished (took 60ms)
 

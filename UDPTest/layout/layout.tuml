@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<tizenFile>
+    <fileInfo>
+        <type>tizen-view</type>
+        <version>1</version>
+        <desc>Tizen Native UI Builder Project</desc>
+    </fileInfo>
+    <document>
+        <documentInfo/>
+        <documentData>
+            <tizen.doc>
+                <tizen.view id="view1" indicator="true" location-x="460" location-y="0">
+                    <efl.box align-x="FILL" align-y="FILL" homogeneous="false" horizontal="false" id="box1" pack-height="360" pack-left="0" pack-top="0" pack-width="360" padding_h="0" padding_v="0" visible="true" weight-x="1" weight-y="1">
+                        <efl.button align-x="FILL" align-y="FILL" autorepeat="false" autorepeat-gap-timeout="" autorepeat-initial-timeout="" disable="false" id="startButton" pack-height="" pack-left="" pack-top="" pack-width="" style="default" text="Start" visible="true" weight-x="1" weight-y="1">
+                            <event onclicked="startButton_onclicked"/>
+                        </efl.button>
+                        <efl.button align-x="FILL" align-y="FILL" autorepeat="false" autorepeat-gap-timeout="" autorepeat-initial-timeout="" disable="false" id="stopButton" pack-height="1" pack-left="0" pack-top="0" pack-width="1" style="default" text="Stop" visible="true" weight-x="1" weight-y="1">
+                            <event onclicked="stopButton_onclicked"/>
+                        </efl.button>
+                    </efl.box>
+                </tizen.view>
+            </tizen.doc>
+        </documentData>
+    </document>
+</tizenFile>

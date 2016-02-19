@@ -1,0 +1,20 @@
+#include "app_main.h"
+#include <tizen.h>
+
+int main(int argc, char **argv)
+{
+	int result = 0;
+	app_data *app = app_create();
+	ui_app_lifecycle_callback_s event_callback = {0,};
+
+	app_event_handler_h handlers[5] = {NULL, };
+
+	if (app)
+	{
+		result = app_run(app, argc, argv);
+		app_destroy(app);
+	}
+
+	return result;
+}
+
