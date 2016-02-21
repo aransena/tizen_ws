@@ -15,6 +15,7 @@
 <stringAttribute key="org.eclipse.cdt.dsf.gdb.TRACEPOINT_MODE" value="TP_NORMAL_ONLY"/>
 <booleanAttribute key="org.eclipse.cdt.dsf.gdb.UPDATE_THREADLIST_ON_SUSPEND" value="false"/>
 <booleanAttribute key="org.eclipse.cdt.dsf.gdb.internal.ui.launching.RemoteApplicationCDebuggerTab.DEFAULTS_SET" value="true"/>
+<intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="gdbserver"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
 <booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
@@ -32,5 +33,7 @@
 <booleanAttribute key="org.tizen.common.launch.device.emulator" value="false"/>
 <stringAttribute key="org.tizen.common.launch.device.id" value="192.168.43.12:26101"/>
 <stringAttribute key="org.tizen.nativeapp.launch.PROJECT_BUILD_CONFIG_NAME_ATTR" value="Debug"/>
+<booleanAttribute key="org.tizen.nativecommon.ATTR_LAUNCH_UPDATE_MODE" value="false"/>
+<booleanAttribute key="org.tizen.nativecommon.ATTR_LAUNCH_VERBOSE_CONSOLE" value="true"/>
 <stringAttribute key="process_factory_id" value="org.eclipse.cdt.dsf.gdb.GdbProcessFactory"/>
 </launchConfiguration>

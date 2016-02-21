@@ -1,4 +1,4 @@
-15:58:38 **** Incremental Build of configuration Debug for project helloWorldUIBuilder ****
+16:14:36 **** Build of configuration Debug for project helloWorldUIBuilder ****
 ninja all 
 [1/10] Building src/managed/src/uib_common.o
 [2/10] Building src/managed/src/connection/uib_view1_connection.o
@@ -17,5 +17,5 @@ collect2: ld returned 1 exit status
 clang-3.4: error: linker (via gcc) command failed with exit code 1 (use -v to see invocation)
 ninja: build stopped: subcommand failed.
 
-15:58:38 Build Finished (took 310ms)
+16:14:37 Build Finished (took 309ms)
 
