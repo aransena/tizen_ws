@@ -93,7 +93,7 @@ static void
 app_terminate(void *data)
 {
 	/* Release all resources. */
-	eext_rotary_event_handler_del(_rotary_handler_cb);
+//eext_rotary_event_handler_del(_rotary_handler_cb);
 }
 
 static void

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;GearS2RobotControl/src/rotaryinputexample.c&apos; to &apos;main.c&apos;" description="Rename resource &apos;rotaryinputexample.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/rotaryinputexample.c" name="main.c" stamp="1456062906203" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;GearS2RobotControl/inc/rotaryinputexample.h&apos; to &apos;main.h&apos;" description="Rename resource &apos;rotaryinputexample.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="inc/rotaryinputexample.h" name="main.h" stamp="1456066290254" updateReferences="true"/>
+</session>
