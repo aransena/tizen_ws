@@ -12,6 +12,9 @@ typedef struct appdata {
 	bool connection;
 	int speed;
 	Evas_Coord x_down;
+	Ecore_Timer *commsTimer;
+	char* message;
+	int interactionCnt;
 
 	// Flag for checking the mouse down event
 	Eina_Bool down;
@@ -34,9 +37,6 @@ static bool send_UDP(char* message, void *data) {
 	bool outcome = false;
 	appdata_s *ad = data;
 	struct addrinfo* res = ad->res;
-	dlog_print(DLOG_DEBUG, LOG_TAG, "socket id: %d", ad->udpPort);
-	dlog_print(DLOG_DEBUG, LOG_TAG, "addr: %d", res->ai_addr);
-	dlog_print(DLOG_DEBUG, LOG_TAG, "addrlen: %d", res->ai_addrlen);
 
 	if (sendto(ad->udpPort, message, sizeof(message)+2, 0, res->ai_addr,
 			res->ai_addrlen) == -1) {
@@ -67,7 +67,7 @@ Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev) {
 
 	appdata_s *ad = data;
 	Evas_Object *bg = ad->bg;
-
+	ad->interactionCnt=0;
 	dlog_print(DLOG_DEBUG, LOG_TAG, "ROTARY HANDLER: UDP port: ", ad->udpPort);
 
 	//bg = elm_win ad->win;
@@ -77,13 +77,13 @@ Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev) {
 				"ROTARY HANDLER: Rotary device rotated in clockwise direction");
 		elm_bg_color_set(bg, rand() % (255 + 1 - 0), 255,
 				rand() % (65 + 1 - 0));
-
-		if (send_UDP("CW,1 ", ad)) {
+		ad->message = "CW,1  ";
+		/*if (send_UDP("CW,1 ", ad)) {
 			dlog_print(DLOG_DEBUG, LOG_TAG,
 					"ROTARY HANDLER: Clockwise UDP message sent");
 		} else {
 			app_terminate(ad);
-		}
+		}*/
 
 	} else {
 		dlog_print(DLOG_DEBUG, LOG_TAG,
@@ -91,26 +91,30 @@ Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev) {
 		elm_bg_color_set(bg, rand() % (65 + 1 - 0), rand() % (255 + 1 - 0),
 				255);
 
-		if (send_UDP("CCW,1", ad)) {
+		ad->message = "CCW,1 ";
+		/*if (send_UDP("CCW,1", ad)) {
 			dlog_print(DLOG_DEBUG, LOG_TAG,
 					"ROTARY HANDLER: Counter Clockwise UDP message sent");
 		} else {
 			app_terminate(ad);
-		}
+		}*/
 
 	}
+
+	ad->interactionCnt=0;
+
 	return EINA_FALSE;
 }
 
 static void fingermove_down_cb(void *data, Evas *evas, Evas_Object *obj,
 		void *event_info) {
 	appdata_s *ad = data;
+	ad->interactionCnt=0;
 
 	Evas_Event_Mouse_Move *ev = event_info;
 	Evas_Coord x = ev->cur.canvas.x;
-	Evas_Coord y = ev->cur.canvas.y;
+//	Evas_Coord y = ev->cur.canvas.y;
 	ad->x_down = x;
-
 	dlog_print(DLOG_DEBUG, LOG_TAG, "Finger Down Event");
 
 }
@@ -118,6 +122,7 @@ static void fingermove_down_cb(void *data, Evas *evas, Evas_Object *obj,
 static void fingermove_up_cb(void *data, Evas *evas, Evas_Object *obj,
 		void *event_info) {
 	appdata_s *ad = data;
+	ad->interactionCnt=0;
 
 	Evas_Event_Mouse_Move *ev = event_info;
 	Evas_Coord x = ev->cur.canvas.x;
@@ -131,11 +136,13 @@ static void fingermove_up_cb(void *data, Evas *evas, Evas_Object *obj,
 	else{
 		message = "F,L  ";
 	}
-	if (send_UDP(message, ad)) {
+	/*if (send_UDP(message, ad)) {
 		dlog_print(DLOG_DEBUG, LOG_TAG,"FINGER HANDLER: Finger UP message sent");
 	} else {
 		app_terminate(ad);
-	}
+	}*/
+	ad->message = message;
+	dlog_print(DLOG_DEBUG, LOG_TAG,"FINGER HANDLER: Finger UP message sent");
 
 }
 
@@ -212,13 +219,29 @@ static void get_UDPsocket(const char* hostname, const char* portname,
 	return;
 }
 
+Eina_Bool network_comms(void *data) {
+	appdata_s *ad = data;
+
+	send_UDP(ad->message, ad);
+
+	if (ad->interactionCnt>50){//if idle > 5 seconds
+		ad->message="STP,1  ";
+
+	}
+	else{
+		ad->message="!!!!!"; // no message, just placeholder
+		ad->interactionCnt=ad->interactionCnt + 1;
+	}
+	dlog_print(DLOG_DEBUG, LOG_TAG, "Timer Callback %d",ad->interactionCnt);
+	return ECORE_CALLBACK_RENEW;
+}
+
 static bool app_create(void *data) {
 	/* Hook to take necessary actions before main event loop starts
 	 Initialize UI resources and application's data
 	 If this function returns true, the main loop of application starts
 	 If this function returns false, the application is terminated */
 	appdata_s *ad = data;
-
 	bool outcome = false;
 	ad->connection = false;
 	get_UDPsocket("192.168.43.218", "21234", ad);
@@ -242,23 +265,31 @@ static void app_control(app_control_h app_control, void *data) {
 static void app_pause(void *data) {
 	appdata_s *ad = data;
 
+	ecore_timer_del(ad->commsTimer);
 	/* Take necessary actions when application becomes invisible. */
 	if (send_UDP("STP,1", ad)) {
 		dlog_print(DLOG_DEBUG, LOG_TAG, "APP_PAUSE: Pause message sent");
 	} else {
 		app_terminate(ad);
 	}
+
+	dlog_print(DLOG_DEBUG, LOG_TAG, "APP_PAUSE: Pause message sent");
+
 }
 
 static void app_resume(void *data) {
 	appdata_s *ad = data;
+	ad->commsTimer = ecore_timer_add(0.1, network_comms,ad);
 
 	/* Take necessary actions when application becomes visible. */
-	if (send_UDP("STR,1", ad)) {
+	/*if (send_UDP("STR,1", ad)) {
 		dlog_print(DLOG_DEBUG, LOG_TAG, "APP_PAUSE: Start message sent");
 	} else {
 		app_terminate(ad);
-	}
+	}*/
+	ad->message = "STR,1  ";
+	ad->interactionCnt=0;
+	dlog_print(DLOG_DEBUG, LOG_TAG, "APP_RESUME: Start message sent");
 }
 
 int main(int argc, char *argv[]) {
@@ -274,10 +305,9 @@ int main(int argc, char *argv[]) {
 	event_callback.resume = app_resume;
 	event_callback.app_control = app_control;
 
-	ret = ui_app_main(argc, argv, &event_callback, &ad);
+    ret = ui_app_main(argc, argv, &event_callback, &ad);
 	if (ret != APP_ERROR_NONE) {
 		dlog_print(DLOG_ERROR, LOG_TAG, "app_main() is failed. err = %d", ret);
 	}
-
 	return ret;
 }

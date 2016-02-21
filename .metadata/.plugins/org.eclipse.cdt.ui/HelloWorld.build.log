@@ -1,6 +1,6 @@
-16:14:33 **** Incremental Build of configuration Debug for project HelloWorld ****
+18:58:50 **** Incremental Build of configuration Debug for project HelloWorld ****
 ninja all 
 ninja: no work to do.
 
-16:14:33 Build Finished (took 59ms)
+18:58:50 Build Finished (took 61ms)
 
