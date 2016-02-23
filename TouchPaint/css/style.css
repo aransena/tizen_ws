@@ -1,0 +1,114 @@
+.ui-content {
+    position: relative;
+}
+
+#options-preview {
+    width: 80%;
+    margin: -5px auto;
+}
+
+#options-range {
+    width: 100%;
+}
+
+#options-colors {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.options-colors {
+    width: 25%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.options-colors span {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    bottom: 4px;
+    height: 100%;
+}
+
+#options-colors-white span {
+    background-color: #fff;
+}
+
+#options-colors-red span {
+    background-color: #f00;
+}
+
+#options-colors-green span {
+    background-color: #0f0;
+}
+
+#options-colors-blue span {
+    background-color: #00f;
+}
+
+.ui-popup .ui-popup-footer .ui-btn.ui-btn-icon-only {
+    text-indent: inherit;
+}
+
+#main-canvas {
+    position: absolute;
+    left: 0;
+}
+
+@media (-tizen-geometric-shape: circle) {
+
+    .ui-page.ui-scroll-on .ui-content {
+        margin: 0;
+    }
+
+    .ui-page.ui-scroll-on .ui-footer {
+        position: absolute;
+    }
+
+    .ui-footer.ui-grid-col-2 button {
+        background-repeat: no-repeat;
+        background-position-y: center;
+    }
+
+    .ui-footer.ui-grid-col-2 button:nth-child(1) {
+        background-position-x: 90%;
+    }
+
+    .ui-footer.ui-grid-col-2 button:nth-child(2) {
+        background-position-x: 10%;
+    }
+
+    .btn-options, .btn-erase, .btn-apply {
+        color: transparent;
+    }
+
+    .ui-footer .btn-options {
+        background-image: url(../img/tw_ic_button_settings_holo_dark.png);
+    }
+
+    .ui-footer .btn-erase {
+        background-image: url(../img/tw_ic_button_erase_holo_dark.png);
+    }
+
+    .ui-footer .btn-apply {
+        background-image: url(../img/tw_ic_button_apply_holo_dark.png);
+    }
+
+    .ui-bottom-button .btn-apply:before {
+        background-color: rgba(255, 255, 255, 1);
+        -webkit-mask-image: url(../img/tw_ic_button_apply_holo_dark.png);
+    }
+
+    .ui-header {
+        border-bottom: 1px solid rgb(0,149,255);
+    }
+
+    .ui-popup .ui-popup-footer .ui-btn.ui-btn-icon-only {
+        text-indent: -624.9375rem;
+    }
+}
