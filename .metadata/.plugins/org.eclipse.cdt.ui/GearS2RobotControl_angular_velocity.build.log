@@ -1,7 +1,0 @@
-21:12:49 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
-ninja all 
-[1/2] Building src/main.o
-[2/2] Linking gears2robotcontrol_v1
-
-21:12:49 Build Finished (took 210ms)
-
