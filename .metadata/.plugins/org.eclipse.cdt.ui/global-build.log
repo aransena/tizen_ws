@@ -1960,3 +1960,233 @@ ninja: no work to do.
 17:48:49 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
 ninja all 
 ninja: no work to do.
+17:50:45 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+17:52:26 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+FAILED: clang -MMD -MT src/main.o -MF src/main.o.d  -I"/home/clm/Aran/tizen_ws/GearS2RobotControl/inc" -O0 -g3 -Wall -c -fmessage-length=0 -target arm-tizen-linux-gnueabi -gcc-toolchain /home/clm/tizen-sdk/tools/smart-build-interface/../arm-linux-gnueabi-gcc-4.6/ -ccc-gcc-name arm-linux-gnueabi-g++ -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mtune=cortex-a8 -Wno-gnu  -fPIE --sysroot="/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core" -mthumb -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/libxml2" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/appcore-agent" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/appcore-watch" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/appfw" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/badge" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/base" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/cairo" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ckm" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/content" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/context-manager" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/dbus-1.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/device" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/dlog" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/e_dbus-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/edje-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eet-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/efl-extension" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/efreet-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eina-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eina-1/eina" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eio-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/elementary-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/embryo-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ethumb-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/evas-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ewebkit2-0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/fontconfig" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/freetype2" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/gio-unix-2.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/glib-2.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/json-glib-1.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/json-glib-1.0/json-glib" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/location" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/media" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/media-content" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/messaging" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/minizip" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/network" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/notification" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/sensor" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/storage" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/system" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/telephony" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ui" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/widget_service" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/widget_viewer_evas" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/lib/dbus-1.0/include" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/lib/glib-2.0/include" -Werror-implicit-function-declaration -c ../src/main.c -o src/main.o
+../src/main.c:204:2: error: expected expression
+        else if(ev->timestamp - ad->time_down < 500){
+        ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+17:52:53 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+17:53:35 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+17:55:34 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+17:59:08 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+18:33:08 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+FAILED: clang -MMD -MT src/main.o -MF src/main.o.d  -I"/home/clm/Aran/tizen_ws/GearS2RobotControl/inc" -O0 -g3 -Wall -c -fmessage-length=0 -target arm-tizen-linux-gnueabi -gcc-toolchain /home/clm/tizen-sdk/tools/smart-build-interface/../arm-linux-gnueabi-gcc-4.6/ -ccc-gcc-name arm-linux-gnueabi-g++ -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mtune=cortex-a8 -Wno-gnu  -fPIE --sysroot="/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core" -mthumb -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/libxml2" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/appcore-agent" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/appcore-watch" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/appfw" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/badge" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/base" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/cairo" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ckm" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/content" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/context-manager" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/dbus-1.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/device" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/dlog" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/e_dbus-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/edje-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eet-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/efl-extension" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/efreet-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eina-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eina-1/eina" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eio-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/elementary-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/embryo-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ethumb-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/evas-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ewebkit2-0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/fontconfig" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/freetype2" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/gio-unix-2.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/glib-2.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/json-glib-1.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/json-glib-1.0/json-glib" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/location" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/media" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/media-content" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/messaging" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/minizip" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/network" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/notification" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/sensor" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/storage" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/system" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/telephony" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ui" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/widget_service" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/widget_viewer_evas" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/lib/dbus-1.0/include" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/lib/glib-2.0/include" -Werror-implicit-function-declaration -c ../src/main.c -o src/main.o
+../src/main.c:164:34: error: expected ';' after expression
+        ad->time_down = ecore_time_get() //ev->timestamp;
+                                        ^
+                                        ;
+1 error generated.
+ninja: build stopped: subcommand failed.
+18:33:19 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+18:33:31 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+18:34:10 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+18:37:46 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+18:39:30 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+18:41:01 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+19:04:47 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+19:07:44 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+19:11:12 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+19:11:13 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:11:13 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:11:14 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:12:13 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+20:23:50 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+20:39:07 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+FAILED: clang -MMD -MT src/main.o -MF src/main.o.d  -I"/home/clm/Aran/tizen_ws/GearS2RobotControl/inc" -O0 -g3 -Wall -c -fmessage-length=0 -target arm-tizen-linux-gnueabi -gcc-toolchain /home/clm/tizen-sdk/tools/smart-build-interface/../arm-linux-gnueabi-gcc-4.6/ -ccc-gcc-name arm-linux-gnueabi-g++ -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mtune=cortex-a8 -Wno-gnu  -fPIE --sysroot="/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core" -mthumb -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/libxml2" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/appcore-agent" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/appcore-watch" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/appfw" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/badge" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/base" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/cairo" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ckm" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/content" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/context-manager" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/dbus-1.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/device" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/dlog" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/e_dbus-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/edje-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eet-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/efl-extension" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/efreet-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eina-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eina-1/eina" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/eio-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/elementary-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/embryo-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ethumb-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/evas-1" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ewebkit2-0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/fontconfig" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/freetype2" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/gio-unix-2.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/glib-2.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/json-glib-1.0" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/json-glib-1.0/json-glib" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/location" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/media" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/media-content" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/messaging" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/minizip" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/network" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/notification" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/sensor" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/storage" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/system" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/telephony" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ui" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/widget_service" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/widget_viewer_evas" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/lib/dbus-1.0/include" -I"/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/lib/glib-2.0/include" -Werror-implicit-function-declaration -c ../src/main.c -o src/main.o
+../src/main.c:119:24: error: no member named 'turnCheckTimer' in 'struct appdata'
+                        ecore_timer_del(ad->turnCheckTimer);
+                                        ~~  ^
+../src/main.c:134:42: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.1, turn_check,ad);
+                                                ^~~~~~~~~~
+/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning and 1 error generated.
+ninja: build stopped: subcommand failed.
+20:39:31 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:134:42: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.1, turn_check,ad);
+                                                ^~~~~~~~~~
+/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol
+20:41:49 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:136:42: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.1, turn_check,ad);
+                                                ^~~~~~~~~~
+/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol
+20:43:02 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:136:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol
+20:43:39 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+20:43:43 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+20:43:46 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+20:43:59 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+20:45:11 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:137:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol
+20:49:28 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:137:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol
+20:58:18 **** Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol
+20:58:36 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+ninja: no work to do.
+20:58:42 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+ninja: no work to do.
+20:59:22 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+ninja: no work to do.
+21:00:05 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+ninja: no work to do.
+21:00:47 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/1] Linking gears2robotcontrol_v1
+21:02:57 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/1] Linking gears2robotcontrol_v2
+21:03:35 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/1] Linking gears2robotcontrol_v1
+21:06:07 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+21:09:21 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:137:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol_v2
+21:10:00 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol_v1
+21:11:37 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:137:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol_v2
+21:12:49 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol_v1

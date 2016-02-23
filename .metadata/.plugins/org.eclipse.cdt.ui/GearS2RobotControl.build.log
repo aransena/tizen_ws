@@ -1,6 +1,14 @@
-17:48:49 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+21:11:37 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
 ninja all 
-ninja: no work to do.
+[1/2] Building src/main.o
+../src/main.c:137:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/clm/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol_v2
 
-17:48:49 Build Finished (took 58ms)
+21:11:38 Build Finished (took 261ms)
 

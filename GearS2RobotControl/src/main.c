@@ -15,11 +15,13 @@ typedef struct appdata {
 
 	Evas_Coord x_down;
 	Evas_Coord y_down;
-	unsigned int time_down;
+	double time_down;
 
 	Ecore_Timer *commsTimer;
+	Ecore_Timer *turningTimer;
 
 	int interactionCnt;
+	int turnCheckCnt;
 
 	// Flag for checking the mouse down event
 	Eina_Bool down;
@@ -29,7 +31,9 @@ typedef struct appdata {
 	int swipeU;
 	int swipeD;
 	int bezelL;
+	int bezelL_prev;
 	int bezelR;
+	int bezelR_prev;
 	int tap;
 	int longPress;
 
@@ -73,14 +77,14 @@ static bool send_UDP(void *data) {
 	struct addrinfo* res = ad->res;
 
 	char *str;
-	str = (char *)malloc(18);
-
-	sprintf( str, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d",ad->control,ad->stop,ad->bezelL,ad->bezelR,ad->swipeL,ad->swipeR,
-				ad->swipeU,ad->swipeD,ad->tap,ad->longPress);
+	str = (char *)malloc(23);
+	int mode = 2;
+	sprintf( str, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,",ad->control,ad->stop,ad->bezelL,ad->bezelR,ad->swipeL,ad->swipeR,
+				ad->swipeU,ad->swipeD,ad->tap,ad->longPress,mode);
 
 	dlog_print(DLOG_DEBUG, LOG_TAG, "sending message: %s", str);
 
-	if (sendto(ad->udpPort, str, 20, 0, res->ai_addr,
+	if (sendto(ad->udpPort, str, 23, 0, res->ai_addr,
 			res->ai_addrlen) == -1) {
 		dlog_print(DLOG_DEBUG, LOG_TAG, "Error sending message: %s",
 				strerror(errno));
@@ -107,11 +111,34 @@ static void app_terminate(void *data) {
 	}
 }
 
+void turn_check(void *data){
+	appdata_s *ad = data;
+	int limit = 30;
+	if ((ad->turnCheckCnt>limit && ad->bezelL==0)||(ad->turnCheckCnt>limit && ad->bezelR==0)){//if idle > 5 seconds
+			ad->bezelL=0;
+			ad->bezelR=0;
+			ad->bezelL_prev=0;
+			ad->bezelR_prev=0;
+			ecore_timer_del(ad->turningTimer);
+		}
+	else{
+		//ad->message="!!!!!"; // no message, just placeholder
+		ad->bezelL = ad->bezelL_prev;
+		ad->bezelR = ad->bezelR_prev;
+		ad->turnCheckCnt = ad->turnCheckCnt + 1;
+	}
+}
+
 Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev) {
 
 	appdata_s *ad = data;
 	Evas_Object *bg = ad->bg;
+	ad->turnCheckCnt = 0;
+	ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+
 	ad->interactionCnt=0;
+	ad->stop = 0;
+
 	dlog_print(DLOG_DEBUG, LOG_TAG, "ROTARY HANDLER: UDP port: ", ad->udpPort);
 
 	//bg = elm_win ad->win;
@@ -122,6 +149,7 @@ Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev) {
 		elm_bg_color_set(bg, rand() % (255 + 1 - 0), 255,
 				rand() % (65 + 1 - 0));
 		ad->bezelR = 1;
+		ad->bezelR_prev = 1;
 
 		/*if (send_UDP("CW,1 ", ad)) {
 			dlog_print(DLOG_DEBUG, LOG_TAG,
@@ -137,6 +165,7 @@ Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev) {
 				255);
 
 		ad->bezelL = 1;
+		ad->bezelL_prev = 1;
 
 		/*if (send_UDP("CCW,1", ad)) {
 			dlog_print(DLOG_DEBUG, LOG_TAG,
@@ -161,9 +190,11 @@ static void fingermove_down_cb(void *data, Evas *evas, Evas_Object *obj,
 	Evas_Coord x = ev->cur.canvas.x;
 	Evas_Coord y = ev->cur.canvas.y;
 
-	ad->time_down = ev->timestamp;
+	ad->time_down = ecore_time_get(); //ev->timestamp;
 	ad->x_down = x;
 	ad->y_down = y;
+
+	//dlog_print(DLOG_DEBUG, LOG_TAG,"FINGER DOWN HANDLER: timestamps %d, %f",ev->timestamp, ad->time_down);
 
 	dlog_print(DLOG_DEBUG, LOG_TAG, "Finger Down Event");
 
@@ -179,8 +210,9 @@ static void fingermove_up_cb(void *data, Evas *evas, Evas_Object *obj,
 	Evas_Coord y = ev->cur.canvas.y;
 
 	dlog_print(DLOG_DEBUG, LOG_TAG, "Mouse Move, %d, %d", x, y);
+	double dt = ecore_time_get() - ad->time_down;
 
-	if(abs(ad->x_down-x)>=500){
+	if(abs(ad->x_down-x)>=100){
 		if(ad->x_down<x){
 			ad->swipeR=1;
 			ad->stop=0;
@@ -190,23 +222,25 @@ static void fingermove_up_cb(void *data, Evas *evas, Evas_Object *obj,
 			ad->stop=0;
 		}
 	}
-	else if(abs(ad->y_down-y)>=500){
-		if(ad->y_down<y){
+	else if(abs(ad->y_down-y)>=100){
+		if(ad->y_down>y){
 			ad->swipeU=1;
 			ad->stop=1;
 		}
 		else{
 			ad->swipeD=1;
-			ad->stop=0;
+			//ad->stop=0;
 		}
 	}
-
-	else if(ev->timestamp - ad->time_down < 100){
+	else if(dt < 0.5){
 		ad->tap = 1;
 	}
-	else if(ev->timestamp - ad->time_down >= 100){
+	else if(dt >= 0.5){
 			ad->longPress = 1;
-		}
+	}
+	else{} // else do nothing
+
+	dlog_print(DLOG_DEBUG, LOG_TAG,"FINGER UP HANDLER: dt %f",dt);
 
 	dlog_print(DLOG_DEBUG, LOG_TAG,"FINGER HANDLER: Finger UP message sent");
 
@@ -300,6 +334,8 @@ Eina_Bool network_comms(void *data) {
 	dlog_print(DLOG_DEBUG, LOG_TAG, "Timer Callback %d",ad->interactionCnt);
 	return ECORE_CALLBACK_RENEW;
 }
+
+
 
 static bool app_create(void *data) {
 	/* Hook to take necessary actions before main event loop starts
