@@ -1,6 +1,6 @@
-20:03:23 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+17:48:49 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
 ninja all 
 ninja: no work to do.
 
-20:03:23 Build Finished (took 59ms)
+17:48:49 Build Finished (took 58ms)
 
