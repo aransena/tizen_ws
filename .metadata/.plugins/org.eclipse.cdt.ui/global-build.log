@@ -1,0 +1,170 @@
+18:54:07 **** Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:137:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-emulator.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol_v2
+19:15:17 **** Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:137:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-emulator.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol_v2
+19:15:25 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:15:44 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:16:05 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:16:26 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:17:30 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:137:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol_v2
+19:18:28 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:21:05 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:21:29 **** Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol_v1
+19:24:10 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+ninja: no work to do.
+19:27:13 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:27:38 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:29:45 **** Clean-only build of configuration Debug for project GearS2RobotControl ****
+ninja clean 
+[1/2] Cleaning SA Report files ..
+[2/2] Cleaning build files ...
+Cleaning... 2 files.
+19:29:45 **** Clean-only build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja clean 
+[1/2] Cleaning SA Report files ..
+[2/2] Cleaning build files ...
+Cleaning... 2 files.
+19:29:45 **** Clean-only build of configuration Debug for project HelloWorld ****
+ninja clean 
+ninja: error: mkdir(/home/clm): Permission denied
+ninja: error: creating build directory /home/clm/Aran/tizen_ws/HelloWorld/Debug: Permission denied
+19:29:45 **** Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:137:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol_v2
+19:29:46 **** Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol_v1
+19:29:47 **** Clean-only build of configuration Debug for project HelloWorld ****
+ninja clean 
+ninja: error: mkdir(/home/clm): Permission denied
+ninja: error: creating build directory /home/clm/Aran/tizen_ws/HelloWorld/Debug: Permission denied
+19:29:47 **** Build of configuration Debug for project HelloWorld ****
+ninja all 
+[1/2] Building src/helloworld.o
+[2/2] Linking helloworld
+19:29:48 **** Build of configuration Debug for project RotaryInputExample ****
+ninja all 
+[1/2] Building src/rotaryinputexample.o
+[2/2] Linking rotaryinputexample
+19:29:48 **** Build of configuration Debug for project RotaryTimer ****
+ninja all 
+[1/5] Building src/rotary.o
+[2/5] Building res/edje/timer.edj
+[3/5] Building src/digital.o
+[4/5] Building src/main.o
+[5/5] Linking rotarytimer
+19:29:52 **** Build of configuration Debug for project UDPTest ****
+ninja all 
+[1/7] Building src/app_main.o
+[2/7] Building src/udptest.o
+[3/7] Building src/managed/src/uib_common.o
+[4/7] Building src/managed/src/uib_view1_view.o
+[5/7] Building src/managed/src/connection/uib_view1_connection.o
+[6/7] Building src/event_handler/uib_view1_event_handler.o
+[7/7] Linking udptest
+19:29:53 **** Build of configuration Debug for project UIBuilderSingleView ****
+ninja all 
+[1/7] Building src/app_main.o
+[2/7] Building src/uibuildersingleview.o
+[3/7] Building src/managed/src/uib_common.o
+[4/7] Building src/managed/src/uib_view1_view.o
+[5/7] Building src/event_handler/uib_view1_event_handler.o
+[6/7] Building src/managed/src/connection/uib_view1_connection.o
+[7/7] Linking uibuildersingleview
+19:29:55 **** Build of configuration Debug for project helloWorldUIBuilder ****
+ninja all 
+[1/10] Building src/managed/src/uib_view2_view.o
+[2/10] Building src/app_main.o
+[3/10] Building src/managed/src/connection/uib_view1_connection.o
+[4/10] Building src/managed/src/connection/uib_view2_connection.o
+[5/10] Building src/helloworlduibuilder.o
+[6/10] Building src/managed/src/uib_common.o
+[7/10] Building src/managed/src/uib_view1_view.o
+[8/10] Building src/event_handler/uib_view1_event_handler.o
+[9/10] Building src/event_handler/uib_view2_event_handler.o
+[10/10] Linking helloworlduibuilder
+FAILED: clang++ -o helloworlduibuilder src/managed/src/uib_common.o src/managed/src/uib_view1_view.o src/managed/src/uib_view2_view.o src/managed/src/connection/uib_view1_connection.o src/managed/src/connection/uib_view2_connection.o src/app_main.o src/helloworlduibuilder.o src/event_handler/uib_view1_event_handler.o src/event_handler/uib_view2_event_handler.o   -target i386-tizen-linux-gnueabi -gcc-toolchain /home/aransena/tizen-sdk/tools/smart-build-interface/../i386-linux-gnueabi-gcc-4.6/ -ccc-gcc-name i386-linux-gnueabi-g++ -march=i386 -Xlinker --as-needed  -pie -lpthread -Xlinker -rpath="/home/developer/sdk_tools/lib" --sysroot="/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-emulator.core" -Xlinker --version-script="/home/aransena/tizen_ws/helloWorldUIBuilder/.exportMap" -L"/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-emulator.core/usr/lib" -lBrokenLocale -lanl -lappcore-agent -lappcore-watch -lbadge -lbase-utils-i18n -lbundle -lcairo -lcapi-appfw-alarm -lcapi-appfw-app-common -lcapi-appfw-app-control -lcapi-appfw-application -lcapi-appfw-app-manager -lcapi-appfw-package-manager -lcapi-appfw-preference -lcapi-appfw-widget-application -lcapi-base-common -lcapi-content-media-content -lcapi-content-mime-type -lcapi-data-control -lcapi-location-manager -lcapi-media-audio-io -lcapi-media-camera -lcapi-media-codec -lcapi-media-image-util -lcapi-media-metadata-extractor -lcapi-media-player -lcapi-media-radio -lcapi-media-recorder -lcapi-media-sound-manager -lcapi-media-tone-player -lcapi-media-tool -lcapi-media-wav-player -lcapi-message-port -lcapi-messaging-messages -lcapi-network-bluetooth -lcapi-network-connection -lcapi-network-nfc -lcapi-network-smartcard -lcapi-network-wifi -lcapi-system-device -lcapi-system-info -lcapi-system-media-key -lcapi-system-runtime-info -lcapi-system-sensor -lcapi-system-system-settings -lcapi-telephony -lcapi-ui-efl-util -lcidn -lcore-context-manager -lcrypto -lcrypt -lc -lcurl -ldlog -ldl -lecore_con -lecore_evas -lecore_fb -lecore_file -lecore_imf_evas -lecore_imf -lecore_input_evas -lecore_input -lecore_ipc -lecore -lecore_x -ledbus -ledje -leet -lefl-extension -lefreet_mime -lefreet -lefreet_trash -leina -leio -lelementary -lembryo -lethumb_client -lethumb -levas -lewebkit2 -lexif -lfontconfig -lfreetype -lgio-2.0 -lglib-2.0 -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -ljson-glib-1.0 -lkey-manager-client -lminizip -lm -lnotification -lnsl -lnss_compat -lnss_dns -lnss_files -lnss_hesiod -lnss_nisplus -lnss_nis -loauth -lopenal -lprivilege-info -lpthread -lpush -lresolv -lrt -lsqlite3 -lssl -lstorage -lstt -ltbm -lthread_db -ltts -lutil -lwidget_service -lwidget_viewer_evas -lxml2 -lz -Xlinker -rpath="/opt/usr/apps/org.example.helloworlduibuilder/lib" -Werror-implicit-function-declaration
+src/managed/src/uib_view2_view.o: In function `uib_view2_view_create':
+/home/aransena/tizen_ws/helloWorldUIBuilder/Debug/../src/managed/src/uib_view2_view.c:37: undefined reference to `view2_listitem1_onitemselected'
+collect2: ld returned 1 exit status
+clang-3.4: error: linker (via gcc) command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+19:34:06 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+19:34:41 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol_v1
+19:32:21 **** Auto Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/1] Linking gears2robotcontrol_v2
+19:32:22 **** Auto Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/1] Linking gears2robotcontrol_v1
+19:32:22 **** Auto Build of configuration Debug for project HelloWorld ****
+ninja all 
+[1/1] Linking helloworld
+19:32:23 **** Auto Build of configuration Debug for project RotaryInputExample ****
+ninja all 
+[1/1] Linking rotaryinputexample
+19:32:26 **** Auto Build of configuration Debug for project UDPTest ****
+ninja all 
+[1/1] Linking udptest

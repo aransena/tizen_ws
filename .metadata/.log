@@ -1,0 +1,1103 @@
+!SESSION 2016-03-10 18:51:22.182 -----------------------------------------------
+eclipse.buildId=2.4.0 Rev4
+java.version=1.7.0_80
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -clean -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2016-03-10 18:51:36.816
+!MESSAGE SDK Information: Path [/home/aransena/tizen-sdk], Data Path [/home/aransena/tizen-sdk-data], Platform Path [/home/aransena/tizen-sdk/platforms/tizen-2.4/mobile]
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-10 18:52:16.650
+!MESSAGE Error: Cannot run program "clang": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-10 18:52:16.671
+!MESSAGE Error: Cannot run program "clang++": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang++": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-10 18:52:25.017
+!MESSAGE Indexed 'helloWorldUIBuilder' (9 sources, 370 headers) in 6.76 sec: 28,629 declarations; 33,242 references; 44 unresolved inclusions; 18 syntax errors; 516 unresolved names (0.83%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-10 18:52:29.747
+!MESSAGE Indexed 'UIBuilderSingleView' (6 sources, 369 headers) in 4.48 sec: 28,602 declarations; 33,072 references; 44 unresolved inclusions; 18 syntax errors; 516 unresolved names (0.83%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-10 18:52:32.568
+!MESSAGE Indexed 'RotaryInputExample' (1 sources, 352 headers) in 2.52 sec: 28,749 declarations; 32,344 references; 44 unresolved inclusions; 18 syntax errors; 515 unresolved names (0.84%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-10 18:52:34.724
+!MESSAGE Indexed 'HelloWorld' (1 sources, 366 headers) in 2.15 sec: 28,422 declarations; 32,335 references; 44 unresolved inclusions; 18 syntax errors; 517 unresolved names (0.84%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-10 18:52:37.943
+!MESSAGE Indexed 'UDPTest' (6 sources, 356 headers) in 2.95 sec: 29,028 declarations; 33,224 references; 44 unresolved inclusions; 18 syntax errors; 516 unresolved names (0.82%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-10 18:52:40.056
+!MESSAGE Indexed 'GearS2RobotControl' (1 sources, 352 headers) in 2.11 sec: 28,811 declarations; 32,718 references; 44 unresolved inclusions; 18 syntax errors; 525 unresolved names (0.85%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-10 18:52:42.923
+!MESSAGE Indexed 'RotaryTimer' (3 sources, 368 headers) in 2.62 sec: 28,483 declarations; 33,450 references; 44 unresolved inclusions; 18 syntax errors; 518 unresolved names (0.83%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-10 18:52:45.639
+!MESSAGE Indexed 'GearS2RobotControl_angular_velocity' (1 sources, 352 headers) in 2.43 sec: 28,803 declarations; 32,671 references; 44 unresolved inclusions; 18 syntax errors; 525 unresolved names (0.85%)
+
+!ENTRY org.tizen.common.connection.debugtools.OnDemandInstall$1InstallJob 4 0 2016-03-10 18:53:03.150
+!MESSAGE [2016.03.10 18:53:03][ERROR] OnDemandInstall.java(322) - Cannot install 'tizen-security-policy,rpm,i586,tizen-security-policy-2.3.2-1.i586.rpm' due to : cd /home/developer/sdk_tools && rpm -U tizen-security-policy-2.3.2-1.i586.rpm && rm -f tizen-security-policy-2.3.2-1.i586.rpm; echo $?; (exitcode: 2)
+
+
+!ENTRY org.tizen.common.connection.debugtools.OnDemandInstall$1InstallJob 4 0 2016-03-10 18:57:19.667
+!MESSAGE [2016.03.10 18:57:19][ERROR] OnDemandInstall.java(322) - Cannot install 'tizen-security-policy,rpm,i586,tizen-security-policy-2.3.2-1.i586.rpm' due to : cd /home/developer/sdk_tools && rpm -U tizen-security-policy-2.3.2-1.i586.rpm && rm -f tizen-security-policy-2.3.2-1.i586.rpm; echo $?; (exitcode: 1)
+
+
+!ENTRY org.tizen.common.connection.debugtools.OnDemandInstall$1InstallJob 4 0 2016-03-10 18:57:46.008
+!MESSAGE [2016.03.10 18:57:46][ERROR] OnDemandInstall.java(322) - Cannot install 'tizen-security-policy,rpm,i586,tizen-security-policy-2.3.2-1.i586.rpm' due to : cd /home/developer/sdk_tools && rpm -U tizen-security-policy-2.3.2-1.i586.rpm && rm -f tizen-security-policy-2.3.2-1.i586.rpm; echo $?; (exitcode: 1)
+
+!SESSION 2016-03-10 19:00:31.049 -----------------------------------------------
+eclipse.buildId=2.4.0 Rev4
+java.version=1.7.0_80
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-10 19:00:39.294
+!MESSAGE Error: Cannot run program "clang": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-10 19:00:39.322
+!MESSAGE Error: Cannot run program "clang++": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang++": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2016-03-10 19:00:40.689
+!MESSAGE SDK Information: Path [/home/aransena/tizen-sdk], Data Path [/home/aransena/tizen-sdk-data], Platform Path [/home/aransena/tizen-sdk/platforms/tizen-2.4/mobile]
+
+!ENTRY org.tizen.common.connection.debugtools.OnDemandInstall$1InstallJob 4 0 2016-03-10 19:01:03.330
+!MESSAGE [2016.03.10 19:01:03][ERROR] OnDemandInstall.java(322) - Cannot install 'tizen-security-policy,rpm,i586,tizen-security-policy-2.3.2-1.i586.rpm' due to : cd /home/developer/sdk_tools && rpm -U tizen-security-policy-2.3.2-1.i586.rpm && rm -f tizen-security-policy-2.3.2-1.i586.rpm; echo $?; (exitcode: 1)
+
+!SESSION 2016-03-10 19:07:34.934 -----------------------------------------------
+eclipse.buildId=2.4.0 Rev4
+java.version=1.7.0_80
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-10 19:07:43.352
+!MESSAGE Error: Cannot run program "clang": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-10 19:07:43.375
+!MESSAGE Error: Cannot run program "clang++": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang++": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2016-03-10 19:07:44.429
+!MESSAGE SDK Information: Path [/home/aransena/tizen-sdk], Data Path [/home/aransena/tizen-sdk-data], Platform Path [/home/aransena/tizen-sdk/platforms/tizen-2.4/mobile]
+
+!ENTRY org.eclipse.jface 2 0 2016-03-10 19:11:55.897
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-10 19:11:55.897
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5d511866,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.include.browser,Open Include Browser,
+		Open an include browser on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5d511866,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-10 19:11:55.897
+!MESSAGE A conflict occurred for F4:
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77190066,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77190066,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F4,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.type.hierarchy,Open Type Hierarchy,
+		Open a type hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a6965a0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-10 19:11:55.898
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7b33e46b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.opentype,Open Element,
+		Open an element in an Editor,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7b33e46b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d8ef0b7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-10 19:11:55.898
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@235d8555,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.opendecl,Open Declaration,
+		Open an editor on the selected element's declaration(s),
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@235d8555,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50dca196,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-10 19:11:55.898
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@44f4a853,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.text.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.cdt.ui.category.refactoring,Refactor - C++,C/C++ Refactorings,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@44f4a853,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1a570483,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-10 19:11:55.898
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46e941f7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@46e941f7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.declarations.in.workspace,Declaration in Workspace,
+		Search for declarations of the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7be9e37f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-10 19:11:55.898
+!MESSAGE A conflict occurred for CTRL+SHIFT+H:
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3856e667,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3856e667,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type.in.hierarchy,Open Type in Hierarchy,
+		Open a type in the type hierarchy view,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@51309116,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-10 19:11:55.898
+!MESSAGE A conflict occurred for CTRL+SHIFT+G:
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b8564fe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.findrefs,References,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,C/C++ Source,C/C++ Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b8564fe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(CTRL+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace,References in Workspace,
+		Search for references to the selected element in the workspace,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@22a9866e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-10 19:11:55.898
+!MESSAGE A conflict occurred for ALT+CTRL+H:
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27b8b189,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.edit.open.call.hierarchy,Open Call Hierarchy,
+		Open the call hierarchy for the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27b8b189,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cViewScope,,,system)
+Binding(ALT+CTRL+H,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.call.hierarchy,Open Call Hierarchy,
+		Open a call hierarchy on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e8fadbe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-10 19:15:08.672
+!MESSAGE [2016.03.10 19:15:08][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-10 19:15:08.779
+!MESSAGE [2016.03.10 19:15:08][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:15:18.690
+!MESSAGE Starting the application on an emulator has been canceled.
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:15:26.035
+!MESSAGE Starting the application on an emulator has been canceled.
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:15:44.594
+!MESSAGE Starting the application on an emulator has been canceled.
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:16:06.116
+!MESSAGE Starting the application on an emulator has been canceled.
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:16:27.054
+!MESSAGE Starting the application on an emulator has been canceled.
+
+!ENTRY org.tizen.common.rds.RdsDeployer 4 0 2016-03-10 19:17:52.953
+!MESSAGE [2016.03.10 19:17:52][ERROR] RdsDeployer.java(291) - Cannot partially upload or reinstall
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:720)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:655)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:587)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:922)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.example.gears2robotcontrol_v2
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:650)
+	... 10 more
+!SUBENTRY 1 org.tizen.common 4 0 2016-03-10 19:17:52.953
+!MESSAGE [RDS] Cannot install application
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.example.gears2robotcontrol_v2
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:650)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:587)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:922)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:18:00.983
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.gears2robotcontrol_v2-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1194)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:987)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:923)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:18:40.150
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.gears2robotcontrol_v2-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1194)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:987)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:923)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:21:20.965
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.gears2robotcontrol_v2-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1194)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:987)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:923)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.rds.RdsDeployer 4 0 2016-03-10 19:21:57.876
+!MESSAGE [2016.03.10 19:21:57][ERROR] RdsDeployer.java(291) - Cannot partially upload or reinstall
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: [RDS] Cannot install application
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:720)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:655)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:587)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:922)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.example.gears2robotcontrol_v1
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:650)
+	... 10 more
+!SUBENTRY 1 org.tizen.common 4 0 2016-03-10 19:21:57.876
+!MESSAGE [RDS] Cannot install application
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -r -t tpk -n org.example.gears2robotcontrol_v1
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:650)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:587)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:922)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:22:08.584
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.gears2robotcontrol_v1-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1194)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:987)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:923)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:24:25.099
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.gears2robotcontrol_v1-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1194)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:987)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:923)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:27:32.087
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.gears2robotcontrol_v2-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1194)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:987)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:923)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.nativecommon 4 0 2016-03-10 19:27:50.882
+!MESSAGE Cannot install application.
+!STACK 0
+org.tizen.common.sdb.command.message.CommandErrorException: 
+Error code: FATAL_ERROR
+Error message: 
+Command: /usr/bin/pkgcmd -q -i -t tpk -p "/opt/usr/apps/tmp/org.example.gears2robotcontrol_v2-1.0.0-arm.tpk"
+Management: Installation or uninstallation is not working temporarily.
+
+	at org.tizen.common.sdb.command.message.PkgcmdErrorType.makeException(PkgcmdErrorType.java:109)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:157)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:144)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.installPackage(TizenLaunchDelegate2.java:1194)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.normalDeploy(TizenLaunchDelegate2.java:987)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.deployApplication(TizenLaunchDelegate2.java:923)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launchApplicationForRun(TizenLaunchDelegate2.java:611)
+	at org.tizen.nativecommon.launch.TizenLaunchDelegate2.launch(TizenLaunchDelegate2.java:269)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2016-03-13 19:30:27.695 -----------------------------------------------
+eclipse.buildId=2.4.0 Rev4
+java.version=1.7.0_80
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-13 19:30:36.649
+!MESSAGE Error: Cannot run program "clang": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-03-13 19:30:36.680
+!MESSAGE Error: Cannot run program "clang++": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang++": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2016-03-13 19:30:40.735
+!MESSAGE SDK Information: Path [/home/aransena/tizen-sdk], Data Path [/home/aransena/tizen-sdk-data], Platform Path [/home/aransena/tizen-sdk/platforms/tizen-2.4/mobile]
+
+!ENTRY org.tizen.common.connection.debugtools.OnDemandInstall$1InstallJob 4 0 2016-03-13 19:33:00.418
+!MESSAGE [2016.03.13 19:33:00][ERROR] OnDemandInstall.java(322) - Cannot install 'tizen-security-policy,rpm,i586,tizen-security-policy-2.3.2-1.i586.rpm' due to : cd /home/developer/sdk_tools && rpm -U tizen-security-policy-2.3.2-1.i586.rpm && rm -f tizen-security-policy-2.3.2-1.i586.rpm; echo $?; (exitcode: 1)
+
+
+!ENTRY org.eclipse.jface 4 2 2016-03-13 19:34:02.790
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: null argument:
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:85)
+	at org.eclipse.core.runtime.Assert.isNotNull(Assert.java:73)
+	at org.tizen.web.editor.configuration.ConfiguratorFactory.unmarshalWidgetConfiguration(ConfiguratorFactory.java:214)
+	at org.tizen.web.zimlaunch.util.LaunchUtil.canRun(LaunchUtil.java:62)
+	at org.tizen.web.zimlaunch.ui.TizenWebMainTab.updateLiveEditingFromConfig(TizenWebMainTab.java:355)
+	at org.tizen.web.zimlaunch.ui.TizenWebMainTab.initializeFrom(TizenWebMainTab.java:337)
+	at org.eclipse.debug.ui.AbstractLaunchConfigurationTabGroup.initializeFrom(AbstractLaunchConfigurationTabGroup.java:86)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupWrapper.initializeFrom(LaunchConfigurationTabGroupWrapper.java:194)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.displayInstanceTabs(LaunchConfigurationTabGroupViewer.java:755)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer$8.run(LaunchConfigurationTabGroupViewer.java:626)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.inputChanged(LaunchConfigurationTabGroupViewer.java:643)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.setInput0(LaunchConfigurationTabGroupViewer.java:605)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.setInput(LaunchConfigurationTabGroupViewer.java:581)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.handleLaunchConfigurationSelectionChanged(LaunchConfigurationsDialog.java:943)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog$3.selectionChanged(LaunchConfigurationsDialog.java:562)
+	at org.eclipse.jface.viewers.StructuredViewer$3.run(StructuredViewer.java:888)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.firePostSelectionChanged(StructuredViewer.java:886)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1726)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1139)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationView.handleConfigurationAdded(LaunchConfigurationView.java:283)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationView.access$1(LaunchConfigurationView.java:272)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationView$2.run(LaunchConfigurationView.java:261)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3717)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3366)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:826)
+	at org.eclipse.jface.window.Window.open(Window.java:802)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1134)
+	at org.eclipse.debug.ui.DebugUITools$2.run(DebugUITools.java:604)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:612)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:546)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.indent,Indent Line,
+		Indents the current line,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7833e4ab,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,Format Active Elements,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@9885944,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67dae646,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,Format,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e713e77,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_UP:
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@544432ee,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@48ec1d54,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.matching.bracket,Go to Matching Bracket,
+		Moves the cursor to the matching bracket,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@496bd27a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@126d8fa6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.add.block.comment,Add Block Comment,
+		Enclose the selection with a block comment,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@643115f9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,Add Block Comment,
+		Add Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@328da9c4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.toggle_comment,Toggle Comment,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@45c76d3e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.show.outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27d5253c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1a7f9a92,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2f7cf4d5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34ade44e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javascriptViewScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.open.file.from.source,Open Selection,
+		Open an editor on the selected link,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@467d7e7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.previous.member,Go to Previous Member,
+		Move the caret to the previous member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3d8f80f3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@724c0116,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_DOWN:
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@185af118,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3042ad61,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7a8a6b25,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,Toggle Comment,
+		Toggle Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@23e4023a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.tizen.common.ui.commandbar.commands.CommandBar,Command Bar,
+		Command Bar,
+		Category(org.tizen.common.ui.category,Tizen SDK,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7066621d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_RIGHT:
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@158088fd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4cf22d2a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for CTRL+SHIFT+\:
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.remove.block.comment,Remove Block Comment,
+		Remove the block comment enclosing the selection,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2a3f6c1a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.remove.block.comment,Remove Block Comment,
+		Remove Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7a2bf7eb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.next.member,Go to Next Member,
+		Move the caret to the next member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@29a1a512,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c44579,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-13 21:13:33.557
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_LEFT:
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@335c5618,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@12adaf4b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-13 21:48:49.420
+!MESSAGE Could not launch the TAUBasic application because the TAUBasic application is currently in launch.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not launch the TAUBasic application because the TAUBasic application is currently in launch.
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:273)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.tizen.web.zimlaunch 4 0 2016-03-13 21:48:49.420
+!MESSAGE Could not launch the TAUBasic application because the TAUBasic application is currently in launch.
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-13 22:09:50.330
+!MESSAGE Could not launch the TAUBasic application because the TAUBasic application is currently in launch.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not launch the TAUBasic application because the TAUBasic application is currently in launch.
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:273)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.tizen.web.zimlaunch 4 0 2016-03-13 22:09:50.330
+!MESSAGE Could not launch the TAUBasic application because the TAUBasic application is currently in launch.

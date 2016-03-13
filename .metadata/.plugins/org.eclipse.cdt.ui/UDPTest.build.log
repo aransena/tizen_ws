@@ -1,0 +1,6 @@
+19:32:26 **** Auto Build of configuration Debug for project UDPTest ****
+ninja all 
+[1/1] Linking udptest
+
+19:32:26 Build Finished (took 106ms)
+

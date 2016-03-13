@@ -318,7 +318,7 @@ static bool app_create(void *data) {
 	appdata_s *ad = data;
 	bool outcome = false;
 	ad->connection = false;
-	get_UDPsocket("192.168.43.218", "21234", ad);
+	get_UDPsocket("192.168.43.83", "21234", ad);
 
 
 	if (ad->connection) {

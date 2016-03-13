@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>Hello TAU</title>
+		<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css"/>
+		<link rel="stylesheet" media="all" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+		<!--load theme file for your application-->
+		<link rel="stylesheet"href="css/style.css"/>
+	</head>
+	<body>
+<div class="ui-page ui-page-active" id="snaplistTest">
+   <header class="ui-header">
+      <h2 class="ui-title">Bottom Button</h2>
+   </header>
+   <div class="ui-content">
+      <ul class="ui-listview ui-snap-listview expand-list" id="snapList">
+         <li class="li-has-2line">
+            <div class="ui-marquee ui-marquee-gradient"><a href="index.html">Main Page</a></div>
+            <div class="li-text-sub ui-li-sub-text">Click to go back to main</div>
+         </li>
+         <li class="li-has-2line">
+            <div class="ui-marquee ui-marquee-gradient">2.SnapListview with Marquee SnapListview with Marquee</div>
+            <div class="li-text-sub ui-li-sub-text">sub-text</div>
+         </li>
+         <li class="li-has-2line">
+            <div class="ui-marquee ui-marquee-gradient">3.SnapListview with Marquee SnapListview with Marquee</div>
+            <div class="li-text-sub ui-li-sub-text">sub-text</div>
+         </li>
+         <li class="li-has-2line">
+            <div class="ui-marquee ui-marquee-gradient">4.SnapListview with Marquee SnapListview with Marquee</div>
+            <div class="li-text-sub ui-li-sub-text">sub-text</div>
+         </li>
+      </ul>
+   </div>
+</div>
+	<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+	<script type="text/javascript" src="js/circle-helper.js"></script>
+	</body>
+</html>

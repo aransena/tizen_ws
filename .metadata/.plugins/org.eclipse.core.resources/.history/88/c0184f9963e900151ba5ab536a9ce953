@@ -1,0 +1,40 @@
+/*global tau */
+/*jslint unparam: true */
+(function(tau) {
+	var page,list,list2
+		elScroller;
+
+	if (tau.support.shape.circle) {
+		document.addEventListener("pagebeforeshow", function (e) {
+			page = e.target;
+			list = page.querySelector(".ui-listview")
+			list2 = page.querySelector(".ui-listview2")
+			
+			if(list){
+				/* Create SnapListView and binding rotary event using tau.helper */
+	            listHelper = tau.helper.SnapListStyle.create(list);   
+			}
+
+			if(list2){
+				/* Create SnapListView and binding rotary event using tau.helper */
+	            listHelper = tau.helper.SnapListStyle.create(list2);   
+			}
+			
+			/*elScroller = page.querySelector(".ui-scroller");
+			if (elScroller) {
+				elScroller.setAttribute("tizen-circular-scrollbar", "");
+			}*/
+		});
+
+		document.addEventListener("pagebeforehide", function (e) {
+			{
+				listHelper.destroy();
+			}
+			
+			/*if(elScroller) {
+				elScroller.removeAttribute("tizen-circular-scrollbar");
+				
+			}*/
+		});
+	}
+}(tau));

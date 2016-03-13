@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/TAUBasicTest" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="P2xKe99OT3.TAUBasicTest" package="P2xKe99OT3" required_version="2.3.1"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.normal"/>
+    <icon src="icon.png"/>
+    <name>TAUBasicTest</name>
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:profile name="wearable"/>
+    <tizen:setting hwkey-event="enable"/>
+</widget>
