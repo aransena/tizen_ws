@@ -2984,3 +2984,7 @@ Binding(F2,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.tizen.common.connection.rename.context,,,system)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:05:42.216
+!MESSAGE [2016.03.14 16:05:42][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+

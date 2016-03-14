@@ -8,11 +8,11 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>mJEWAPhLna+LC0GpUNzFDreUDJemrYtrHp1VNZWED7Q=</DigestValue>
+<DigestValue>kGonzOJASeaHuI2WVDIjVOLVgJVV61udm7So77igZn8=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>0OgkgYolT6uhPkCsmd/yz2P/7R94CETW4QMBZ4udB7M=</DigestValue>
+<DigestValue>J4ZfJtUDSvFMmLSKZP9yAsrgblDe+IU6nQwZpvPRiVc=</DigestValue>
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -24,7 +24,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>3hFhNEO/PIUvTYxnCgeKgdmP8Mx8OVDcRSgbLE9YYaY=</DigestValue>
+<DigestValue>1W+BW748tyssZyDRG8RGC4st3bMOH9FDEYY9k4HNNIQ=</DigestValue>
 </Reference>
 <Reference URI="js%2Fcircle-helper.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1031,11 +1031,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-qJk4ad5FylW6YhEvuxW01B3rosjrD6BiNM3LUuncp5M8VJZ0MrZVN6lRrO4jdUrepYZbf2oDHwcW
-YpbktKLUGpGo5AHBtdWQMFfmmPxCLhXbBIaJet3FvsuDLzPAxg8feKV859tGk8i7QDNPlVJa1uIl
-eZI4+QrYVF4NAXf282zdXGQk7MSmy818Cq2HSAAdRpsZ7NKzz2dlDB5C0+EVZwgAD5E4bdfgpNe2
-6TS7RLnDxHXXEDYAik6CjcZn9Z9XEhXoZ7Y90sfl6/utpguMedE5n9MV/LCv+bhogp8e6pPzNzel
-Xkl4/gT5LzcAoMgwy1+IpNySwQLl+gUYygDP3Q==
+mf1Tk941r7COwawbJUCx+Fk6Y5cdIo0LLEqWY9eTOGfPGR/R07OgzjHEbe0yeNow5BdnGM0TZgjn
+jeYmBapV9bsQAwvRInI5ZgTqstA4iYVzOnYT1BoixMWr28BRehfcudDw8fJ8IYcpFm5MI49To/Zw
+mDUwyH3Ah21cU2tt4SRg9++i02LUMjH8cYHJvNYjHyPUF4IV1Wjn0MXaA5Et1i1jSIPHwnp/pCkp
+Pt/DcVQxHMj7dkz3jsbo8JVJxLwPbGl42DsoIn3OOH0kk3DWrl4HB3LHOoxm5d1dvmsblZo0Qsme
+gEtF0kwiBYkAGgfI8bY21B9iYXwdyrVevlVe6A==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

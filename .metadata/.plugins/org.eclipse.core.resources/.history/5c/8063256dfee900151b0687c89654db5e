@@ -40,7 +40,7 @@
    //console.log("start: ", window.localStorage.getItem('url').length);
    if(window.localStorage.getItem('url')){
 	   console.log("Exists");
-	   console.log(window.localStorage.getItem('url'));
+	   console.log(window.localStorage.getItem('url'))
 	   }
    else{
 	   console.log("Does not exist");

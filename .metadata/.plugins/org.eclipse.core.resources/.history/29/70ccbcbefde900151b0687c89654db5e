@@ -37,14 +37,7 @@
       
    </div>
    <script> 
-   //console.log("start: ", window.localStorage.getItem('url').length);
-   if(window.localStorage.getItem('url')){
-	   console.log("Exists");
-	   console.log(window.localStorage.getItem('url'));
-	   }
-   else{
-	   console.log("Does not exist");
-	   }
+   window.localStorage.setItem('url', 'ws://192.168.1.100:8888/ws');
       var ev1 = document.getElementById("list-p2_main");
       ev1.addEventListener("click", function ()
       {
