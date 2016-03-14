@@ -3345,3 +3345,114 @@ java.io.IOException: [RDS] Pushing file "/home/aransena/tizen_ws/RobotControlWeb
 !ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:24:54.691
 !MESSAGE [2016.03.14 16:24:54][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
 
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:44:09.120
+!MESSAGE [2016.03.14 16:44:09][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:44:09.432
+!MESSAGE [2016.03.14 16:44:09][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-14 16:46:28.205
+!MESSAGE There is no response while 300 seconds. Please retry again.
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Failed to `step SDB shell handle 'ls /usr/bin/wrt-launcher > /tmp/aransena.deployer 2>&1; echo $? ' command` operation
+ (Return Code:30)sdb timeout exception
+	at org.tizen.web.zimlaunch.util.CommandLauncher.runCommand(CommandLauncher.java:166)
+	at org.tizen.web.zimlaunch.util.CommandLauncher.checkWRTType(CommandLauncher.java:265)
+	at org.tizen.web.zimlaunch.util.CommandLauncher.isInstalled(CommandLauncher.java:288)
+	at org.tizen.web.zimlaunch.step.InitLaunchStep.executeStep(InitLaunchStep.java:206)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.preLaunch(ZimLaunchDelegate.java:218)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:254)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-14 16:47:01.262
+!MESSAGE Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:273)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.tizen.web.zimlaunch 4 0 2016-03-14 16:47:01.262
+!MESSAGE Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-14 16:47:07.214
+!MESSAGE step SDB shell handle failed
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Failed to `step SDB shell handle '/usr/bin/pkgcmd -C -n "XHIY5TNuo7";echo $?' command` operation
+ (Return Code:31)sdb command rejected exception
+	at org.tizen.web.zimlaunch.util.CommandLauncher.runCommand(CommandLauncher.java:170)
+	at org.tizen.web.zimlaunch.util.CommandLauncher.isRunningWidget(CommandLauncher.java:325)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:123)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:47:34.227
+!MESSAGE [2016.03.14 16:47:34][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:47:35.132
+!MESSAGE [2016.03.14 16:47:35][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:47:45.320
+!MESSAGE [2016.03.14 16:47:45][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:47:50.385
+!MESSAGE [2016.03.14 16:47:50][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:47:56.017
+!MESSAGE [2016.03.14 16:47:56][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-14 16:47:56.823
+!MESSAGE [2016.03.14 16:47:56][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.web.zimlaunch.util.jsconsole.JSLogThread 4 0 2016-03-14 17:00:46.720
+!MESSAGE [2016.03.14 17:00:46][ERROR] JSLogThread.java(60) - null
+
+!STACK 0
+org.tizen.sdblib.exception.TimeoutException
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:415)
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:377)
+	at org.tizen.sdblib.SdbHelper.readSdbResponse(SdbHelper.java:224)
+	at org.tizen.sdblib.command.Command.sendRequest(Command.java:234)
+	at org.tizen.sdblib.command.Command.in(Command.java:127)
+	at org.tizen.sdblib.command.Command.in(Command.java:104)
+	at org.tizen.sdblib.Device.executeShellCommand(Device.java:507)
+	at org.tizen.web.zimlaunch.util.jsconsole.JSLogThread.run(JSLogThread.java:58)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-14 17:42:46.938
+!MESSAGE Element not found: /RobotControlWebS.
+!STACK 0
+java.lang.IllegalArgumentException: Element not found: /RobotControlWebS.
+	at org.eclipse.core.internal.watson.ElementTree.elementNotFound(ElementTree.java:256)
+	at org.eclipse.core.internal.watson.ElementTree.getSubtree(ElementTree.java:446)
+	at org.tizen.common.rds.RdsDeltaDetector.makeDeltaFile(RdsDeltaDetector.java:255)
+	at org.tizen.web.zimlaunch.step.RdsDeltaInputStep.executeStep(RdsDeltaInputStep.java:98)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:157)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
