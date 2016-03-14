@@ -58,7 +58,7 @@ static void reset_data(void *data) {
 	ad->swipeL=0;
 	ad->swipeR=0;
 	ad->swipeU=0;
-	ad->swipeD=0;
+	//ad->swipeD=0;
 	ad->tap=0;
 	ad->longPress=0;
 }
@@ -185,7 +185,7 @@ static void fingermove_down_cb(void *data, Evas *evas, Evas_Object *obj,
 		void *event_info) {
 	appdata_s *ad = data;
 	ad->interactionCnt=0;
-
+	ad->swipeD=1;
 	Evas_Event_Mouse_Move *ev = event_info;
 	Evas_Coord x = ev->cur.canvas.x;
 	Evas_Coord y = ev->cur.canvas.y;
@@ -193,6 +193,7 @@ static void fingermove_down_cb(void *data, Evas *evas, Evas_Object *obj,
 	ad->time_down = ecore_time_get(); //ev->timestamp;
 	ad->x_down = x;
 	ad->y_down = y;
+
 
 	//dlog_print(DLOG_DEBUG, LOG_TAG,"FINGER DOWN HANDLER: timestamps %d, %f",ev->timestamp, ad->time_down);
 
@@ -204,7 +205,7 @@ static void fingermove_up_cb(void *data, Evas *evas, Evas_Object *obj,
 		void *event_info) {
 	appdata_s *ad = data;
 	ad->interactionCnt=0;
-
+	ad->swipeD=0;
 	Evas_Event_Mouse_Move *ev = event_info;
 	Evas_Coord x = ev->cur.canvas.x;
 	Evas_Coord y = ev->cur.canvas.y;
@@ -345,7 +346,7 @@ static bool app_create(void *data) {
 	appdata_s *ad = data;
 	bool outcome = false;
 	ad->connection = false;
-	get_UDPsocket("192.168.43.83", "21234", ad);
+	get_UDPsocket("192.168.1.102", "21234", ad);
 
 
 	if (ad->connection) {

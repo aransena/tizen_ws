@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>Hello TAU</title>
+		<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css"/>
+		<link rel="stylesheet" media="all" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+		<!--load theme file for your application-->
+		<link rel="stylesheet"href="css/style.css"/>
+	</head>
+	<body>
+	
+	<div class="ui-page ui-page-active" id="robotControl">
+	<header class="ui-header" id="header">
+  	</header>
+	   <div class="ui-content" style="position:absolute;">
+	   		<canvas id="canvas" width="360" height="360" style="position:relative; top:0px;letter-spacing: 0px;"></canvas>
+	   
+	   </div>
+
+	  
+	<script>
+	document.getElementById("canvas").style.backgroundColor = "white";
+	document.getElementById("header").style.backgroundColor = "white";
+	
+	var ws='';
+	var url= window.localStorage.getItem('url').toString();	
+	console.log("connecting to: "+url);  		  
+	ws = new WebSocket(url);
+	
+
+	////////// Websocket related functions /////////
+	ws.onopen = function() {
+		ws.send('Ping'); // Send the message 'Ping' to the server
+	};
+	ws.onclose = function() {
+		
+	};
+	ws.onmessage = function(msg) {
+		console.log(msg.data); // Send the message 'Ping' to the server
+		navigator.vibrate(100);		
+	};
+	ws.onerror = function () {
+		console.error("Websocket Error!");
+		alert("Websocket Error!");
+	};
+	///////////////////////////////////////////////
+	
+	
+	//////////////////Events//////////////////////
+	var page = document.getElementById("robotControl");
+	
+	// Rotary Events //
+    var rotaryEventHandler = function(e)
+    {
+        
+        var ev_time=tizen.time.getCurrentDateTime().getSeconds()+"."+tizen.time.getCurrentDateTime().getMilliseconds();
+       if (e.detail.direction === "CW")
+       {
+    	   console.log("Rotate CW:\t'"+ ev_time);
+    	   ws.send("CW\t"+ev_time);
+    	   
+       }
+       else if (e.detail.direction === "CCW") 
+       {
+    	   console.log("Rotate CCW:\t"+tizen.time.getCurrentDateTime().getMilliseconds());
+    	   ws.send("CCW\t"+ev_time);
+    	   
+       }
+        
+    };
+
+	document.addEventListener("rotarydetent", rotaryEventHandler,true);	
+	
+	
+	////// Touch Events //////
+
+
+	// Multitouch Events //
+	var touchDownT = 0;
+	var touchType = "";
+	var touchDownXY = [0,0];
+	var lastPos =[0,0];
+	
+    var multiTouchHandler = function(e){
+    	if(ws.readyState==1){
+            touchDownT = Date.now();
+    		e.preventDefault();
+			touchDownXY[0] = e.touches[0].pageX;
+			touchDownXY[1] = e.touches[0].pageY;
+			lastPos[0] = touchDownXY[0];
+			lastPos[1] = touchDownXY[1];
+									
+			var touchCount = e.touches.length;
+			console.log("touches: " + touchCount);
+			ws.send("Touches: " + touchCount);
+			
+			if(touchCount==2){
+	    		touchType = "Two Finger";
+	    		document.getElementById("canvas").style.backgroundColor = "blue";
+	    		document.getElementById("header").style.backgroundColor = "blue";
+			}
+			else if(touchCount==1){
+	    		touchType = "One Finger";
+	    		document.getElementById("canvas").style.backgroundColor = "red";
+	    		document.getElementById("header").style.backgroundColor = "red";
+			}
+			else{
+	    		console.log("Error");
+	    		ws.send("Unknown");
+			}
+			
+    	}
+    	else{
+        	console.log("Websocket not ready for touch event");
+        	}
+    }
+	
+    var moveTouchHandler = function(e){
+        console.log("move: "+e.touches[0].pageX);
+		e.preventDefault();
+		lastPos[0]=e.touches[0].pageX;
+		lastPos[1]=e.touches[0].pageY;
+    }
+        
+    var endTouchHandler = function(e){
+		e.preventDefault();
+		ws.send(e.type);
+        var dt_lim = 300;
+        var dist_lim = 50;
+        var dur = Date.now() - touchDownT;
+        console.log("Touch even duration: " + dur);
+        var dist = 0;
+		var dist = Math.sqrt(Math.pow(lastPos[0]-touchDownXY[0],2)+Math.pow(lastPos[1]-touchDownXY[1],2));
+        console.log("dist: "+dist+" 1: "+lastPos[0]+ " 2: " + touchDownXY[0]);
+    	if(ws.readyState==1){
+        	ws.send("End Touch");
+        	console.log("End Touch");
+        	if(dur<dt_lim && dist>dist_lim){
+				ws.send(touchType + " Swipe");
+            }
+        	else{
+        		ws.send(touchType + " Press");
+        	}
+    		document.getElementById("canvas").style.backgroundColor = "white";
+    		document.getElementById("header").style.backgroundColor = "white";
+      	}
+    	else{
+        	console.log("Websocket not ready for touch event");
+        	}
+    }
+    
+    page.addEventListener('touchstart', multiTouchHandler, true);
+	page.addEventListener('touchmove', moveTouchHandler, true);
+    page.addEventListener('touchend', endTouchHandler, true);
+
+	// HW Back Button Press Event - modified from app.js to unregister rotary handler from window //
+    window.addEventListener( 'tizenhwkey', function( ev ) {
+		if( ev.keyName === "back" ) {
+			document.removeEventListener("rotarydetent", rotaryEventHandler);	
+			var page = document.getElementsByClassName( 'ui-page-active' )[0],
+				pageid = page ? page.id : "";
+			
+			if( pageid === "pageMain" ) {
+				try {
+					tizen.application.getCurrentApplication().exit();
+				} catch (ignore) {
+				}
+			} else {
+				window.history.back();
+			}
+		}
+	} );
+	/////////////////////////////////////////////////////////
+	
+   </script>
+   
+   
+	</div>
+	<!-- <script src="app.js"></script> -->
+	
+	</body>
+</html>
