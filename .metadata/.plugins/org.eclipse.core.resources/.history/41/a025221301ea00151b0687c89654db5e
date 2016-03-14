@@ -29,16 +29,8 @@
 	{
 		if(ws.readyState==1){
 			ws.send("Hello");
-			console.log("Button Press");
 		}
 	});
-	
-	document.addEventListener("click", function(){
-		if(ws.readyState==1){
-			ws.send("Screen Press");
-			console.log("Screen Press");
-		}
-	});	
 
 	////////// Websocket related functions /////////
 	ws.onopen = function() {
@@ -56,7 +48,7 @@
 	///////////////////////////////////////////////
 
 	// Rotary Events //
-    var rotaryEventHandler = function(e)
+    var rotaryEventHandler = function()
     {
        if (e.detail.direction === "CW")
        {

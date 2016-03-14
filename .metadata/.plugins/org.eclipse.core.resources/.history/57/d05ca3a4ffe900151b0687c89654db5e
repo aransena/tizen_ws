@@ -29,16 +29,8 @@
 	{
 		if(ws.readyState==1){
 			ws.send("Hello");
-			console.log("Button Press");
 		}
 	});
-	
-	document.addEventListener("click", function(){
-		if(ws.readyState==1){
-			ws.send("Screen Press");
-			console.log("Screen Press");
-		}
-	});	
 
 	////////// Websocket related functions /////////
 	ws.onopen = function() {
@@ -56,23 +48,8 @@
 	///////////////////////////////////////////////
 
 	// Rotary Events //
-    var rotaryEventHandler = function(e)
-    {
-       if (e.detail.direction === "CW")
-       {
-    	   console.log("Rotate CW:\t'"+ tizen.time.getCurrentDateTime().getMilliseconds());
-    	   ws.send("CW");
-       }
-       else if (e.detail.direction === "CCW") 
-       {
-    	   console.log("Rotate CCW:\t"+tizen.time.getCurrentDateTime().getMilliseconds());
-    	   ws.send("CCW");
-       }
-    };
 	document.addEventListener("rotarydetent", rotaryEventHandler, false);	
-	/* Rotary event handler */
-
-    
+ 
    </script>
    
 	</div>

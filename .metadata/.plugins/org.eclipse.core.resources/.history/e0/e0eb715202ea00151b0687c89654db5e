@@ -29,7 +29,6 @@
 	{
 		if(ws.readyState==1){
 			ws.send("Hello");
-			console.log("Button Press");
 		}
 	});
 	

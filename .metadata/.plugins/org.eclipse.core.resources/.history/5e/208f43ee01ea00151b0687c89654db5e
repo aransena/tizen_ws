@@ -44,7 +44,7 @@
 	   }
    else{
 	   console.log("Does not exist");
-	   alert("Set websocket\nIP Address");
+	   alert("Set websocket\nIP Address")
 	   }
       var ev1 = document.getElementById("list-p2_main");
       ev1.addEventListener("click", function ()
