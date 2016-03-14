@@ -12,7 +12,7 @@
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>OS7z8rgNs5QBUZ5NtkKXAUdAjXydVdCNXbTrFJY553A=</DigestValue>
+<DigestValue>Viwt9nH2cUCSUsEC2fgoFzG35OM3Wmpi/JHALSZEY7I=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -20,7 +20,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>0vFceJetNYsPWJW5MXK6LX4HfcagP309mRtVBwdK7as=</DigestValue>
+<DigestValue>wYIB3MLf8pVAo5/lxNWdYIRjXXvEthkuDJYh1ZYsK4E=</DigestValue>
 </Reference>
 <Reference URI="js%2Fcircle-helper.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1000,7 +1000,7 @@
 </Reference>
 <Reference URI="robotControl.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Xgg7QOyiMGTjA71q7EyU0HzYT9rVlI6xpvqrWc7b7p0=</DigestValue>
+<DigestValue>uacL+E8huvumXMYiuatDY+9MMG38ZNEK/BPt4ArkuiE=</DigestValue>
 </Reference>
 <Reference URI="second.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1027,11 +1027,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-l04sIlkuEjcYFHCMXI3giM0dCFE0wa/NciIUVmwDrPW22zBlitQ/tHEFVMDfebq26WYoBLSXFznk
-4/K//iyVxkAbrdHjIbgOoFM2u+dun8GnQGDKhSlPTXMXYiLrIIsrqAmgB4/P1DuBoFKn1bn8NT/E
-htlQL9cLE82Nfd4NELPB4XN/Ob7Vblhfs4akPKH1+zggx2AEgZsMMpyT2mFlrcGLKx/+RbZ3nuhv
-MJvgIKjoasinsoBJCn6Pr7oa9vPBeqDgZJPRisABqBmHxzp4oNWlFjvmwbBWaKW0FBTFXWmvx/xz
-zTsC83GG9tw013Mo1IvXRMvZP6ys0qplvc1Nxw==
+wPQKw03dok6hd59/By8LJ3iyIehfFdRO3qtRxGiyeBoMFnkhJe345feUiYJz960v1JeE4yunte1H
+bJeiHklTYDCmWMm8x8zGHdgthmh+c0XmJhEizvjwiYMoMDvvfqNKGvQ2WigueL6TPyQlUWTBEE2Z
+W6uaTuTDxvbyBAjDUNW6u3dg9CUK6OyOo80mmUTtzgNTcyuqkTLqLWkqFF62aVE/3jEPOOC00Khi
+FksGjS/ZoDixzGP6O18sV2+tDYcrDc2/76Y9We3sN+TEZeKCxXqOArgJPJQTJELXnUls8G2AK2xU
+u+m/YCt3E8cXRsO2Z79y/DJ+wj4owqtkFVQbZA==
 </SignatureValue>
 <KeyInfo>
 <X509Data>
