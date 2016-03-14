@@ -1,6 +1,6 @@
-19:32:22 **** Auto Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+02:45:51 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
 ninja all 
-[1/1] Linking gears2robotcontrol_v1
+ninja: no work to do.
 
-19:32:22 Build Finished (took 107ms)
+02:45:51 Build Finished (took 60ms)
 

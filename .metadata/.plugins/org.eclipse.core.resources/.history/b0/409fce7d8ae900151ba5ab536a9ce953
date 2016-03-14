@@ -1,0 +1,4 @@
+(function(tau) {
+	console.log("test");
+
+});

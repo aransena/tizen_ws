@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="test" content="width=device-width, user-scalable=no">
+		<title>test</title>
+		<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css"/>
+		<link rel="stylesheet" media="all" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+		<!--load theme file for your application-->
+	</head>
+
+<body>
+    <div class="ui-page">
+      <div class="ui-content">
+        Blah
+        <div>
+          <a href="#" class="btn">&lt;&lt;</a>
+          
+        </div>
+      </div>
+    </div>
+
+</body>
+	<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+
+	<script src="js/ws.js"></script>	
+
+</html>

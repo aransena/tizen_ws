@@ -1,0 +1,11 @@
+var init = null;
+
+function launchApp() {
+	alert('Hello');
+}
+init = function() {
+document.getElementById('btnCall').addEventListener('click', launchApp);
+}
+
+window.onload = init;
+

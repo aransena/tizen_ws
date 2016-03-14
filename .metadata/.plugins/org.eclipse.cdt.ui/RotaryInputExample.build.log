@@ -1,6 +1,6 @@
-19:32:23 **** Auto Build of configuration Debug for project RotaryInputExample ****
+02:45:53 **** Incremental Build of configuration Debug for project RotaryInputExample ****
 ninja all 
-[1/1] Linking rotaryinputexample
+ninja: no work to do.
 
-19:32:23 Build Finished (took 106ms)
+02:45:53 Build Finished (took 57ms)
 

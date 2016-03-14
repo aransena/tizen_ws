@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>Circular UI</title>
+	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+	<!-- load theme file for your application -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="ui-page ui-page-active" id="first">
+   <div class="ui-content">
+      <a href="html/pagetwo.html" taget="_self">Go to page two</a>
+   </div>
+</div>
+
+<div class="ui-page" id="two">
+   <div class="ui-content">
+      <a href="index2.html">Go to page one</a>
+   </div>
+</div>
+
+	<script type="text/javascript" src="./lib/tau/wearable/js/tau.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

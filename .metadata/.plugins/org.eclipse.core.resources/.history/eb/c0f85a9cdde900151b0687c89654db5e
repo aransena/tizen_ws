@@ -1,0 +1,43 @@
+//Index.html
+<div class="ui-page ui-page-active" id="main">
+		<header class="ui-header">
+			<h2 class="ui-title">TAU Basic</h2>
+		</header>
+		<div class="ui-content content-padding">		
+			    <button id="itemButton" class="ui-btn">Item List</button>		
+			    <button id="loginButton" class="ui-btn">Login page</button>				
+		</div>
+	</div>
+	<div class="ui-page"  id="ItemPage">
+	    	<header class="ui-header">
+				<h2 class="ui-title">Item List</h2>
+			</header>
+	   	<div class="ui-content content-padding">
+	        <ul class="ui-listview">
+				<li>item1</li>
+				<li>item2</li>
+				<li>item3</li>
+				<li>item4</li>
+				<li>item5</li>
+			</ul>
+	    </div>	
+	</div>
+<script>
+	var e = document.getElementById("itemButton");
+	e.addEventListener("click", function() {
+			tau.changePage("#ItemPage");
+		});
+	e = document.getElementById("loginButton");
+	e.addEventListener("click", function() {
+			tau.changePage("loginPage.html");
+		});
+</script>
+//loginPage.html
+<div class="ui-page" id="Login Page">
+		<header class="ui-header">
+			<h2 class="ui-title">Login Page</h2>
+		</header>
+		<div class="ui-content content-padding">		
+			   <a href = "index.html"> <button id="mainButton" class="ui-btn">Goto Main page</button></a>					    		    			
+		</div>
+</div>	

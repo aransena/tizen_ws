@@ -1,0 +1,74 @@
+/*
+ * Copyright (c) 2015 Samsung Electronics Co., Ltd. All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*global define, document, tau */
+
+/**
+ * Main view module.
+ */
+define({
+    name: 'views/main',
+    requires: [
+        'views/display',
+        'views/sound',
+        'views/call',
+        'views/screenLock',
+        'views/input',
+        'views/gearInfo',
+        'views/device',
+        'views/connections',
+        'views/accessibility',
+        'helpers/list',
+        'helpers/popup'
+    ],
+    def: function main(req) {
+        'use strict';
+
+        /**
+         * List helper module instance.
+         * @type {Module}
+         */
+        var listHelper = req.helpers.list,
+
+            /**
+             * Popup helper module instance.
+             * @type {Module}
+             */
+            popupHelper = req.helpers.popup,
+
+            /**
+             * Page element.
+             * @type {HTMLElement}
+             */
+            page = null;
+
+        /**
+         * Initializes module.
+         */
+        function init() {
+            page = document.getElementById('main');
+
+            listHelper.animate(page);
+            popupHelper.resetScrollBeforeOpen(
+                page.querySelector('#power-saving-popup')
+            );
+        }
+
+        return {
+            init: init
+        };
+    }
+});

@@ -1,6 +1,6 @@
-19:32:22 **** Auto Build of configuration Debug for project HelloWorld ****
+02:45:52 **** Incremental Build of configuration Debug for project HelloWorld ****
 ninja all 
-[1/1] Linking helloworld
+ninja: no work to do.
 
-19:32:22 Build Finished (took 157ms)
+02:45:52 Build Finished (took 59ms)
 

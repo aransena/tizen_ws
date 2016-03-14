@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="test" content="width=device-width, user-scalable=no">
+		<title>test</title>
+		<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css"/>
+		<link rel="stylesheet" media="all" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+		<!--load theme file for your application-->
+		<script src="../js/ws.js"></script>	
+	</head>
+
+<body>
+<div class="ui-page ui-page-active" id="pageWS">
+   <header class="ui-header">
+	   <h2 class="ui-title">Third Page</h2>
+   </header>
+   
+   <div class="ui-content">
+        <button id="btnCall" onClick="test()">Call App</button>
+       
+   </div>
+   
+</div>
+
+</body>
+<script>
+function test(){
+	alert("tttt");
+}</script>
+	<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+
+	
+
+</html>

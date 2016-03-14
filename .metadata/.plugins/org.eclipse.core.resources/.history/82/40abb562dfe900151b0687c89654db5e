@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>Circular UI</title>
+	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+	<!-- load theme file for your application -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!--pageTwo.html-->
+<div class="ui-page ui-page-active" id="second">
+   <div class="ui-content">
+      This is the second page of the example.
+      <button id="second-button">Click here to change to page one</button>
+   </div>
+   <script>
+      var el2 = document.getElementById("second-button");
+      el2.addEventListener("click", function ()
+      {
+         tau.changePage("index2.html");
+      });
+   </script>
+</div>
+
+
+	<script type="text/javascript" src="./lib/tau/wearable/js/tau.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

@@ -1,10 +1,6 @@
-19:29:48 **** Build of configuration Debug for project RotaryTimer ****
+02:45:53 **** Incremental Build of configuration Debug for project RotaryTimer ****
 ninja all 
-[1/5] Building src/rotary.o
-[2/5] Building res/edje/timer.edj
-[3/5] Building src/digital.o
-[4/5] Building src/main.o
-[5/5] Linking rotarytimer
+[1/1] Linking rotarytimer
 
-19:29:49 Build Finished (took 519ms)
+02:45:53 Build Finished (took 108ms)
 

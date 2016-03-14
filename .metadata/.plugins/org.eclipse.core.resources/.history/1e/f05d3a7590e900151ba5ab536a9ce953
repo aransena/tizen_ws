@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>Hello TAU</title>
+		<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css"/>
+		<link rel="stylesheet" media="all" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+		<!--load theme file for your application-->
+	</head>
+
+<body>
+<div class="ui-page ui-page-active" id="pageWS">
+   
+   <div id="mainContent">
+   
+        <button id="btnCall">Call App</button>
+           <script src="js/ws.js"></script>
+        
+   </div>
+   
+</div>
+
+</body>
+
+</html>

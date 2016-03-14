@@ -1,6 +1,6 @@
-19:32:26 **** Auto Build of configuration Debug for project UDPTest ****
+02:45:54 **** Incremental Build of configuration Debug for project UDPTest ****
 ninja all 
-[1/1] Linking udptest
+ninja: no work to do.
 
-19:32:26 Build Finished (took 106ms)
+02:45:54 Build Finished (took 57ms)
 

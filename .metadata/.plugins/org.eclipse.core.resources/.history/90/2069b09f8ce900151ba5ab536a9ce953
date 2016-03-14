@@ -1,0 +1,12 @@
+var init = null;
+
+function launchApp() {
+	alert('Hello');
+}
+init = function() {
+	console.log("init");
+document.getElementById('connect-btn').addEventListener('click', launchApp);
+}
+
+window.onload = init;
+
