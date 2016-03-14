@@ -1,3 +1,0 @@
-1. tw_ic_button_apply_holo_dark.png image is a character from DejaVu Sans font. The font is under public domain license: http://dejavu-fonts.org/wiki/License.
-
-2. tw_ic_button_erase_holo_dark.png image is a character from Y.OzFontP font. The font is under open source license: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=OFL.

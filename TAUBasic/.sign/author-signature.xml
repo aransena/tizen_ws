@@ -8,23 +8,11 @@
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>3KJGOAXygxsvwlErBWRmalbuWXRGwvWqvJP1FLmvHY4=</DigestValue>
+<DigestValue>XiAXKx8UzS3zHflt38dl8mfcBlE10Y9JldMTtys3RUw=</DigestValue>
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>yxb11zEpiLoeP2n3oIljhdxKGrhAl10fvAXgT/mWmP0=</DigestValue>
-</Reference>
-<Reference URI="html%2Fsecond.html">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>4tXd9Ey0snx92Zi9m2njypXXDsWF02rf1xroVAASyJQ=</DigestValue>
-</Reference>
-<Reference URI="html%2Fthird.html">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>IlzzFO1RpCvphUS11ZtuNZehkjmGluCBN8wSfpmbwO8=</DigestValue>
-</Reference>
-<Reference URI="html%2Fwebsocket.html">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>XuwPK6jL7gHn2ffoRi3DTI29+340MIGzWdE3KIiBurE=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -32,11 +20,11 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>/mc//HuS2USkR8oucv+aqRYjR2qnWamiZWKkC1q/SV4=</DigestValue>
+<DigestValue>pJwMzhKSq4ZprIUCKKfJIqehwQQMWl0EOvPyJIirVWo=</DigestValue>
 </Reference>
 <Reference URI="index2.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>L2jqVax4PLPOxS9AH/KSDHrY8CJ762uosUFjMps+iIg=</DigestValue>
+<DigestValue>D8Q4m/NDu+o7QchtVkRhIe/dqzM9su3Rmo9LaOkO418=</DigestValue>
 </Reference>
 <Reference URI="js%2Fcircle-helper.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -44,7 +32,7 @@
 </Reference>
 <Reference URI="js%2Fmarquee-helper.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>eyXthjn24kLbgdUg0vpIwJHhlWWPiqiNXNJXmweDbSQ=</DigestValue>
+<DigestValue>acNlqIBCgcgCsP2wpqGbkboFueTPwofTUY+HgLk2wM0=</DigestValue>
 </Reference>
 <Reference URI="js%2Fws.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1016,11 +1004,23 @@
 </Reference>
 <Reference URI="pagetwo.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>ZjKusHM1zczSrutaQb2gxMJNws5S0vPfcSv9CeMfQJE=</DigestValue>
+<DigestValue>S5DtB//aVpmFRq64wlI7F43nPt8FSYEy2wpC9drU8E8=</DigestValue>
+</Reference>
+<Reference URI="second.html">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>Lixj6k3c+LwFI1Q9yfoUZ0Swz9oWZF+wXareDwP5Wlk=</DigestValue>
 </Reference>
 <Reference URI="temp">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>LfGN97w33FMv7++DV1CvNdCbkxQlrT1Wj1O8PvP0qZ0=</DigestValue>
+</Reference>
+<Reference URI="third.html">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>+KfnVGqTjyekaJksxInRVpQYs2/AjShbRSt1OZJas6k=</DigestValue>
+</Reference>
+<Reference URI="websocket.html">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>XuwPK6jL7gHn2ffoRi3DTI29+340MIGzWdE3KIiBurE=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -1031,11 +1031,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-0EewADyKKuo7o41GLLyccpAzGA9XZZVG4SdbQVBzTsw/6wQ1R+W/xE8/nl5xJSFdz1YZaSUv/T8N
-p/24chs9SG5WGh0AymUd0ZjAIodsr2BT19zh/pOZfEym61hinhd7e6htrrNEecBjaLISu6TVUJNj
-ernI6FKVohhKzIrmNODEDSzpR+JryxJvwh1uRKshOw9mWf5LJwA3dCGWNscw8DArepYWAUw+VG+E
-TH/QjgiRXlygD1rBQWg9Ox8yAj59LD8vpgk8IqNMNNqVZwTh+e82zXwoGu60MXpcsud/8EHb/uYZ
-ntF9qrmK/I9c5AFGmT4+kajCH6VlvmOPqfhuGg==
+TQ43wcwcwbNLottAivxZC+AsTI79R+nG9mr/avokN62edz/vUwrCARJpI1BXLbw6lSnSmHxUs2o7
+fZkHCAWu9uZQDbzXKWqXXG1GO9dCxfXNmTSpiBLlodK/Rzvl70U0gXR4hgi/RjdTyl/uw5b9erCR
+w/4SFULFFJz1ypqTIMkjMgq3i3AbEWXc3AWevl8db0SW+zpSV2DhSMdN1mDGPaWtOYa+26qQLjix
+TxMOdFE64hrCJQ6UoXYUbPGhN+VRu/S1+gmHBm8k0w17GXcX+I2Mi+xaKGWWEtyyIpWZoXyx6Och
+buOvzEGJFf9dpwXHwLiFqUddPIgMl7mslPwoRw==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>Hello TAU</title>
+		<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css"/>
+		<link rel="stylesheet" media="all" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+		<!--load theme file for your application-->
+		<link rel="stylesheet"href="css/style.css"/>
+	</head>
+	<body>
+	
+	<div class="ui-page ui-page-active" id="robotControl">
+	   <div class="ui-content">
+	   </div>
+   <footer class="ui-footer ui-bottom-button">
+      <a href="" class="ui-btn" id="btn-Connect">Connect</a>
+   </footer>
+	  
+	<script>
+
+	function(){
+		console.log("Teest test")
+		}
+	/*var url= window.localStorage.getItem('url').toString();	
+	console.log("connecting to: "+url);  		  
+	ws = new WebSocket(url);
+	console.log("Websocket: "+ws);
+	window.localStorage.setItem('websocket', ws);
+	
+	var ws='';
+	var ev = document.getElementById("btn-Connect");*/
+	
+	ev.addEventListener("click", function ()
+	{
+		ws =  window.localStorage.getItem('websocket');
+		console.log("loaded websocket: " + ws);
+		if(ws.readyState==1){
+			ws.send("Hello");
+		}
+	});
+
+	ws.onopen = function () {
+		ws.send('Ping'); // Send the message 'Ping' to the server
+	};
+ 
+   </script>
+   
+	</div>
+	<script src="app.js"></script>
+	
+	</body>
+</html>
