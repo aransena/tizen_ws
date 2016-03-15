@@ -4,6 +4,7 @@
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.normal"/>
     <feature name="http://tizen.org/feature/network.internet"/>
+    <feature name="http://tizen.org/feature/sensor.proximity"/>
     <icon src="icon.png"/>
     <name>RobotControlWebS</name>
     <tizen:privilege name="http://tizen.org/privilege/application.info"/>

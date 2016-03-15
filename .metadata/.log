@@ -6575,3 +6575,922 @@ org.eclipse.core.internal.resources.ResourceException: Resource is out of sync w
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
 !SUBENTRY 1 org.eclipse.core.resources 4 274 2016-03-15 20:47:07.550
 !MESSAGE Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-15 20:52:02.539
+!MESSAGE Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:273)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.tizen.web.zimlaunch 4 0 2016-03-15 20:52:02.539
+!MESSAGE Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-15 20:52:10.510
+!MESSAGE Transferring the package... > Fail
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Error occurred at the below step.
+ `Transferring the package...`
+ (Return Code:3)connection error
+	at org.tizen.web.zimlaunch.step.TransferStep.transferPackage(TransferStep.java:143)
+	at org.tizen.web.zimlaunch.step.TransferStep.executeStep(TransferStep.java:107)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 20:52:27.774
+!MESSAGE [2016.03.15 20:52:27][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 20:56:09.793
+!MESSAGE [2016.03.15 20:56:09][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-15 20:56:32.058
+!MESSAGE Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:273)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.tizen.web.zimlaunch 4 0 2016-03-15 20:56:32.058
+!MESSAGE Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-15 20:58:03.943
+!MESSAGE Transferring the package... > Fail
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Error occurred at the below step.
+ `Transferring the package...`
+ (Return Code:3)connection error
+	at org.tizen.web.zimlaunch.step.TransferStep.transferPackage(TransferStep.java:143)
+	at org.tizen.web.zimlaunch.step.TransferStep.executeStep(TransferStep.java:107)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 20:58:14.642
+!MESSAGE [2016.03.15 20:58:14][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.eclipse.jface 2 0 2016-03-15 21:13:58.117
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.117
+!MESSAGE A conflict occurred for CTRL+I:
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.indent,Indent Line,
+		Indents the current line,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@47b04737,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.active.elements,Format Active Elements,
+		Format active elements,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@60e52f16,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.117
+!MESSAGE A conflict occurred for CTRL+SHIFT+F:
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.format,Format,
+		Format the selected text,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24da51b3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+F,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.format.document,Format,
+		Format selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3ab3211b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.117
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_UP:
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7929d1ab,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.enclosing,Select Enclosing Element,
+		Expand selection to include enclosing element,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7d0f739d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.117
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.matching.bracket,Go to Matching Bracket,
+		Moves the cursor to the matching bracket,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@28846fb2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4f05c2f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.117
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.add.block.comment,Add Block Comment,
+		Enclose the selection with a block comment,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c031f62,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.add.block.comment,Add Block Comment,
+		Add Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3605fb02,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.toggle_comment,Toggle Comment,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ec123e6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.117
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.show.outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2a1bd89b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.quick_outline,Quick Outline,
+		Show the quick outline for the editor input,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@a29bdb6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.118
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3a65fcf0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7dc10e83,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javascriptViewScope,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.open.file.from.source,Open Selection,
+		Open an editor on the selected link,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d9ffaf5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.118
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_UP:
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.previous.member,Go to Previous Member,
+		Move the caret to the previous member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@214f1d0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_UP,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.previousSibling,Previous Sibling,
+		Go to Previous Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19abc9d7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.118
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_DOWN:
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2d0f8fc1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.last,Restore Last Selection,
+		Restore last selection,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b27d947,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.118
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.toggle.comment,Toggle Comment,
+		Toggle comment the selected lines,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58a6df03,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.toggle.comment,Toggle Comment,
+		Toggle Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5d870f00,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.tizen.common.ui.commandbar.commands.CommandBar,Command Bar,
+		Command Bar,
+		Category(org.tizen.common.ui.category,Tizen SDK,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c2f6c3e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.118
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_RIGHT:
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@337b6b6d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_RIGHT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.next,Select Next Element,
+		Expand selection to include next sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ebc63dc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.118
+!MESSAGE A conflict occurred for CTRL+SHIFT+\:
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.remove.block.comment,Remove Block Comment,
+		Remove the block comment enclosing the selection,
+		Category(org.eclipse.wst.jsdt.ui.category.source,Source,JavaScript Source Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77fc3593,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+\,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.remove.block.comment,Remove Block Comment,
+		Remove Block Comment,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2938cd8c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.118
+!MESSAGE A conflict occurred for CTRL+SHIFT+ARROW_DOWN:
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.goto.next.member,Go to Next Member,
+		Move the caret to the next member of the JavaScript file,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6bc9db82,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(CTRL+SHIFT+ARROW_DOWN,
+	ParameterizedCommand(Command(org.eclipse.wst.xml.ui.nextSibling,Next Sibling,
+		Go to Next Sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@29763ff7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-03-15 21:13:58.118
+!MESSAGE A conflict occurred for ALT+SHIFT+ARROW_LEFT:
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.jsdt.ui.edit.text.java.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@116a6b17,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.jsdt.ui.javaEditorScope,,,system)
+Binding(ALT+SHIFT+ARROW_LEFT,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.structure.select.previous,Select Previous Element,
+		Expand selection to include previous sibling,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f1762d0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:16:31.510
+!MESSAGE [2016.03.15 21:16:31][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.debugtools.OnDemandInstall$1InstallJob 4 0 2016-03-15 21:17:55.957
+!MESSAGE [2016.03.15 21:17:55][ERROR] OnDemandInstall.java(322) - Cannot install 'tizen-security-policy,rpm,i586,tizen-security-policy-2.3.2-1.i586.rpm' due to : cd /home/developer/sdk_tools && rpm -U tizen-security-policy-2.3.2-1.i586.rpm && rm -f tizen-security-policy-2.3.2-1.i586.rpm; echo $?; (exitcode: 1)
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:20:36.745
+!MESSAGE [2016.03.15 21:20:36][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:20:37.849
+!MESSAGE [2016.03.15 21:20:37][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:20:38.685
+!MESSAGE [2016.03.15 21:20:38][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:20:39.690
+!MESSAGE [2016.03.15 21:20:39][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:20:40.714
+!MESSAGE [2016.03.15 21:20:40][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:20:41.769
+!MESSAGE [2016.03.15 21:20:41][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-15 21:20:55.960
+!MESSAGE Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:273)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.tizen.web.zimlaunch 4 0 2016-03-15 21:20:55.960
+!MESSAGE Could not launch the RobotControlWebS application because the RobotControlWebS application is currently in launch.
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:21:54.160
+!MESSAGE [2016.03.15 21:21:54][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.rds.RdsDeployer 4 0 2016-03-15 21:22:01.636
+!MESSAGE [2016.03.15 21:22:01][ERROR] RdsDeployer.java(291) - Cannot partially upload or reinstall
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: [RDS] Failed to push file(s)
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:720)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:568)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.web.zimlaunch.step.RdsStep.runRds(RdsStep.java:235)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:141)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: [RDS] Pushing file "/home/aransena/tizen_ws/RobotControlWebS/XHIY5TNuo7.RobotControlWebS.zip" to "/opt/usr/apps/tmp/XHIY5TNuo7/XHIY5TNuo7.RobotControlWebS.zip" in target...
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:559)
+	... 10 more
+!SUBENTRY 1 org.tizen.common 4 0 2016-03-15 21:22:01.636
+!MESSAGE [RDS] Failed to push file(s)
+!STACK 0
+java.io.IOException: [RDS] Pushing file "/home/aransena/tizen_ws/RobotControlWebS/XHIY5TNuo7.RobotControlWebS.zip" to "/opt/usr/apps/tmp/XHIY5TNuo7/XHIY5TNuo7.RobotControlWebS.zip" in target...
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:559)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.web.zimlaunch.step.RdsStep.runRds(RdsStep.java:235)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:141)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.externals 4 0 2016-03-15 21:22:02.042
+!MESSAGE Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at zipeditor.ZipContentProvider.isForUs(ZipContentProvider.java:137)
+	at org.tizen.common.externals.decorator.PackageDecorator.decorateImage(PackageDecorator.java:64)
+	at org.eclipse.ui.internal.decorators.FullDecoratorDefinition.decorateImage(FullDecoratorDefinition.java:114)
+	at org.eclipse.ui.internal.decorators.FullImageDecoratorRunnable.run(FullImageDecoratorRunnable.java:28)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.safeDecorateImage(DecoratorManager.java:642)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.decorateImage(DecoratorManager.java:590)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$ManagedWorkbenchLabelDecorator.decorateImage(DecoratorManager.java:149)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.getImage(DecoratingStyledCellLabelProvider.java:173)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.update(DelegatingStyledCellLabelProvider.java:118)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.update(DecoratingStyledCellLabelProvider.java:134)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:152)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:953)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:113)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1033)
+	at org.eclipse.ui.navigator.CommonViewer.doUpdateItem(CommonViewer.java:409)
+	at org.eclipse.ui.internal.navigator.resources.ResourceToItemsMapper.updateItem(ResourceToItemsMapper.java:142)
+	at org.eclipse.ui.internal.navigator.resources.ResourceToItemsMapper.objectChanged(ResourceToItemsMapper.java:131)
+	at org.eclipse.ui.navigator.CommonViewer.handleLabelProviderChanged(CommonViewer.java:223)
+	at org.eclipse.jface.viewers.ContentViewer$1.labelProviderChanged(ContentViewer.java:97)
+	at org.eclipse.jface.viewers.BaseLabelProvider$1.run(BaseLabelProvider.java:74)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.BaseLabelProvider.fireLabelProviderChanged(BaseLabelProvider.java:72)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider$1.labelProviderChanged(DecoratingStyledCellLabelProvider.java:77)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$1.run(DecoratorManager.java:430)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.fireListener(DecoratorManager.java:428)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$3.runInUIThread(DecorationScheduler.java:530)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3717)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3366)
+	at org.tizen.common.connection.explorer.RemoteDeviceManagerDialog.open(RemoteDeviceManagerDialog.java:147)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.startRemoteDeviceManager(ActionDeviceRemote.java:25)
+	at org.tizen.common.connection.explorer.action.ActionDeviceRemote.run(ActionDeviceRemote.java:20)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:499)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2016-03-15 21:22:02.042
+!MESSAGE Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-15 21:22:02.239
+!MESSAGE step SDB shell handle failed
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Failed to `step SDB shell handle 'mkdir -p /opt/usr/apps/tmp' command` operation
+ (Return Code:31)sdb command rejected exception
+	at org.tizen.web.zimlaunch.util.CommandLauncher.runCommand(CommandLauncher.java:170)
+	at org.tizen.web.zimlaunch.step.TransferStep.executeStep(TransferStep.java:103)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:157)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:22:08.210
+!MESSAGE [2016.03.15 21:22:08][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:22:08.803
+!MESSAGE [2016.03.15 21:22:08][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.eclipse.core.resources 4 2 2016-03-15 21:22:19.553
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.tizen.web.editor.configuration.ConfigurationEditor$4.visit(ConfigurationEditor.java:384)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at org.tizen.web.editor.configuration.ConfigurationEditor.resourceChanged(ConfigurationEditor.java:375)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:396)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1531)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at org.tizen.web.packager.ui.WebPackager.removePackage(WebPackager.java:626)
+	at org.tizen.web.zimlaunch.step.PackageStep.executeStep(PackageStep.java:74)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:157)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.resources 4 2 2016-03-15 21:22:19.563
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.tizen.web.editor.configuration.ConfigurationEditor$4.visit(ConfigurationEditor.java:384)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at org.tizen.web.editor.configuration.ConfigurationEditor.resourceChanged(ConfigurationEditor.java:375)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:396)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1531)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at org.tizen.web.packager.ui.WebPackager.getPackagingResources(WebPackager.java:259)
+	at org.tizen.web.packager.ui.WebPackager.createPackage(WebPackager.java:171)
+	at org.tizen.web.packager.ui.WebPackager.createPackage(WebPackager.java:123)
+	at org.tizen.web.zimlaunch.step.PackageStep.executeStep(PackageStep.java:91)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:157)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.externals 4 0 2016-03-15 21:23:40.490
+!MESSAGE Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at zipeditor.ZipContentProvider.isForUs(ZipContentProvider.java:137)
+	at org.tizen.common.externals.decorator.PackageDecorator.decorateImage(PackageDecorator.java:64)
+	at org.eclipse.ui.internal.decorators.FullDecoratorDefinition.decorateImage(FullDecoratorDefinition.java:114)
+	at org.eclipse.ui.internal.decorators.FullImageDecoratorRunnable.run(FullImageDecoratorRunnable.java:28)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.safeDecorateImage(DecoratorManager.java:642)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.decorateImage(DecoratorManager.java:590)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$ManagedWorkbenchLabelDecorator.decorateImage(DecoratorManager.java:149)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.getImage(DecoratingStyledCellLabelProvider.java:173)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.update(DelegatingStyledCellLabelProvider.java:118)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.update(DecoratingStyledCellLabelProvider.java:134)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:152)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:953)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:113)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1033)
+	at org.eclipse.ui.navigator.CommonViewer.doUpdateItem(CommonViewer.java:409)
+	at org.eclipse.ui.internal.navigator.resources.ResourceToItemsMapper.updateItem(ResourceToItemsMapper.java:142)
+	at org.eclipse.ui.internal.navigator.resources.ResourceToItemsMapper.objectChanged(ResourceToItemsMapper.java:131)
+	at org.eclipse.ui.navigator.CommonViewer.handleLabelProviderChanged(CommonViewer.java:223)
+	at org.eclipse.jface.viewers.ContentViewer$1.labelProviderChanged(ContentViewer.java:97)
+	at org.eclipse.jface.viewers.BaseLabelProvider$1.run(BaseLabelProvider.java:74)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.BaseLabelProvider.fireLabelProviderChanged(BaseLabelProvider.java:72)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider$1.labelProviderChanged(DecoratingStyledCellLabelProvider.java:77)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$1.run(DecoratorManager.java:430)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.fireListener(DecoratorManager.java:428)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$3.runInUIThread(DecorationScheduler.java:530)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3717)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3366)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2016-03-15 21:23:40.490
+!MESSAGE Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 21:37:18.735
+!MESSAGE [2016.03.15 21:37:18][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.debugtools.OnDemandInstall$1InstallJob 4 0 2016-03-15 21:37:19.968
+!MESSAGE [2016.03.15 21:37:19][ERROR] OnDemandInstall.java(322) - Cannot install 'tizen-security-policy,rpm,i586,tizen-security-policy-2.3.2-1.i586.rpm' due to : cd /home/developer/sdk_tools && rpm -U tizen-security-policy-2.3.2-1.i586.rpm && rm -f tizen-security-policy-2.3.2-1.i586.rpm; echo $?; (exitcode: 1)
+
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-15 22:04:04.940
+!MESSAGE Element not found: /RobotControlWebS.
+!STACK 0
+java.lang.IllegalArgumentException: Element not found: /RobotControlWebS.
+	at org.eclipse.core.internal.watson.ElementTree.elementNotFound(ElementTree.java:256)
+	at org.eclipse.core.internal.watson.ElementTree.getSubtree(ElementTree.java:446)
+	at org.tizen.common.rds.RdsDeltaDetector.makeDeltaFile(RdsDeltaDetector.java:255)
+	at org.tizen.web.zimlaunch.step.RdsDeltaInputStep.executeStep(RdsDeltaInputStep.java:98)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:157)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.rds.RdsDeployer 4 0 2016-03-15 22:28:23.675
+!MESSAGE [2016.03.15 22:28:23][ERROR] RdsDeployer.java(291) - Cannot partially upload or reinstall
+
+!STACK 1
+org.eclipse.core.runtime.CoreException: [RDS] There is no response while 20000 seconds. Please retry again.
+	at org.tizen.common.rds.RdsDeployer.newCoreException(RdsDeployer.java:720)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:653)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:587)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.web.zimlaunch.step.RdsStep.runRds(RdsStep.java:235)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:141)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.tizen.sdblib.exception.TimeoutException
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:415)
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:377)
+	at org.tizen.sdblib.SdbHelper.readSdbResponse(SdbHelper.java:224)
+	at org.tizen.sdblib.command.Command.sendRequest(Command.java:234)
+	at org.tizen.sdblib.command.Command.in(Command.java:127)
+	at org.tizen.sdblib.command.Command.in(Command.java:104)
+	at org.tizen.sdblib.Device.executeShellCommand(Device.java:507)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:150)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:650)
+	... 11 more
+!SUBENTRY 1 org.tizen.common 4 0 2016-03-15 22:28:23.676
+!MESSAGE [RDS] There is no response while 20000 seconds. Please retry again.
+!STACK 0
+org.tizen.sdblib.exception.TimeoutException
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:415)
+	at org.tizen.sdblib.SdbHelper.read(SdbHelper.java:377)
+	at org.tizen.sdblib.SdbHelper.readSdbResponse(SdbHelper.java:224)
+	at org.tizen.sdblib.command.Command.sendRequest(Command.java:234)
+	at org.tizen.sdblib.command.Command.in(Command.java:127)
+	at org.tizen.sdblib.command.Command.in(Command.java:104)
+	at org.tizen.sdblib.Device.executeShellCommand(Device.java:507)
+	at org.tizen.common.sdb.command.SdbCommand.runCommand(SdbCommand.java:150)
+	at org.tizen.common.rds.RdsDeployer.postInstall(RdsDeployer.java:650)
+	at org.tizen.common.rds.RdsDeployer.partialZipInstall(RdsDeployer.java:587)
+	at org.tizen.common.rds.RdsDeployer.deploy(RdsDeployer.java:289)
+	at org.tizen.web.zimlaunch.step.RdsStep.runRds(RdsStep.java:235)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:141)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.externals 4 0 2016-03-15 22:28:24.145
+!MESSAGE Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:269)
+	at zipeditor.ZipContentProvider.isForUs(ZipContentProvider.java:137)
+	at org.tizen.common.externals.decorator.PackageDecorator.decorateImage(PackageDecorator.java:64)
+	at org.eclipse.ui.internal.decorators.FullDecoratorDefinition.decorateImage(FullDecoratorDefinition.java:114)
+	at org.eclipse.ui.internal.decorators.FullImageDecoratorRunnable.run(FullImageDecoratorRunnable.java:28)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.safeDecorateImage(DecoratorManager.java:642)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.decorateImage(DecoratorManager.java:590)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$ManagedWorkbenchLabelDecorator.decorateImage(DecoratorManager.java:149)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.getImage(DecoratingStyledCellLabelProvider.java:173)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.update(DelegatingStyledCellLabelProvider.java:118)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.update(DecoratingStyledCellLabelProvider.java:134)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:152)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:953)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:113)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1033)
+	at org.eclipse.ui.navigator.CommonViewer.doUpdateItem(CommonViewer.java:409)
+	at org.eclipse.ui.internal.navigator.resources.ResourceToItemsMapper.updateItem(ResourceToItemsMapper.java:142)
+	at org.eclipse.ui.internal.navigator.resources.ResourceToItemsMapper.objectChanged(ResourceToItemsMapper.java:131)
+	at org.eclipse.ui.navigator.CommonViewer.handleLabelProviderChanged(CommonViewer.java:223)
+	at org.eclipse.jface.viewers.ContentViewer$1.labelProviderChanged(ContentViewer.java:97)
+	at org.eclipse.jface.viewers.BaseLabelProvider$1.run(BaseLabelProvider.java:74)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.BaseLabelProvider.fireLabelProviderChanged(BaseLabelProvider.java:72)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider$1.labelProviderChanged(DecoratingStyledCellLabelProvider.java:77)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$1.run(DecoratorManager.java:430)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.fireListener(DecoratorManager.java:428)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$3.runInUIThread(DecorationScheduler.java:530)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3717)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3366)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2016-03-15 22:28:24.146
+!MESSAGE Resource is out of sync with the file system: '/RobotControlWebS/RobotControlWebS.wgt'.
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-15 22:29:10.796
+!MESSAGE Transferring the package... > Fail
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Error occurred at the below step.
+ `Transferring the package...`
+ (Return Code:3)connection error
+	at org.tizen.web.zimlaunch.step.TransferStep.transferPackage(TransferStep.java:143)
+	at org.tizen.web.zimlaunch.step.TransferStep.executeStep(TransferStep.java:107)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:157)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 22:29:26.933
+!MESSAGE [2016.03.15 22:29:26][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.eclipse.ui.console 4 120 2016-03-15 22:29:29.766
+!MESSAGE Error logged from Console plug-in: 
+!STACK 0
+java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:453)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:242)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:237)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.eclipse.ui.console.MessageConsoleStream.print(MessageConsoleStream.java:56)
+	at org.tizen.common.ui.view.console.ConsoleManager2.print(ConsoleManager2.java:318)
+	at org.tizen.common.ui.view.console.ConsoleManager2.println(ConsoleManager2.java:344)
+	at org.tizen.web.zimlaunch.util.jsconsole.JsLogReceiver.printJsLog(JsLogReceiver.java:223)
+	at org.tizen.web.zimlaunch.util.jsconsole.JsLogReceiver.processNewLines(JsLogReceiver.java:103)
+	at org.tizen.sdblib.receiver.MultiLineReceiver.flush(MultiLineReceiver.java:202)
+	at org.tizen.sdblib.receiver.MultiLineReceiver.append(MultiLineReceiver.java:185)
+	at org.tizen.sdblib.receiver.AbstractShellOutputReceiver.append(AbstractShellOutputReceiver.java:59)
+	at org.tizen.sdblib.command.Command.in(Command.java:168)
+	at org.tizen.sdblib.command.Command.in(Command.java:104)
+	at org.tizen.sdblib.Device.executeShellCommand(Device.java:507)
+	at org.tizen.web.zimlaunch.util.jsconsole.JSLogThread.run(JSLogThread.java:58)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 22:29:30.920
+!MESSAGE [2016.03.15 22:29:30][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 22:29:34.700
+!MESSAGE [2016.03.15 22:29:34][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.eclipse.ui.console 4 120 2016-03-15 22:29:39.711
+!MESSAGE Error logged from Console plug-in: 
+!STACK 0
+java.io.IOException: Document is closed
+	at org.eclipse.ui.internal.console.IOConsolePartitioner.streamAppended(IOConsolePartitioner.java:453)
+	at org.eclipse.ui.console.IOConsoleOutputStream.notifyParitioner(IOConsoleOutputStream.java:242)
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:237)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.eclipse.ui.console.MessageConsoleStream.print(MessageConsoleStream.java:56)
+	at org.tizen.common.ui.view.console.ConsoleManager2.print(ConsoleManager2.java:318)
+	at org.tizen.common.ui.view.console.ConsoleManager2.println(ConsoleManager2.java:344)
+	at org.tizen.web.zimlaunch.util.jsconsole.JsLogReceiver.printJsLog(JsLogReceiver.java:223)
+	at org.tizen.web.zimlaunch.util.jsconsole.JsLogReceiver.processNewLines(JsLogReceiver.java:103)
+	at org.tizen.sdblib.receiver.MultiLineReceiver.flush(MultiLineReceiver.java:202)
+	at org.tizen.sdblib.receiver.MultiLineReceiver.append(MultiLineReceiver.java:185)
+	at org.tizen.sdblib.receiver.AbstractShellOutputReceiver.append(AbstractShellOutputReceiver.java:59)
+	at org.tizen.sdblib.command.Command.in(Command.java:168)
+	at org.tizen.sdblib.command.Command.in(Command.java:104)
+	at org.tizen.sdblib.Device.executeShellCommand(Device.java:507)
+	at org.tizen.web.zimlaunch.util.jsconsole.JSLogThread.run(JSLogThread.java:58)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 22:30:44.730
+!MESSAGE [2016.03.15 22:30:44][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 22:30:48.724
+!MESSAGE [2016.03.15 22:30:48][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-03-15 22:32:00.746
+!MESSAGE step SDB shell handle failed
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Failed to `step SDB shell handle 'mkdir -p /opt/usr/apps/tmp' command` operation
+ (Return Code:31)sdb command rejected exception
+	at org.tizen.web.zimlaunch.util.CommandLauncher.runCommand(CommandLauncher.java:170)
+	at org.tizen.web.zimlaunch.step.TransferStep.executeStep(TransferStep.java:103)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.step.RdsStep.executeStep(RdsStep.java:157)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 22:33:20.970
+!MESSAGE [2016.03.15 22:33:20][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2016-03-15 22:33:22.243
+!MESSAGE [2016.03.15 22:33:22][ERROR] ConnectionExplorerLabelProvider.java(106) - Failed to get platform capability
+
