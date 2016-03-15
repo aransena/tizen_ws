@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<title>Circular UI</title>
+<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+	href="lib/tau/wearable/theme/default/tau.circle.min.css">
+<!-- load theme file for your application -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="">
+
+	<div class="ui-page ui-page-active" id="pageMain">
+		<div class="ui-content">
+			<ul class="ui-listview ui-snap-listview expand-list" id="snapList">
+				<li class="li-has-2line" id="list-start_main">
+					<div class="ui-marquee ui-marquee-gradient">Start</div>
+					<div class="li-text-sub ui-li-sub-text">Control Robot</div>
+				</li>
+
+				<li class="li-has-2line" id="list-auto_main">
+					<div class="ui-marquee ui-marquee-gradient">Return Control</div>
+					<div class="li-text-sub ui-li-sub-text">Autonomous Mode</div>
+				</li>
+
+				<li class="li-has-2line" id="list-settings_main">
+					<div class="ui-marquee ui-marquee-gradient">Settings</div>
+					<div class="li-text-sub ui-li-sub-text">Configure network
+						settings</div>
+				</li>
+
+			</ul>
+
+		</div>
+		<script type="text/javascript"> 
+		window.onunload  = function(){};
+		var ws = '';	
+		function checkConnection(){
+			if(window.localStorage.getItem('url')){
+			  console.log("Exists");
+			  console.log(window.localStorage.getItem('url'));
+			  var url = window.localStorage.getItem('url').toString();
+			  if(!ws){
+			  console.log("connecting to: " + url);
+			  ws = new WebSocket(url);
+			  }
+			  ws.onopen = function() {
+					ws.send('IDLE');
+				};
+				
+		   }
+		   else{
+			   console.log("Does not exist");
+			   alert("Set websocket\nIP Address");
+		   }
+		}
+
+		
+
+	   var ev1 = document.getElementById("list-start_main");
+	   ev1.addEventListener("click", function (){
+
+		   if(window.localStorage.getItem('url')){
+			   ws.close();
+			   tau.changePage("robotControl.html");
+			}
+			else{
+				alert("\nError!\nNo robot\nIP set");
+			}
+			
+      });
+
+      var ev2 = document.getElementById("list-auto_main");
+
+      ev2.addEventListener("click",
+					function() {
+						if (window.localStorage.getItem('url')) {
+							if(!ws){
+								}
+							ws.send("AUTO");
+							//ws.close();
+							
+						} else {
+							alert("\nError!\nNo robot\nIP set");
+						}
+
+					});
+
+				var ev3 = document.getElementById("list-settings_main");
+				ev3.addEventListener("click", function() {
+					if(ws){
+						ws.close();
+					}
+					tau.changePage("settings.html");
+				});
+			</script>
+	</div>
+
+
+	<script type="text/javascript" src="js/marquee-helper.js"></script>
+	<script type="text/javascript" src="./lib/tau/wearable/js/tau.min.js"></script>
+	<script type="text/javascript" src="js/circle-helper.js"></script>
+	<script src="app.js" type="text/javascript"></script>
+	<script src="lowBatteryCheck.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>Circular UI</title>
+	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+	<!-- load theme file for your application -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="ui-page ui-page-active" id="pageSettings">
+   <div class="ui-content">
+   	
+     <ul class="ui-listview ui-snap-listview expand-list" id="snapList">     	
+
+    	<li class="li-has-2line" id="list-checkWS_settings">
+	        <div class="ui-marquee ui-marquee-gradient">Check WebSocket</div>
+	        <div class="li-text-sub ui-li-sub-text">Click to see websocket address</div>
+    	</li>
+
+
+    	<li class="li-has-2line" id="list-setWS_settings">
+	        <div class="ui-marquee ui-marquee-gradient">Set Robot IP</div>
+	        <div class="li-text-sub ui-li-sub-text">Click to set Robot IP</div>
+    	</li>
+    	
+
+      </ul>
+      
+   </div>
+   <script> 
+   //console.log("start: ", window.localStorage.getItem('url').length);
+
+      var ev2 = document.getElementById("list-setWS_settings");
+      ev2.addEventListener("click", function ()
+      {
+    	  tau.changePage("setURL.html");
+      });
+
+      var ev3 = document.getElementById("list-checkWS_settings");
+      ev3.addEventListener("click", function ()
+      {
+		  	if(window.localStorage.getItem('url')){
+				console.log(window.localStorage.getItem('url').toString());
+				alert("\n\nWS URL: \n" + window.localStorage.getItem('url').toString());
+			}
+	  		else{
+	  			alert("\nError!\nNo robot \nIP set");
+ 	  		}		
+      });
+      
+   </script>
+</div>
+
+
+	<script type="text/javascript" src="js/marquee-helper.js"></script>
+	<script type="text/javascript" src="./lib/tau/wearable/js/tau.min.js"></script>
+	<script type="text/javascript" src="js/circle-helper.js"></script>
+	<script src="app.js"></script>
+	<script src="lowBatteryCheck.js"></script>
+</body>
+</html>

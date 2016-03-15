@@ -65,6 +65,7 @@ static void reset_data(void *data) {
 
 static void win_back_cb(void *data, Evas_Object *obj, void *event_info) {
 	appdata_s *ad = data;
+	//dlog_print(DLOG_DEBUG, LOG_TAG, "back pressed");
 	/* Let window go to hide state. */
 	elm_win_lower(ad->win);
 }

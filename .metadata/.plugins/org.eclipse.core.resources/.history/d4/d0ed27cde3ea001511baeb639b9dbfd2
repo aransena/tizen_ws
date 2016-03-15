@@ -1,0 +1,26 @@
+// Rotary Events //
+var rotaryEventHandler = function(e)
+{
+
+    
+    var ev_time=tizen.time.getCurrentDateTime().getSeconds()+"."+tizen.time.getCurrentDateTime().getMilliseconds();
+   if (e.detail.direction === "CW")
+   {
+	   console.log("Rotate CW:\t'"+ ev_time);
+	   //ws.send("CW\t"+ev_time);
+	   //msgPack.CW=1;
+	   self.postMessage("CW");
+	   
+   }
+   else if (e.detail.direction === "CCW") 
+   {
+	   console.log("Rotate CCW:\t"+tizen.time.getCurrentDateTime().getMilliseconds());
+	   //ws.send("CCW\t"+ev_time);
+	   //msgPack.CCW=1;
+	   self.postMessage("CCW");
+	   
+   }
+    
+};
+
+self.addEventListener("rotarydetent", rotaryEventHandler,false);	

@@ -250,3 +250,37 @@ ninja: no work to do.
 22:27:58 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
 ninja all 
 ninja: no work to do.
+17:16:33 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/1] Linking gears2robotcontrol_v1
+17:26:17 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+ninja: no work to do.
+18:50:18 **** Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:138:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol_v2
+18:52:21 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+ninja: no work to do.
+18:56:19 **** Incremental Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:67:13: warning: unused variable 'ad' [-Wunused-variable]
+        appdata_s *ad = data;
+                   ^
+../src/main.c:138:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+2 warnings generated.
+[2/2] Linking gears2robotcontrol_v2

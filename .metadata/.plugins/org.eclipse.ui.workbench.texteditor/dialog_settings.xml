@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="289" key="DIALOG_WIDTH"/>
-		<item value="425" key="DIALOG_Y_ORIGIN"/>
-		<item value="432" key="DIALOG_HEIGHT"/>
-		<item value="1006" key="DIALOG_X_ORIGIN"/>
+		<item value="533" key="DIALOG_Y_ORIGIN"/>
+		<item value="1495" key="DIALOG_X_ORIGIN"/>
+		<item value="429" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="rotar" key="selection"/>
+		<item value="msgP" key="selection"/>
 		<list key="findhistory">
-			<item value="rotar"/>
-			<item value="192"/>
-			<item value="rue"/>
-			<item value="antique"/>
-			<item value="page"/>
-			<item value="settings"/>
-			<item value="picture-size-btn"/>
-			<item value="main-clear-btn"/>
+			<item value="msgP"/>
+			<item value="proxi"/>
+			<item value="btn"/>
+			<item value="unregist"/>
+			<item value="setint"/>
+			<item value="onsucc"/>
+			<item value="interval"/>
+			<item value="int"/>
 		</list>
 		<list key="replacehistory">
 		</list>
