@@ -18,3 +18,8 @@
 0	126	0	src/helloworld.o	40aa781036c458d6
 126	186	0	helloworld	e63f4fadcef94d4a
 1	128	0	helloworld	e63f4fadcef94d4a
+0	59	0	helloworld	e63f4fadcef94d4a
+0	2	0	clean_sa	c7f188d8c15bb3bc
+2	4	0	clean	d59b6dac04fa9b5d
+0	136	0	src/helloworld.o	40aa781036c458d6
+136	195	0	helloworld	e63f4fadcef94d4a

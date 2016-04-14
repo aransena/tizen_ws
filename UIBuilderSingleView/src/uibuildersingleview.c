@@ -3,6 +3,7 @@
 
 int main(int argc, char **argv)
 {
+	dlog_print(DLOG_VERBOSE, "APP", "Main");
 	int result = 0;
 	app_data *app = app_create();
 	if (app)

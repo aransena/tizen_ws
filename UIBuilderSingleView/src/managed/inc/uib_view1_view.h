@@ -36,8 +36,8 @@ typedef struct _uib_view1_view_context {
 
 	/* UI Components in this view */
 	Evas_Object *box1;
-	Evas_Object *startButton;
-	Evas_Object *stopButton;
+	Evas_Object *circleslider1;
+	Evas_Object *controlButton;
 } uib_view1_view_context;
 
 

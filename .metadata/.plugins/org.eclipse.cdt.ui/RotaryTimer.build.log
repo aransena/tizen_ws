@@ -1,6 +1,6 @@
-02:45:53 **** Incremental Build of configuration Debug for project RotaryTimer ****
+17:06:09 **** Incremental Build of configuration Debug for project RotaryTimer ****
 ninja all 
-[1/1] Linking rotarytimer
+ninja: no work to do.
 
-02:45:53 Build Finished (took 108ms)
+17:06:09 Build Finished (took 58ms)
 

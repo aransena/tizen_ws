@@ -17,6 +17,7 @@ typedef struct _app_data
 	Evas_Object *win;
 	Evas_Object *bg;
 	Evas_Object *conformant;
+	Evas_Object *btnRef;
 	Eext_Circle_Surface *circle_surface;
 } app_data;
 

@@ -8,7 +8,9 @@
 #include "uib_views.h"
 
 /* event handler declarations */
-void view1_startButton_onclicked(uib_view1_view_context*, Evas_Object*, void*);
+void view1_circleslider1_onvalue_changed(uib_view1_view_context*, Evas_Object*, void*);
+void view1_controlButton_onpressed(uib_view1_view_context*, Evas_Object*, void*);
+void view1_controlButton_onrepeated(uib_view1_view_context*, Evas_Object*, void*);
 
 uib_view_context* uib_view1_view_create(Evas_Object* parent, void* create_callback_param) {
 	app_data *ad = (app_data*)evas_object_data_get(elm_object_top_widget_get(parent), "root");
@@ -28,26 +30,33 @@ uib_view_context* uib_view1_view_create(Evas_Object* parent, void* create_callba
 		elm_box_padding_set(vc->box1,0,0);
 		evas_object_size_hint_align_set(vc->box1, -1.0, -1.0);
 		evas_object_size_hint_weight_set(vc->box1, 1, 1);
-		vc->startButton = elm_button_add(vc->box1);
-		if (vc->startButton) {
-			evas_object_size_hint_align_set(vc->startButton, -1.0, -1.0);			evas_object_size_hint_weight_set(vc->startButton, 1, 1);			elm_object_text_set(vc->startButton,"Start");
-			elm_object_style_set(vc->startButton,"default");
-			elm_button_autorepeat_set(vc->startButton, EINA_FALSE);
-			evas_object_show(vc->startButton);
+		vc->circleslider1 = eext_circle_object_slider_add(vc->box1, vc->ad->circle_surface);
+		if(vc->circleslider1) {
+			eext_rotary_object_event_activated_set(vc->circleslider1, EINA_TRUE);
+			eext_circle_object_value_min_max_set(vc->circleslider1,0.0,360);
+			eext_circle_object_value_set(vc->circleslider1,180);
+			eext_circle_object_slider_step_set(vc->circleslider1,0.01);
+			evas_object_size_hint_align_set(vc->circleslider1, -1.0, -1.0);
+			evas_object_size_hint_weight_set(vc->circleslider1, 1, 1);
+			evas_object_show(vc->circleslider1);
 		}
-		vc->stopButton = elm_button_add(vc->box1);
-		if (vc->stopButton) {
-			evas_object_size_hint_align_set(vc->stopButton, -1.0, -1.0);			evas_object_size_hint_weight_set(vc->stopButton, 1, 1);			elm_object_text_set(vc->stopButton,"Stop");
-			elm_object_style_set(vc->stopButton,"default");
-			elm_button_autorepeat_set(vc->stopButton, EINA_FALSE);
-			evas_object_show(vc->stopButton);
+		vc->controlButton = elm_button_add(vc->box1);
+		if (vc->controlButton) {
+			evas_object_size_hint_align_set(vc->controlButton, -1.0, -1.0);			evas_object_size_hint_weight_set(vc->controlButton, 1, 1);			elm_object_text_set(vc->controlButton,"Button");
+			elm_object_style_set(vc->controlButton,"default");
+			elm_button_autorepeat_set(vc->controlButton, EINA_TRUE);
+			elm_button_autorepeat_initial_timeout_set(vc->controlButton,1);
+			elm_button_autorepeat_gap_timeout_set(vc->controlButton,0.01);
+			evas_object_show(vc->controlButton);
 		}
-		elm_box_pack_end(vc->box1, vc->startButton);
-		elm_box_pack_end(vc->box1, vc->stopButton);
+		elm_box_pack_end(vc->box1, vc->circleslider1);
+		elm_box_pack_end(vc->box1, vc->controlButton);
 		evas_object_show(vc->box1);
 	}
 	//bind event handler
-	evas_object_smart_callback_add(vc->startButton, "clicked", (Evas_Smart_Cb)view1_startButton_onclicked, vc);
+	evas_object_smart_callback_add(vc->circleslider1, "value,changed", (Evas_Smart_Cb)view1_circleslider1_onvalue_changed, vc);
+	evas_object_smart_callback_add(vc->controlButton, "pressed", (Evas_Smart_Cb)view1_controlButton_onpressed, vc);
+	evas_object_smart_callback_add(vc->controlButton, "repeated", (Evas_Smart_Cb)view1_controlButton_onrepeated, vc);
 
 	evas_object_data_set(vc->root_container, KEY_VIEW_CONTEXT, vc);
 	evas_object_event_callback_add(vc->root_container, EVAS_CALLBACK_DEL, (Evas_Object_Event_Cb)uib_view_destroy_callback, vc);

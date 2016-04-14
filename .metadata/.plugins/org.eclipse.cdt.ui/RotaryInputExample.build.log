@@ -1,6 +1,7 @@
-02:45:53 **** Incremental Build of configuration Debug for project RotaryInputExample ****
+15:53:49 **** Build of configuration Debug for project RotaryInputExample ****
 ninja all 
-ninja: no work to do.
+[1/2] Building src/rotaryinputexample.o
+[2/2] Linking rotaryinputexample
 
-02:45:53 Build Finished (took 57ms)
+15:53:49 Build Finished (took 257ms)
 

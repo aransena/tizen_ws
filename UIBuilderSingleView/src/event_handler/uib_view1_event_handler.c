@@ -8,10 +8,29 @@
 
 typedef struct _uib_view1_control_context {
  /* add your variables here */
+	double prev_value;
 
 } uib_view1_control_context;
 
-void view1_startButton_onclicked(uib_view1_view_context *vc, Evas_Object *obj, void *event_info) {
+//void view1_controlButton_onclicked(uib_view1_view_context *vc, Evas_Object *obj, void *event_info) {
+//	dlog_print(DLOG_VERBOSE, "APP", "Clicked");
+//}
+
+void view1_controlButton_onpressed(uib_view1_view_context *vc, Evas_Object *obj, void *event_info) {
+	dlog_print(DLOG_VERBOSE, "APP", "Pressed");
+}
+
+//void view1_controlButton_onunpressed(uib_view1_view_context *vc, Evas_Object *obj, void *event_info) {
+//	dlog_print(DLOG_VERBOSE, "APP", "Released");
+//}
+
+void view1_controlButton_onrepeated(uib_view1_view_context *vc, Evas_Object *obj, void *event_info) {
+	dlog_print(DLOG_VERBOSE, "APP", "Repeated");
+}
+
+void view1_circleslider1_onvalue_changed(uib_view1_view_context *vc, Evas_Object *obj, void *event_info) {
+	double value = eext_circle_object_value_get(vc->circleslider1);
+	dlog_print(DLOG_VERBOSE, "APP", "Slider value: %f", value);
 
 }
 

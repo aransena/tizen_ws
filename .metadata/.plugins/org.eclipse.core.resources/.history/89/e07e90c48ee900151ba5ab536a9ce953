@@ -1,9 +1,0 @@
-( function () {
-	document.getElementById('').addEventListener('click', launchApp);
-} () );
-
-function launchApp(){
-	console.log("Testtttttts");
-}
-
-

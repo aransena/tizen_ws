@@ -1,6 +1,25 @@
-02:45:55 **** Incremental Build of configuration Debug for project UIBuilderSingleView ****
+17:45:42 **** Incremental Build of configuration Debug for project UIBuilderSingleView ****
 ninja all 
-[1/1] Linking uibuildersingleview
+[1/7] Building src/app_main.o
+[2/7] Building src/uibuildersingleview.o
+[3/7] Building src/managed/src/uib_common.o
+[4/7] Building src/managed/src/uib_view1_view.o
+[5/7] Building src/event_handler/uib_view1_event_handler.o
+[6/7] Building src/managed/src/connection/uib_view1_connection.o
+../src/app_main.c:26:51: warning: incompatible pointer types passing 'Eina_Bool (void *, Eext_Rotary_Event_Info *)' to parameter of type 'Eext_Rotary_Event_Cb' (aka 'Eina_Bool (*)(void *, Evas_Object *, Eext_Rotary_Event_Info *)') [-Wincompatible-pointer-types]
+        eext_rotary_object_event_callback_del(ad->btnRef,_rotary_handler_cb);
+                                                         ^~~~~~~~~~~~~~~~~~
+/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/efl-extension/circle/efl_extension_rotary.h:199:89: note: passing argument to parameter 'func' here
+EAPI void *eext_rotary_object_event_callback_del(Evas_Object *obj, Eext_Rotary_Event_Cb func);
+                                                                                        ^
+../src/app_main.c:43:22: warning: unused variable 'handlers' [-Wunused-variable]
+        app_event_handler_h handlers[5] =
+                            ^
+../src/app_main.c:90:26: warning: incompatible pointer types initializing 'uib_view1_view_context *' (aka 'struct _uib_view1_view_context *') with an expression of type 'uib_view_context *' (aka 'struct _uib_view_context *') [-Wincompatible-pointer-types]
+        uib_view1_view_context* vc = startup_view_create(ad);
+                                ^    ~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+[7/7] Linking uibuildersingleview
 
-02:45:55 Build Finished (took 109ms)
+17:45:43 Build Finished (took 309ms)
 

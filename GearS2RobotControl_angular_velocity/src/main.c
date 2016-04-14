@@ -2,7 +2,6 @@
 
 Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev); // function prototype
 
-
 typedef struct appdata {
 	Evas_Object *win;
 	Evas_Object *bg;
@@ -33,9 +32,9 @@ typedef struct appdata {
 	int bezelR;
 	int tap;
 	int longPress;
-
 	int stop;
 	int control;
+	int fingerDown;
 
 } appdata_s;
 
@@ -49,7 +48,6 @@ static void win_delete_request_cb(void *data, Evas_Object *obj,
 static void reset_data(void *data) {
 	appdata_s *ad = data;
 	ad->control=1;
-	//ad->stop=0;
 	ad->bezelL=0;
 	ad->bezelR=0;
 	ad->swipeL=0;
@@ -67,17 +65,16 @@ static void win_back_cb(void *data, Evas_Object *obj, void *event_info) {
 }
 
 static bool send_UDP(void *data) {
-	//const char* content = "this is the message";
 	bool outcome = false;
 	appdata_s *ad = data;
 
 	struct addrinfo* res = ad->res;
 
 	char *str;
-	str = (char *)malloc(23);
+	str = (char *)malloc(25);
 	int mode = 1;
-	sprintf( str, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,",ad->control,ad->stop,ad->bezelL,ad->bezelR,ad->swipeL,ad->swipeR,
-				ad->swipeU,ad->swipeD,ad->tap,ad->longPress,mode);
+	sprintf( str, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,",ad->control,ad->stop,ad->bezelL,ad->bezelR,ad->swipeL,ad->swipeR,
+				ad->swipeU,ad->swipeD,ad->tap,ad->longPress,mode,ad->fingerDown);
 
 	dlog_print(DLOG_DEBUG, LOG_TAG, "sending message: %s", str);
 
@@ -112,7 +109,6 @@ Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev) {
 
 	appdata_s *ad = data;
 	Evas_Object *bg = ad->bg;
-
 	ad->interactionCnt=0;
 	ad->stop = 0;
 
@@ -125,12 +121,6 @@ Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev) {
 				rand() % (65 + 1 - 0));
 		ad->bezelR = 1;
 
-		/*if (send_UDP("CW,1 ", ad)) {
-			dlog_print(DLOG_DEBUG, LOG_TAG,
-					"ROTARY HANDLER: Clockwise UDP message sent");
-		} else {
-			app_terminate(ad);
-		}*/
 
 	} else {
 		dlog_print(DLOG_DEBUG, LOG_TAG,
@@ -140,17 +130,10 @@ Eina_Bool _rotary_handler_cb(void *data, Eext_Rotary_Event_Info *ev) {
 
 		ad->bezelL = 1;
 
-		/*if (send_UDP("CCW,1", ad)) {
-			dlog_print(DLOG_DEBUG, LOG_TAG,
-					"ROTARY HANDLER: Counter Clockwise UDP message sent");
-		} else {
-			app_terminate(ad);
-		}*/
-
 	}
 
+	//evas_object_smart_callback_call(bg, "pressed",ad);
 	ad->interactionCnt=0;
-
 	return EINA_FALSE;
 }
 
@@ -166,10 +149,21 @@ static void fingermove_down_cb(void *data, Evas *evas, Evas_Object *obj,
 	ad->time_down = ecore_time_get(); //ev->timestamp;
 	ad->x_down = x;
 	ad->y_down = y;
+	ad->fingerDown=1;
 
 	//dlog_print(DLOG_DEBUG, LOG_TAG,"FINGER DOWN HANDLER: timestamps %d, %f",ev->timestamp, ad->time_down);
 
-	dlog_print(DLOG_DEBUG, LOG_TAG, "Finger Down Event");
+	dlog_print(DLOG_VERBOSE, LOG_TAG, "Finger Down Event");
+
+}
+static void fingermove_down_cb2(void *data, Evas *evas, Evas_Object *obj,
+		void *event_info) {
+	dlog_print(DLOG_VERBOSE, LOG_TAG, "Finger Down 2 Event");
+
+}
+static void fingermove_up_cb2(void *data, Evas *evas, Evas_Object *obj,
+		void *event_info) {
+	dlog_print(DLOG_VERBOSE, LOG_TAG, "Finger Up 2 Event");
 
 }
 
@@ -177,11 +171,12 @@ static void fingermove_up_cb(void *data, Evas *evas, Evas_Object *obj,
 		void *event_info) {
 	appdata_s *ad = data;
 	ad->interactionCnt=0;
+	ad->fingerDown=0;
 
 	Evas_Event_Mouse_Move *ev = event_info;
 	Evas_Coord x = ev->cur.canvas.x;
 	Evas_Coord y = ev->cur.canvas.y;
-
+	dlog_print(DLOG_VERBOSE, LOG_TAG, "Mouse Up");
 	dlog_print(DLOG_DEBUG, LOG_TAG, "Mouse Move, %d, %d", x, y);
 	double dt = ecore_time_get() - ad->time_down;
 
@@ -219,6 +214,7 @@ static void fingermove_up_cb(void *data, Evas *evas, Evas_Object *obj,
 
 }
 
+
 static void create_base_gui(appdata_s *ad) {
 	Evas_Object *win = NULL, *bg = NULL;
 
@@ -240,11 +236,22 @@ static void create_base_gui(appdata_s *ad) {
 	elm_win_resize_object_add(ad->win, bg);
 	evas_object_show(bg);
 	ad->bg = bg;
+
 	eext_rotary_event_handler_add(_rotary_handler_cb, ad);
+	//eext_rotary_object_event_callback_priority_add(bg,EEXT_CALLBACK_PRIORITY_AFTER ,_rotary_handler_cb, ad);
+
 	evas_object_event_callback_add(bg, EVAS_CALLBACK_MOUSE_UP, fingermove_up_cb,
 			ad);
-	evas_object_event_callback_add(bg, EVAS_CALLBACK_MOUSE_DOWN, fingermove_down_cb,
+
+	evas_object_event_callback_priority_add(bg, EVAS_CALLBACK_MOUSE_DOWN, 0,fingermove_down_cb,
 				ad);
+	evas_object_event_callback_add(bg, EVAS_CALLBACK_MULTI_DOWN, fingermove_down_cb2,
+					ad);
+	evas_object_event_callback_add(bg, EVAS_CALLBACK_MULTI_UP, fingermove_up_cb2,
+						ad);
+
+
+//	evas_object_smart_callback_add(bg, "pressed", fingermove_down_cb,ad);
 
 }
 
@@ -294,7 +301,6 @@ static void get_UDPsocket(const char* hostname, const char* portname,
 
 Eina_Bool network_comms(void *data) {
 	appdata_s *ad = data;
-
 	send_UDP(ad);
 
 	if (ad->interactionCnt>50){//if idle > 5 seconds

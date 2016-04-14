@@ -1,6 +1,7 @@
-02:45:52 **** Incremental Build of configuration Debug for project HelloWorld ****
+15:53:48 **** Build of configuration Debug for project HelloWorld ****
 ninja all 
-ninja: no work to do.
+[1/2] Building src/helloworld.o
+[2/2] Linking helloworld
 
-02:45:52 Build Finished (took 59ms)
+15:53:48 Build Finished (took 266ms)
 
