@@ -1,0 +1,29 @@
+15:53:53 **** Build of configuration Debug for project UIComponents ****
+ninja all 
+[1/24] Building src/check.o
+[2/24] Building src/eext_datetime.o
+[3/24] Building src/eext_genlist.o
+[4/24] Building src/eext_more_option.o
+[5/24] Building src/eext_progressbar.o
+[6/24] Building res/ui_controls.edj
+[7/24] Building src/bg.o
+[8/24] Building src/button.o
+[9/24] Building src/eext_rotary_selector.o
+[10/24] Building src/eext_scroller.o
+[11/24] Building src/eext_slider.o
+[12/24] Building src/eext_spinner.o
+[13/24] Building src/entry.o
+[14/24] Building src/genlist.o
+[15/24] Building src/image.o
+[16/24] Building src/index.o
+[17/24] Building src/layout.o
+[18/24] Building src/main.o
+[19/24] Building src/map.o
+[20/24] Building src/popup.o
+[21/24] Building src/progressbar.o
+[22/24] Building src/radio.o
+[23/24] Building src/scroller.o
+[24/24] Linking uicomponents
+
+15:53:54 Build Finished (took 817ms)
+
