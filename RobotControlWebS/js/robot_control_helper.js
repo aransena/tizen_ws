@@ -1,33 +1,3 @@
-function sensorCheck() {
-	proximitySensor.getLightSensorData(onGetSuccessCB);
-}
-
-function onsuccessCB() {
-	console.log("The sensor started successfully.");
-	sensorInterval = setInterval(sensorCheck, sensorInterval_T);
-}
-
-function startSensor() {
-	proximitySensor.start(onsuccessCB);
-}
-
-
-function handleVisibilityChange() {
-	console.log("Visibility Change");
-
-	if (document[hidden]) {
-		console.log("Page is now hidden.");
-		clearInterval(sensorInterval);
-		clearInterval(commsInterval);
-//		ws.close();
-
-	} else {
-		console.log("Page is now visible. " + ws.readyState);
-		
-		ws.send("USER");
-		// startIntervals();
-	}
-}
 
 
 //HW Back Button Press Event - modified from app.js to unregister rotary

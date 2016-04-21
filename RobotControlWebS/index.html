@@ -45,7 +45,7 @@
 		  console.log(window.localStorage.getItem('url'));
 		  var url = window.localStorage.getItem('url').toString();
 		  if(!ws){
-		  console.log("connecting to: " + url);
+		  console.log("connecting to, 1: " + url);
 		  ws = new WebSocket(url);
 		  }
 		  ws.onopen = function() {

@@ -5,7 +5,8 @@ var commsInterval_T = 30;
 
 var sensorInterval;
 var sensorInterval_T = 1000;
-var controlP = 0;
+
+var touchDownT = 0;
 
 var hidden, visibilityChange;
 
@@ -19,7 +20,6 @@ if (typeof document.hidden !== "undefined") {
 
 // Multitouch vars //
 var touchDownT = 0;
-var touchType = "";
 var touchDownXY = [ 0, 0 ];
 var lastPos = [ 0, 0 ];
 
@@ -32,61 +32,59 @@ var endTouch = false;
 var ws = '';
 var url = window.localStorage.getItem('url').toString();
 
-sensorService = tizen.sensorservice	|| (window.webapis && window.webapis.sensorservice) || null;
+var sensorService = tizen.sensorservice	|| (window.webapis && window.webapis.sensorservice) || null;
 var proximitySensor = sensorService.getDefaultSensor("LIGHT");
-
-
-var prev_LGT_S = 0;
+var prev_LightSignal = 0;
 
 var msgPack = {
-	'CW' : 0,
-	'CCW' : 0,
-	'S_L' : 0,
-	'S_R' : 0,
-	'P' : 0,
-	'LH' : 0,
-	'NUM_F' : 0,
-	'LGT' : 0,
-	'LGT_S' : 0,
+	'Device' : 'SmartWatch',
+	'ControlLevel' :0,
+	'Clockwise' : 0,
+	'CounterClockwise' : 0,
+	'SwipeLeft' : 0,
+	'SwipeRight' : 0,
+	'Press' : 0,
+	'LongHold' : 0,
+	'NumFingers' : 0,
+	'LightLevel' : 0,
+	'LightSignal' : 0,
 	'ALPHA' :0,
 	'BETA' :0,
 	'GAMMA' :0,
 	'reset' : function(all) {
 
-		this.CW = 0;
-		this.CCW = 0;
-		this.S_L = 0;
-		this.S_R = 0;
-		this.P = 0;
+		this.Clockwise = 0;
+		this.CounterClockwise = 0;
+		this.SwipeLeft = 0;
+		this.SwipeRight = 0;
+		this.Press = 0;
+		//this.ControlLevel = 0;
 		// this.LGT = 0;
 		if (all) {
-			this.LH = 0;
-			this.NUM_F = 0;
+			this.LongHold = 0;
+			this.NumFingers = 0;
 		}
 
 	}
 };
-
+/*
 var touchTypes = {
 	SWIPE_L : 1,
 	SWIPE_R : 2,
 	PRESS : 3
-};
+};*/
 
 var canv = document.getElementById("canvas");
 var ctx = canv.getContext("2d");
 var headr = document.getElementById("header");
 var page = document.getElementById("robotControl");
 
-////////////////////////////////////////////////////////////////////////////////////////////////
-
 ////////// Start Script //////////
-console.log("connecting to: " + url);
+console.log("connecting to, 2: " + url);
 ws = new WebSocket(url);
 
-startSensor();
-startRotaryEventHandler();
-
+/// Setup Events ///
+window.addEventListener("devicemotion", onDeviceMotion);
 page.addEventListener('touchstart', multiTouchHandler, false);
 page.addEventListener('touchmove', moveTouchHandler, false);
 page.addEventListener('touchcancel', cancelTouchHandler, false);
@@ -94,15 +92,15 @@ page.addEventListener('touchend', endTouchHandler, false);
 document.addEventListener(visibilityChange, handleVisibilityChange, false);
 window.addEventListener('tizenhwkey', control_back);
 window.addEventListener('devicemotion', onDeviceMotion);
-function onDeviceMotion(e) {
-		console.log(e);
-		console.log(e.accelerationIncludingGravity.x)
-		//console.log("GYRO");
-		msgPack.ALPHA = Math.round(e.accelerationIncludingGravity.x);
-		msgPack.BETA = Math.round(e.accelerationIncludingGravity.y);
-		msgPack.GAMMA = Math.round(e.accelerationIncludingGravity.z);
-}
-window.addEventListener("devicemotion", onDeviceMotion);
+
+window.addEventListener("rotarydetent", rotaryEventHandler, false);
+console.log("Events added");
+
+/// Start Events ///
+//startSensor();
+proximitySensor.start(onsuccessCB);
+//startRotaryEventHandler();
+
 
 ///////// Control Screen GUI Setup ////////
 canv.style.backgroundColor = "white";
@@ -114,47 +112,86 @@ ctx.fillStyle = 'yellow';
 ctx.fill();
 ctx.stroke();
 
-////////////////////////////////////////////////////////////////////////////////////////////////
+/*function handleVisibilityChange() {
+	console.log("Visibility Change");
+
+	if (document[hidden]) {
+		console.log("Page is now hidden.");
+		clearInterval(sensorInterval);
+		clearInterval(commsInterval);
+//		ws.close();
+
+	} else {
+		console.log("Page is now visible. " + ws.readyState);
+		
+		ws.send("USER");
+		// startIntervals();
+	}
+}*/
+
+//// Motion Events ////
+function onDeviceMotion(e) {
+	//console.log(e);
+	//console.log(e.accelerationIncludingGravity.x)
+	msgPack.ALPHA = e.accelerationIncludingGravity.x.toFixed(2);//Math.round(e.accelerationIncludingGravity.x);
+	msgPack.BETA = e.accelerationIncludingGravity.y.toFixed(2);//Math.round(e.accelerationIncludingGravity.y);
+	msgPack.GAMMA = e.accelerationIncludingGravity.z.toFixed(2);//Math.round(e.accelerationIncludingGravity.z);
+}
 
 // /// Rotary Events /////
 var rotaryEventHandler = function(e) {
 	if (e.detail.direction === "CW") {
 		console.log("Rotate CW");
-		msgPack.CW = 1;
+		msgPack.Clockwise = 1;
 	} else {
 		console.log("Rotate CCW");
-		msgPack.CCW = 1;
+		msgPack.CounterClockwise = 1;
 	}
 };
 
-function startRotaryEventHandler() {
-	window.addEventListener("rotarydetent", rotaryEventHandler, false);
-}
+/*
 
+function startRotaryEventHandler() {
+	
+}*/
 
 // ///// Light Sensor /////////
+
 function onGetSuccessCB(sensorData) {
 	var lightLevel = sensorData.lightLevel;
 	// console.log("Light Level: " + lightLevel);
-	msgPack.LGT = lightLevel;
+	msgPack.LightLevel = lightLevel;
 	if (lightLevel < 200) {
-		msgPack.LGT_S = 1;
-		prev_LGT_S = 1;
+		msgPack.LightSignal = 1;
+		prev_LightSignal = 1;
 	} else {
-		msgPack.LGT_S = 0;
-		if (prev_LGT_S == 1) {
-			navigator.vibrate([ 100, 50, 100, 50, 100 ]);
+		msgPack.LightSignal = 0;
+		if (prev_LightSignal === 1) {
+			//navigator.vibrate([ 100, 50, 100, 50, 100 ]);
 		}
-		prev_LGT_S = 0;
+		prev_LightSignal = 0;
 	}
 }
 
 
-// //// Touch Events //////
+function sensorCheck() {
+	proximitySensor.getLightSensorData(onGetSuccessCB);
+}
 
+
+function onsuccessCB() {
+	console.log("The sensor started successfully.");
+	sensorInterval = setInterval(sensorCheck, sensorInterval_T);
+}
+
+/*function startSensor() {
+	
+}*/
+
+// //// Touch Events //////
 var multiTouchHandler = function(e) {
 	longtouch_chk = false;
-	if (ws.readyState == 1) {
+	if (ws.readyState === 1) {
 		timer = setTimeout(longtouch, touchduration);
 		touchDownT = Date.now();
 		e.preventDefault();
@@ -167,13 +204,13 @@ var multiTouchHandler = function(e) {
 		console.log("touches: " + touchCount);
 
 		// ws.send("Touches: " + touchCount);
-		msgPack.NUM_F = touchCount;
+		msgPack.NumFingers = touchCount;
 
-		if (touchCount == 2) {
+		if (touchCount === 2) {
 			// touchType = "Two Finger";
 			document.getElementById("canvas").style.backgroundColor = "blue";
 			document.getElementById("header").style.backgroundColor = "blue";
-		} else if (touchCount == 1) {
+		} else if (touchCount === 1) {
 			// touchType = "One Finger";
 			document.getElementById("canvas").style.backgroundColor = "red";
 			document.getElementById("header").style.backgroundColor = "red";
@@ -187,17 +224,28 @@ var multiTouchHandler = function(e) {
 	}
 };
 
-var longtouch = function(e) {
+
+var longtouch = function() {
 	// ws.send(touchType + " Hold");
 	longtouch_chk = true;
-	msgPack.LH = 1;
+	msgPack.LongHold = 1;
+	
+	if(msgPack.NumFingers===1){
+	msgPack.ControlLevel = 2;
+	}
+	else{
+		msgPack.ControlLevel = 3;
+	}
+	
 	navigator.vibrate(400);
 };
 
-var cancelTouchHandler = function(e) {
+
+var cancelTouchHandler = function() {
 	// e.preventDefault();
 	// ws.send("touch cancelled");
 };
+
 
 var moveTouchHandler = function(e) {
 	e.preventDefault();
@@ -207,26 +255,26 @@ var moveTouchHandler = function(e) {
 
 function getSwipeType(Pos1, Pos2) {
 	var dist_lim = 30;
-	var x_lim = dist_lim;
-	var y_lim = dist_lim;
+	//var x_lim = dist_lim;
+	//var y_lim = dist_lim;
 	// var swipeType = '';
 
-	var dist = Math.sqrt(Math.pow(Pos1[0] - Pos2[0], 2)
-			+ Math.pow(Pos1[1] - Pos2[1], 2));
+	var dist = Math.sqrt(Math.pow(Pos1[0] - Pos2[0], 2)	+ Math.pow(Pos1[1] - Pos2[1], 2));
 
 	if (dist > dist_lim) {
 		if (Math.abs(Pos1[0] - Pos2[0]) > dist_lim) {
 			if (Pos1[0] > Pos2[0]) {
 				// swipeType= touchTypes.SWIPE_R;//' Right Swipe';
-				msgPack.S_R = 1;
+				msgPack.SwipeRight = 1;
 			} else {
 				// swipeType= touchTypes.SWIPE_L; //' Left Swipe';
-				msgPack.S_L = 1;
+				msgPack.SwipeLeft = 1;
 			}
 		}
 	} else {
 		// swipeType= touchTypes.PRESS;//" Press";
-		msgPack.P = 1;
+		msgPack.Press = 1;
+		msgPack.ControlLevel = msgPack.ControlLevel===1 ? 0:1;
 	}
 }
 
@@ -234,16 +282,18 @@ var endTouchHandler = function(e) {
 	endTouch = true;
 	document.getElementById("canvas").style.backgroundColor = "white";
 	document.getElementById("header").style.backgroundColor = "white";
-
+	if(msgPack.ControlLevel>1){
+		msgPack.ControlLevel = 0;
+	}
+	else{
 	if (timer) { // if a long press wasn't detected...
 		clearTimeout(timer);
-		msgPack.LH = 0;
+		msgPack.LongHold = 0;
 	}
 
 	if (!longtouch_chk) {
 		e.preventDefault();
 		var dt_lim = 400;
-		// var swipeType = '';
 
 		var dur = Date.now() - touchDownT;
 
@@ -251,69 +301,19 @@ var endTouchHandler = function(e) {
 
 		if (dur < dt_lim) {
 			getSwipeType(lastPos, touchDownXY);
-			// ws.send(touchType + swipeType);
 
-		} else {
-			// ws.send(touchType + " Press");
-			msgPack.P = 1;
+		} 
+		else{
+			msgPack.Press = 1;
+			msgPack.ControlLevel = msgPack.ControlLevel===1 ? 0:1;
 		}
-
+	
+	}
 	}
 
 };
 
-
-// //////// System ///////////
-// ///////////////////////////////////////////////////////
-
 ////////////////// Comms ////////////
-function sysComms() {
-	console.log("sysComms Send");
-	ws.send(JSON.stringify(msgPack));
-	if (!endTouch) {
-		msgPack.reset(false);
-	} else {
-		msgPack.reset(true);
-	}
-	endTouch = false;
-
-}
-
-function startIntervals() {
-	console.log("Starting sensor");
-	startSensor();
-	// startComms();
-	console.log("Starting comms");
-	commsInterval = setInterval(sysComms, commsInterval_T);
-	// setInterval(commsInterval, commsInterval_T);
-}
-
-function endIntervals(){
-	clearInterval(sensorInterval);
-	clearInterval(commsInterval);
-	window.removeEventListener("rotarydetent", rotaryEventHandler, false);
-}
-
-function handleVisibilityChange() {
-	console.log("Visibility Change");
-
-	if (document[hidden]) {
-		console.log("Page is now hidden.");
-		clearInterval(sensorInterval);
-		clearInterval(commsInterval);
-		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
-		//ws.close();
-
-	} else {
-		console.log("Page is now visible. " + ws.readyState);
-		window.addEventListener("rotarydetent", rotaryEventHandler, false);
-		ws.send("USER");
-		
-		// startIntervals();
-	}
-}
-startRotaryEventHandler();
-
 ws.onclose = function() {
 	console.error("Websocket Close");
 
@@ -339,7 +339,7 @@ ws.onopen = function() {
 
 ws.onmessage = function(msg) {
 	console.log("message: " + msg.data);
-	if (msg.data == "USER") {
+	if (msg.data === "USER") {
 		console.log("CONNECTED");
 		ws.send("RUN");
 		startIntervals();
@@ -347,6 +347,58 @@ ws.onmessage = function(msg) {
 	}
 
 };
+
+function sysComms() {
+	console.log("sysComms Send");
+	ws.send(JSON.stringify(msgPack));
+	if (!endTouch) {
+		msgPack.reset(false);
+	} else {
+		msgPack.reset(true);
+	}
+	endTouch = false;
+
+}
+
+function startIntervals() {
+	//console.log("Starting sensor");
+	//startSensor();
+	// startComms();
+	console.log("Starting comms");
+	commsInterval = setInterval(sysComms, commsInterval_T);
+	// setInterval(commsInterval, commsInterval_T);
+}
+
+/*
+function endIntervals(){
+	clearInterval(sensorInterval);
+	clearInterval(commsInterval);
+	window.removeEventListener("rotarydetent", rotaryEventHandler, false);
+}*/
+
+//// System Events ///
+function handleVisibilityChange() {
+	console.log("Visibility Change");
+
+	if (document[hidden]) {
+		console.log("Page is now hidden.");
+		clearInterval(sensorInterval);
+		clearInterval(commsInterval);
+		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
+		window.removeEventListener("devicemotion", onDeviceMotion);
+
+		//ws.close();
+
+	} else {
+		console.log("Page is now visible. " + ws.readyState);
+		window.addEventListener("rotarydetent", rotaryEventHandler, false);
+		window.addEventListener("devicemotion", onDeviceMotion);
+
+		ws.send("USER");
+		
+		// startIntervals();
+	}
+}
 
 function control_back(ev) {
 	console.log(ev.keyName);
@@ -356,8 +408,21 @@ function control_back(ev) {
 		clearInterval(sensorInterval);
 		clearInterval(commsInterval);
 		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
-		window.removeEventListener("tizenhwkey",control_back,false)
+		window.removeEventListener("tizenhwkey",control_back,false);
+		window.removeEventListener("devicemotion", onDeviceMotion);
 		document.removeEventListener(visibilityChange, handleVisibilityChange, false);
+		
+		var page = document.getElementsByClassName( 'ui-page-active' )[0],
+		pageid = page ? page.id : "";
+	
+		if( pageid === "pageMain" ) {
+			try {
+				tizen.application.getCurrentApplication().exit();
+			} catch (ignore) {
+			}
+		} else {
+			window.history.back();
+		}
 	} 
 	
 }

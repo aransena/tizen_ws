@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="289" key="DIALOG_WIDTH"/>
-		<item value="533" key="DIALOG_Y_ORIGIN"/>
-		<item value="457" key="DIALOG_HEIGHT"/>
-		<item value="1495" key="DIALOG_X_ORIGIN"/>
+		<item value="419" key="DIALOG_Y_ORIGIN"/>
+		<item value="485" key="DIALOG_HEIGHT"/>
+		<item value="1440" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,18 +13,26 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="motionDa" key="selection"/>
+		<item value="/ws" key="selection"/>
 		<list key="findhistory">
-			<item value="motionda"/>
-			<item value="motiond"/>
-			<item value="event"/>
-			<item value="devicemotion"/>
-			<item value="window.addEventListener(&apos;devicemotion&apos;, onDeviceMotion);"/>
-			<item value="motion"/>
-			<item value="motiondata"/>
-			<item value="getmotiondata"/>
+			<item value="/ws"/>
+			<item value="S_R"/>
+			<item value="LongHold"/>
+			<item value="longpress"/>
+			<item value="startrotary"/>
+			<item value="endinter"/>
+			<item value="startSensor"/>
+			<item value="sensorcheck"/>
 		</list>
 		<list key="replacehistory">
+			<item value=".Press"/>
+			<item value="Press"/>
+			<item value="SwipeRight"/>
+			<item value="SwipeLeft"/>
+			<item value="LongHold"/>
+			<item value="CounterClockwise"/>
+			<item value="Clockwise"/>
+			<item value="NumFingers"/>
 		</list>
 	</section>
 </section>
