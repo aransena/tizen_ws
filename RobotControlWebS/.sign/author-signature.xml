@@ -40,7 +40,7 @@
 </Reference>
 <Reference URI="js%2Frobot_control.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>2j4GSMRGS5BIw8KaafPhtGUZbwn+3IK1NA0hpnvrQ1M=</DigestValue>
+<DigestValue>DrPnOr8h3MzYOIV4s1Jvu6ghIJjawLwSCLCLnWaFkio=</DigestValue>
 </Reference>
 <Reference URI="js%2Frobot_control_helper.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1055,11 +1055,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-5CBQ1TfJpgofGc5R1wb9S0GbOmcdJGJaYl6YB/fMpa1oyop5lDJzzV5tC0OTAqTfOhtFSwuug5sj
-N9tB6oEXnrArDHTt8PJ3qTqGXH4ubw/7SwzLIWVzs8KlrkmacNrVG41/dEDTAvFIMrDwTU3FXPTa
-VDVs9m40u1hMiucgOkVUpMe5N8DHaz21oh/Wc5eaUW34d0UJRZuVyJeG0iPY2/4A8bJ0eNH4nr/o
-gWkskO2TsaeuOXaCpgofKJeLPNA+LOQuMn5krd00fh5OjjOgWA7QTmLi0ysc07dbk7mDX9mR8gAW
-LKPiyUE2y7bwNDNPk067oVHdhfdQjTNJ0mhTxw==
+gvo8ISvUpjQmWZSF2zLi8Yjry2I27MATNJS5GX2liQHaHcIaMdyprrpyaSglEMGEVGGBEEUASgTn
+9TYZoh/xXhCpFdj7pjJeWlu88NGnhtfvOLEq5STOrxgG+jMjnZHvWat0P8PpSAsB5X84GNPqd2Px
+kFuKw+Pe//+OCr6/FNQzg7Zpsvfb78GW0utnb1Yr+ixA/4RORO0oEomIFe6QXChqhswqk3FklqAE
+esgMwmdq9OioOaIE/8OlnyLZ5ppVeu19kWWMy/fhI6UTSvuo05qdESec1wJtyXPJV+Lwm8VhG+va
+G8qT0V11nAx0Ic7dUzbwm6sOHmCjzwYcCT2DQg==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

@@ -3,6 +3,7 @@
 var WHEEL_CENTER_X = -(512-360)/2;
 var WHEEL_CENTER_Y = WHEEL_CENTER_X;
 var angle = 0;
+var heading = 0
 
 var commsInterval;
 var commsInterval_T = 30;
@@ -80,8 +81,8 @@ var touchTypes = {
 
 var canv = document.getElementById("canvas");
 var ctx = canv.getContext("2d");
-//var headr = document.getElementById("header");
 var page = document.getElementById("robotControl");
+
 
 ////////// Start Script //////////
 console.log("connecting to, 2: " + url);
@@ -118,13 +119,7 @@ wheelImg.onload = function () {
     //draw background image
 	
 	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
-	//ctx.translate(-WHEEL_CENTER_X,-WHEEL_CENTER_Y);
-	ctx.translate(180,180);
-	ctx.rotate(10 * Math.PI / 180);
-	ctx.translate(-180,-180);
-	//ctx.translate(WHEEL_CENTER_X,WHEEL_CENTER_Y);
-	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
-    //draw a box over the top
+	//draw a box over the top
     //ctx.fillStyle = "rgba(200, 0, 0, 0.5)";
     //ctx.fillRect(0, 0, 500, 500);
     
@@ -168,17 +163,37 @@ function onDeviceMotion(e) {
 
 // /// Rotary Events /////
 var rotaryEventHandler = function(e) {
+	var _heading = 0;
+	_heading = parseFloat(heading);
+	//rotation = _heading-angle;
 	if (e.detail.direction === "CW") {
 		console.log("Rotate CW");
 		msgPack.Clockwise = 1;
-		angle+=1;
-		wheelImg.rotate(angle);
+		if(angle>0){
+			_heading=0;
+		}
+		//angle+=1;
+		//wheelImg.rotate(angle);
 	} else {
 		console.log("Rotate CCW");
+		if(angle<0){
+			_heading=0;
+		}
 		msgPack.CounterClockwise = 1;
-		angle-=1;
-		wheelImg.rotate(angle);
+		//angle-=1;
+		//wheelImg.rotate(angle);
 	}
+	
+	_heading = _heading-angle;
+	angle += _heading;
+	
+	console.log("HEADING: ",_heading.toString(), "ANGLE: ", angle.toString());
+	ctx.translate(180,180);
+	ctx.rotate(_heading*-50 * Math.PI / 180);
+	
+	ctx.translate(-180,-180);
+	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
+    
 };
 
 /*
@@ -370,18 +385,30 @@ ws.onopen = function() {
 };
 
 ws.onmessage = function(msg) {
-	console.log("message: " + msg.data);
+	//console.log("message: " + msg.data);
 	if (msg.data === "USER") {
 		console.log("CONNECTED");
 		ws.send("RUN");
 		startIntervals();
 		// commsInterval = setInterval(sysComms, commsInterval_T);
 	}
+	else{
+		try{
+			//console.log("ELSE");
+			var obj = JSON.parse(msg.data);
+			heading = obj['heading'];
+			//console.log("heading: ");
+			
+		}catch(err){
+			console.log(err.message);
+		}
+		
+	}
 
 };
 
 function sysComms() {
-	console.log("sysComms Send");
+	//console.log("sysComms Send");
 	ws.send(JSON.stringify(msgPack));
 	if (!endTouch) {
 		msgPack.reset(false);
@@ -398,6 +425,7 @@ function startIntervals() {
 	// startComms();
 	console.log("Starting comms");
 	commsInterval = setInterval(sysComms, commsInterval_T);
+	console.log("comms interval set");
 	// setInterval(commsInterval, commsInterval_T);
 }
 
