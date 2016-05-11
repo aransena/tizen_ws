@@ -1,4 +1,4 @@
-15:53:46 **** Build of configuration Debug for project GearS2RobotControl ****
+23:56:09 **** Build of configuration Debug for project GearS2RobotControl ****
 ninja all 
 [1/2] Building src/main.o
 ../src/main.c:138:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
@@ -10,5 +10,5 @@ EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *dat
 1 warning generated.
 [2/2] Linking gears2robotcontrol_v2
 
-15:53:46 Build Finished (took 259ms)
+23:56:10 Build Finished (took 663ms)
 

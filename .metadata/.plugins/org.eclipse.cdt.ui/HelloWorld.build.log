@@ -1,7 +1,7 @@
-15:53:48 **** Build of configuration Debug for project HelloWorld ****
+23:56:12 **** Build of configuration Debug for project HelloWorld ****
 ninja all 
 [1/2] Building src/helloworld.o
 [2/2] Linking helloworld
 
-15:53:48 Build Finished (took 266ms)
+23:56:12 Build Finished (took 558ms)
 

@@ -1,6 +1,9 @@
-17:06:09 **** Incremental Build of configuration Debug for project RotaryTimer ****
+23:56:15 **** Build of configuration Debug for project RotaryTimer ****
 ninja all 
-ninja: no work to do.
+[1/4] Building src/rotary.o
+[2/4] Building src/digital.o
+[3/4] Building src/main.o
+[4/4] Linking rotarytimer
 
-17:06:09 Build Finished (took 58ms)
+23:56:15 Build Finished (took 308ms)
 

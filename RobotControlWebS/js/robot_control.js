@@ -1,5 +1,9 @@
 ////////// Main Variables //////////
 
+var WHEEL_CENTER_X = -(512-360)/2;
+var WHEEL_CENTER_Y = WHEEL_CENTER_X;
+var angle = 0;
+
 var commsInterval;
 var commsInterval_T = 30;
 
@@ -76,7 +80,7 @@ var touchTypes = {
 
 var canv = document.getElementById("canvas");
 var ctx = canv.getContext("2d");
-var headr = document.getElementById("header");
+//var headr = document.getElementById("header");
 var page = document.getElementById("robotControl");
 
 ////////// Start Script //////////
@@ -104,13 +108,37 @@ proximitySensor.start(onsuccessCB);
 
 ///////// Control Screen GUI Setup ////////
 canv.style.backgroundColor = "white";
-headr.style.backgroundColor = "white";
+//headr.style.backgroundColor = "white";
 
-ctx.beginPath();
+//Loading of the home test image - img1
+var wheelImg = new Image();
+
+//drawing of the test image - img1
+wheelImg.onload = function () {
+    //draw background image
+	
+	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
+	//ctx.translate(-WHEEL_CENTER_X,-WHEEL_CENTER_Y);
+	ctx.translate(180,180);
+	ctx.rotate(10 * Math.PI / 180);
+	ctx.translate(-180,-180);
+	//ctx.translate(WHEEL_CENTER_X,WHEEL_CENTER_Y);
+	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
+    //draw a box over the top
+    //ctx.fillStyle = "rgba(200, 0, 0, 0.5)";
+    //ctx.fillRect(0, 0, 500, 500);
+    
+
+};
+
+//wheelImg.translate(-WHEEL_CENTER_X,-WHEEL_CENTER_Y);
+wheelImg.src = 'img/wheel2.png';
+
+/*ctx.beginPath();
 ctx.arc(180, 70, 50, 0, 2 * Math.PI);
 ctx.fillStyle = 'yellow';
 ctx.fill();
-ctx.stroke();
+ctx.stroke();*/
 
 /*function handleVisibilityChange() {
 	console.log("Visibility Change");
@@ -143,9 +171,13 @@ var rotaryEventHandler = function(e) {
 	if (e.detail.direction === "CW") {
 		console.log("Rotate CW");
 		msgPack.Clockwise = 1;
+		angle+=1;
+		wheelImg.rotate(angle);
 	} else {
 		console.log("Rotate CCW");
 		msgPack.CounterClockwise = 1;
+		angle-=1;
+		wheelImg.rotate(angle);
 	}
 };
 
@@ -209,11 +241,11 @@ var multiTouchHandler = function(e) {
 		if (touchCount === 2) {
 			// touchType = "Two Finger";
 			document.getElementById("canvas").style.backgroundColor = "blue";
-			document.getElementById("header").style.backgroundColor = "blue";
+		//	document.getElementById("header").style.backgroundColor = "blue";
 		} else if (touchCount === 1) {
 			// touchType = "One Finger";
 			document.getElementById("canvas").style.backgroundColor = "red";
-			document.getElementById("header").style.backgroundColor = "red";
+			//document.getElementById("header").style.backgroundColor = "red";
 		} else {
 			console.log("Error");
 			// ws.send("Unknown");
@@ -281,7 +313,7 @@ function getSwipeType(Pos1, Pos2) {
 var endTouchHandler = function(e) {
 	endTouch = true;
 	document.getElementById("canvas").style.backgroundColor = "white";
-	document.getElementById("header").style.backgroundColor = "white";
+	//document.getElementById("header").style.backgroundColor = "white";
 	if(msgPack.ControlLevel>1){
 		msgPack.ControlLevel = 0;
 	}

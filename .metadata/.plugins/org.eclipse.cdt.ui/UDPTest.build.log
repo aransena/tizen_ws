@@ -1,4 +1,4 @@
-15:53:51 **** Build of configuration Debug for project UDPTest ****
+23:56:22 **** Build of configuration Debug for project UDPTest ****
 ninja all 
 [1/7] Building src/app_main.o
 [2/7] Building src/udptest.o
@@ -8,5 +8,5 @@ ninja all
 [6/7] Building src/event_handler/uib_view1_event_handler.o
 [7/7] Linking udptest
 
-15:53:51 Build Finished (took 308ms)
+23:56:22 Build Finished (took 356ms)
 

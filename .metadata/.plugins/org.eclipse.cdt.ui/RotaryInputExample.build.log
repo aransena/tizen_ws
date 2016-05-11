@@ -1,7 +1,7 @@
-15:53:49 **** Build of configuration Debug for project RotaryInputExample ****
+23:56:14 **** Build of configuration Debug for project RotaryInputExample ****
 ninja all 
 [1/2] Building src/rotaryinputexample.o
 [2/2] Linking rotaryinputexample
 
-15:53:49 Build Finished (took 257ms)
+23:56:14 Build Finished (took 256ms)
 

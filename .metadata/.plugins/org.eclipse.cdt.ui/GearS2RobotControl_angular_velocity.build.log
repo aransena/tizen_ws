@@ -1,14 +1,7 @@
-16:07:53 **** Incremental Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+23:56:11 **** Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
 ninja all 
 [1/2] Building src/main.o
-../src/main.c:257:82: warning: incompatible pointer types passing 'Eina_Bool (void *, Eext_Rotary_Event_Info *)' to parameter of type 'Eext_Rotary_Event_Cb' (aka 'Eina_Bool (*)(void *, Evas_Object *, Eext_Rotary_Event_Info *)') [-Wincompatible-pointer-types]
-        eext_rotary_object_event_callback_priority_add(bg,EEXT_CALLBACK_PRIORITY_AFTER ,_rotary_handler_cb, ad);
-                                                                                        ^~~~~~~~~~~~~~~~~~
-/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/efl-extension/circle/efl_extension_rotary.h:182:135: note: passing argument to parameter 'func' here
-EAPI Eina_Bool eext_rotary_object_event_callback_priority_add(Evas_Object *obj, Eext_Callback_Priority priority, Eext_Rotary_Event_Cb func, void *data);
-                                                                                                                                      ^
-1 warning generated.
 [2/2] Linking gears2robotcontrol_v1
 
-16:07:53 Build Finished (took 259ms)
+23:56:11 Build Finished (took 309ms)
 

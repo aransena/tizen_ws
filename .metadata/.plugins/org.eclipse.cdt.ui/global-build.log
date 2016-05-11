@@ -1420,3 +1420,117 @@ EAPI void *eext_rotary_object_event_callback_del(Evas_Object *obj, Eext_Rotary_E
                                 ^    ~~~~~~~~~~~~~~~~~~~~~~~
 3 warnings generated.
 [7/7] Linking uibuildersingleview
+23:56:09 **** Build of configuration Debug for project GearS2RobotControl ****
+ninja all 
+[1/2] Building src/main.o
+../src/main.c:138:43: warning: incompatible pointer types passing 'void (void *)' to parameter of type 'Ecore_Task_Cb' (aka 'Eina_Bool (*)(void *)') [-Wincompatible-pointer-types]
+        ad->turningTimer = ecore_timer_add(0.01, turn_check,ad);
+                                                 ^~~~~~~~~~
+/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/ecore-1/Ecore.h:2407:60: note: passing argument to parameter 'func' here
+EAPI Ecore_Timer *ecore_timer_add(double in, Ecore_Task_Cb func, const void *data);
+                                                           ^
+1 warning generated.
+[2/2] Linking gears2robotcontrol_v2
+23:56:11 **** Build of configuration Debug for project GearS2RobotControl_angular_velocity ****
+ninja all 
+[1/2] Building src/main.o
+[2/2] Linking gears2robotcontrol_v1
+23:56:12 **** Build of configuration Debug for project HelloWorld ****
+ninja all 
+[1/2] Building src/helloworld.o
+[2/2] Linking helloworld
+23:56:14 **** Build of configuration Debug for project RotaryInputExample ****
+ninja all 
+[1/2] Building src/rotaryinputexample.o
+[2/2] Linking rotaryinputexample
+23:56:15 **** Build of configuration Debug for project RotaryTimer ****
+ninja all 
+[1/4] Building src/rotary.o
+[2/4] Building src/digital.o
+[3/4] Building src/main.o
+[4/4] Linking rotarytimer
+23:56:22 **** Build of configuration Debug for project UDPTest ****
+ninja all 
+[1/7] Building src/app_main.o
+[2/7] Building src/udptest.o
+[3/7] Building src/managed/src/uib_common.o
+[4/7] Building src/managed/src/uib_view1_view.o
+[5/7] Building src/managed/src/connection/uib_view1_connection.o
+[6/7] Building src/event_handler/uib_view1_event_handler.o
+[7/7] Linking udptest
+23:56:23 **** Build of configuration Debug for project UIBuilderSingleView ****
+ninja all 
+[1/7] Building src/app_main.o
+[2/7] Building src/uibuildersingleview.o
+[3/7] Building src/managed/src/uib_common.o
+[4/7] Building src/managed/src/uib_view1_view.o
+[5/7] Building src/event_handler/uib_view1_event_handler.o
+[6/7] Building src/managed/src/connection/uib_view1_connection.o
+../src/app_main.c:26:51: warning: incompatible pointer types passing 'Eina_Bool (void *, Eext_Rotary_Event_Info *)' to parameter of type 'Eext_Rotary_Event_Cb' (aka 'Eina_Bool (*)(void *, Evas_Object *, Eext_Rotary_Event_Info *)') [-Wincompatible-pointer-types]
+        eext_rotary_object_event_callback_del(ad->btnRef,_rotary_handler_cb);
+                                                         ^~~~~~~~~~~~~~~~~~
+/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-device.core/usr/include/efl-extension/circle/efl_extension_rotary.h:199:89: note: passing argument to parameter 'func' here
+EAPI void *eext_rotary_object_event_callback_del(Evas_Object *obj, Eext_Rotary_Event_Cb func);
+                                                                                        ^
+../src/app_main.c:43:22: warning: unused variable 'handlers' [-Wunused-variable]
+        app_event_handler_h handlers[5] =
+                            ^
+../src/app_main.c:90:26: warning: incompatible pointer types initializing 'uib_view1_view_context *' (aka 'struct _uib_view1_view_context *') with an expression of type 'uib_view_context *' (aka 'struct _uib_view_context *') [-Wincompatible-pointer-types]
+        uib_view1_view_context* vc = startup_view_create(ad);
+                                ^    ~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+[7/7] Linking uibuildersingleview
+23:56:24 **** Build of configuration Debug for project UIBuilderSingleView2 ****
+ninja all 
+[1/9] Building src/managed/src/manager/uib_view_manager.o
+[2/9] Building src/managed/src/connection/uib_view1_connection.o
+[3/9] Building src/app_main.o
+[4/9] Building src/uibuildersingleview2.o
+[5/9] Building src/managed/src/view/uib_view1_view.o
+[6/9] Building src/managed/src/view/uib_views.o
+[7/9] Building src/managed/src/utils/uib_util.o
+[8/9] Building src/managed/src/manager/uib_app_manager.o
+[9/9] Linking uibuildersingleview2
+23:56:25 **** Build of configuration Debug for project UIComponents ****
+ninja all 
+[1/23] Building src/check.o
+[2/23] Building src/eext_datetime.o
+[3/23] Building src/eext_genlist.o
+[4/23] Building src/eext_more_option.o
+[5/23] Building src/eext_progressbar.o
+[6/23] Building src/bg.o
+[7/23] Building src/button.o
+[8/23] Building src/eext_rotary_selector.o
+[9/23] Building src/eext_scroller.o
+[10/23] Building src/eext_slider.o
+[11/23] Building src/eext_spinner.o
+[12/23] Building src/entry.o
+[13/23] Building src/genlist.o
+[14/23] Building src/image.o
+[15/23] Building src/index.o
+[16/23] Building src/layout.o
+[17/23] Building src/main.o
+[18/23] Building src/map.o
+[19/23] Building src/popup.o
+[20/23] Building src/progressbar.o
+[21/23] Building src/radio.o
+[22/23] Building src/scroller.o
+[23/23] Linking uicomponents
+23:56:26 **** Build of configuration Debug for project helloWorldUIBuilder ****
+ninja all 
+[1/10] Building src/managed/src/uib_view2_view.o
+[2/10] Building src/app_main.o
+[3/10] Building src/managed/src/connection/uib_view1_connection.o
+[4/10] Building src/managed/src/connection/uib_view2_connection.o
+[5/10] Building src/helloworlduibuilder.o
+[6/10] Building src/managed/src/uib_common.o
+[7/10] Building src/managed/src/uib_view1_view.o
+[8/10] Building src/event_handler/uib_view1_event_handler.o
+[9/10] Building src/event_handler/uib_view2_event_handler.o
+[10/10] Linking helloworlduibuilder
+FAILED: clang++ -o helloworlduibuilder src/managed/src/uib_common.o src/managed/src/uib_view1_view.o src/managed/src/uib_view2_view.o src/managed/src/connection/uib_view1_connection.o src/managed/src/connection/uib_view2_connection.o src/app_main.o src/helloworlduibuilder.o src/event_handler/uib_view1_event_handler.o src/event_handler/uib_view2_event_handler.o   -shared -target i386-tizen-linux-gnueabi -gcc-toolchain /home/aransena/tizen-sdk/tools/smart-build-interface/../i386-linux-gnueabi-gcc-4.6/ -ccc-gcc-name i386-linux-gnueabi-g++ -march=i386 -Xlinker --as-needed  -pie -lpthread -Xlinker -rpath="/home/developer/sdk_tools/lib" --sysroot="/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-emulator.core" -Xlinker --version-script="/home/aransena/tizen_ws/helloWorldUIBuilder/.exportMap" -L"/home/aransena/tizen-sdk/tools/smart-build-interface/../../platforms/tizen-2.3.1/wearable/rootstraps/wearable-2.3.1-emulator.core/usr/lib" -lBrokenLocale -lanl -lappcore-agent -lappcore-watch -lbadge -lbase-utils-i18n -lbundle -lcairo -lcapi-appfw-alarm -lcapi-appfw-app-common -lcapi-appfw-app-control -lcapi-appfw-application -lcapi-appfw-app-manager -lcapi-appfw-package-manager -lcapi-appfw-preference -lcapi-appfw-widget-application -lcapi-base-common -lcapi-content-media-content -lcapi-content-mime-type -lcapi-data-control -lcapi-location-manager -lcapi-media-audio-io -lcapi-media-camera -lcapi-media-codec -lcapi-media-image-util -lcapi-media-metadata-extractor -lcapi-media-player -lcapi-media-radio -lcapi-media-recorder -lcapi-media-sound-manager -lcapi-media-tone-player -lcapi-media-tool -lcapi-media-wav-player -lcapi-message-port -lcapi-messaging-messages -lcapi-network-bluetooth -lcapi-network-connection -lcapi-network-nfc -lcapi-network-smartcard -lcapi-network-wifi -lcapi-system-device -lcapi-system-info -lcapi-system-media-key -lcapi-system-runtime-info -lcapi-system-sensor -lcapi-system-system-settings -lcapi-telephony -lcapi-ui-efl-util -lcidn -lcore-context-manager -lcrypto -lcrypt -lc -lcurl -ldlog -ldl -lecore_con -lecore_evas -lecore_fb -lecore_file -lecore_imf_evas -lecore_imf -lecore_input_evas -lecore_input -lecore_ipc -lecore -lecore_x -ledbus -ledje -leet -lefl-extension -lefreet_mime -lefreet -lefreet_trash -leina -leio -lelementary -lembryo -lethumb_client -lethumb -levas -lewebkit2 -lexif -lfontconfig -lfreetype -lgio-2.0 -lglib-2.0 -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -ljson-glib-1.0 -lkey-manager-client -lminizip -lm -lnotification -lnsl -lnss_compat -lnss_dns -lnss_files -lnss_hesiod -lnss_nisplus -lnss_nis -loauth -lopenal -lprivilege-info -lpthread -lpush -lresolv -lrt -lsqlite3 -lssl -lstorage -lstt -ltbm -lthread_db -ltts -lutil -lwidget_service -lwidget_viewer_evas -lxml2 -lz -Xlinker -rpath="/opt/usr/apps/org.example.helloworlduibuilder/lib" -Wl,--no-undefined -Werror-implicit-function-declaration
+src/managed/src/uib_view2_view.o: In function `uib_view2_view_create':
+/home/aransena/tizen_ws/helloWorldUIBuilder/Debug/../src/managed/src/uib_view2_view.c:37: undefined reference to `view2_listitem1_onitemselected'
+collect2: ld returned 1 exit status
+clang-3.4: error: linker (via gcc) command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
