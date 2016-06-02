@@ -4,8 +4,7 @@ INDEX VERSION 1.3+/home/aransena/tizen_ws/.metadata/.plugins/org.eclipse.wst.jsd
 2892815266.index
 2730327445.index
 3156419728.index
-2066816935.index
-4260642940.index
+584876942.index
 2885177786.index
 2141562287.index
 1568121908.index
@@ -15,8 +14,6 @@ INDEX VERSION 1.3+/home/aransena/tizen_ws/.metadata/.plugins/org.eclipse.wst.jsd
 2904653115.index
 2738746254.index
 4290539658.index
-697670644.index
-189241967.index
 755602612.index
 2938878387.index
-584876942.index
+2066816935.index

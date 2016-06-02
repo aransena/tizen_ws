@@ -7,11 +7,11 @@ var angle = 0;
 var heading = 0
 
 var commsInterval;
-var commsInterval_T = 30;
+var commsInterval_T = 5;
 var control_mode = window.localStorage.getItem('mode');
 
-var sensorInterval;
-var sensorInterval_T = 1000;
+//var sensorInterval;
+//var sensorInterval_T = 1000;
 
 var touchDownT = 0;
 
@@ -39,9 +39,9 @@ var endTouch = false;
 var ws = '';
 var url = window.localStorage.getItem('url').toString();
 
-var sensorService = tizen.sensorservice	|| (window.webapis && window.webapis.sensorservice) || null;
-var proximitySensor = sensorService.getDefaultSensor("LIGHT");
-var prev_LightSignal = 0;
+//var sensorService = tizen.sensorservice	|| (window.webapis && window.webapis.sensorservice) || null;
+//var proximitySensor = sensorService.getDefaultSensor("LIGHT");
+//var prev_LightSignal = 0;
 
 var bgd_color=""
 
@@ -112,7 +112,7 @@ console.log("Events added");
 
 /// Start Events ///
 //startSensor();
-proximitySensor.start(onsuccessCB);
+//proximitySensor.start(onsuccessCB);
 //startRotaryEventHandler();
 
 
@@ -213,13 +213,44 @@ function float2int (value) {
     return value | 0;
 }
 
+
+var cwCount=0;
+var ccwCount=0;
+var timerCount = 1;
+
+function cwSignal(){
+	console.log("CW LOW");
+	cwCount=0;
+	clearInterval(cwInterval);
+}
+function ccwSignal(){
+	console.log("CCW LOW");
+	ccwCount=0;
+	clearInterval(ccwInterval);
+}
+
+function timerSignal(){
+	timerCount=timerCount+1;
+}
 // /// Rotary Events /////
 var rotaryEventHandler = function(e) {
 	var _heading = 0;
 	_heading = parseFloat(heading);
 	//rotation = _heading-angle;
 	if (e.detail.direction === "CW") {
-		console.log("Rotate CW");
+		
+		console.log("CW HIGH " + (cwCount/timerCount).toString());
+		cwCount=cwCount+1;
+		try{
+			clearInterval(cwInterval);
+		}catch(err){
+			
+		}
+		timerCount = 1;
+
+		cwInterval = setInterval(cwSignal, 200);
+		timerInterval = setInterval(timerSignal, 15);
+		//console.log("Rotate CW");
 		msgPack.Clockwise = 1;
 		if(angle>0){
 			_heading=0;
@@ -227,7 +258,18 @@ var rotaryEventHandler = function(e) {
 		//angle+=1;
 		//wheelImg.rotate(angle);
 	} else {
-		console.log("Rotate CCW");
+		
+		console.log("CCW HIGH " + (ccwCount/timerCount).toString());
+		ccwCount=ccwCount+1
+		try{
+			clearInterval(ccwInterval);
+		}catch(err){
+			
+		}
+		timerCount = 1;
+
+		ccwInterval = setInterval(ccwSignal, 200);
+		//console.log("Rotate CCW");
 		if(angle<0){
 			_heading=0;
 		}
@@ -239,15 +281,15 @@ var rotaryEventHandler = function(e) {
 	_heading = _heading-angle;
 	angle += _heading;
 	
-	console.log("HEADING: ",_heading.toString(), "ANGLE: ", angle.toString());
-	
+	//console.log("HEADING: ",_heading.toString(), "ANGLE: ", angle.toString());
+	/*
 	ctx.fillStyle = bgd_color;
     ctx.fillRect(0, 0, 500, 500);
 	ctx.translate(180,180);
 	ctx.rotate(_heading*-50 * Math.PI / 180);
 	
 	ctx.translate(-180,-180);
-	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
+	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);*/
     
 };
 
@@ -258,7 +300,7 @@ function startRotaryEventHandler() {
 }*/
 
 // ///// Light Sensor /////////
-
+/*
 function onGetSuccessCB(sensorData) {
 	var lightLevel = sensorData.lightLevel;
 	// console.log("Light Level: " + lightLevel);
@@ -284,7 +326,7 @@ function sensorCheck() {
 function onsuccessCB() {
 	console.log("The sensor started successfully.");
 	sensorInterval = setInterval(sensorCheck, sensorInterval_T);
-}
+}*/
 
 /*function startSensor() {
 	
@@ -410,7 +452,7 @@ var endTouchHandler = function(e) {
 		else{
 			msgPack.Press = 1;
 			//msgPack.ControlLevel = msgPack.ControlLevel===1 ? 0:1;
-			msgPack.ControlLevel=1
+			msgPack.ControlLevel=1;
 		}
 	
 	}
@@ -422,7 +464,7 @@ var endTouchHandler = function(e) {
 ws.onclose = function() {
 	console.error("Websocket Close");
 
-	clearInterval(sensorInterval);
+	//clearInterval(sensorInterval);
 	clearInterval(commsInterval);
 };
 
@@ -522,10 +564,12 @@ function control_back(ev) {
 	console.log(ev.keyName);
 	if (ev.keyName === "back") {
 		//ws.close();
-		msgPack.ControlLevel = 0;
+		msgPack.ControlLevel = -1;
+		msgPack.BETA = 0;
 		ws.send(JSON.stringify(msgPack));
-		console.log("back button pressed"); 
-		clearInterval(sensorInterval);
+		
+		//console.log("back button pressed"); 
+		//clearInterval(sensorInterval);
 		clearInterval(commsInterval);
 		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
 		window.removeEventListener("tizenhwkey",control_back,false);
@@ -543,6 +587,7 @@ function control_back(ev) {
 		} else {
 			window.history.back();
 		}
+		ws.close();
 	} 
 	
 }

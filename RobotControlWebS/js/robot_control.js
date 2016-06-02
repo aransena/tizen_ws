@@ -7,7 +7,7 @@ var angle = 0;
 var heading = 0
 
 var commsInterval;
-var commsInterval_T = 30;
+var commsInterval_T = 5;
 var control_mode = window.localStorage.getItem('mode');
 
 //var sensorInterval;
@@ -38,6 +38,7 @@ var endTouch = false;
 
 var ws = '';
 var url = window.localStorage.getItem('url').toString();
+var mode = window.localStorage.getItem('mode').toString();
 
 //var sensorService = tizen.sensorservice	|| (window.webapis && window.webapis.sensorservice) || null;
 //var proximitySensor = sensorService.getDefaultSensor("LIGHT");
@@ -62,6 +63,7 @@ var msgPack = {
 	'BETA' :0,
 	'GAMMA' :0,
 	'Mode':0,
+	'Turn':'0.0',
 	'reset' : function(all) {
 
 		this.Clockwise = 0;
@@ -97,18 +99,7 @@ var page = document.getElementById("robotControl");
 console.log("connecting to, 2: " + url);
 ws = new WebSocket(url);
 
-/// Setup Events ///
-window.addEventListener("devicemotion", onDeviceMotion);
-page.addEventListener('touchstart', multiTouchHandler, false);
-page.addEventListener('touchmove', moveTouchHandler, false);
-page.addEventListener('touchcancel', cancelTouchHandler, false);
-page.addEventListener('touchend', endTouchHandler, false);
-document.addEventListener(visibilityChange, handleVisibilityChange, false);
-window.addEventListener('tizenhwkey', control_back);
-window.addEventListener('devicemotion', onDeviceMotion);
 
-window.addEventListener("rotarydetent", rotaryEventHandler, false);
-console.log("Events added");
 
 /// Start Events ///
 //startSensor();
@@ -213,25 +204,89 @@ function float2int (value) {
     return value | 0;
 }
 
+
+var cwCount=0;
+var ccwCount=0;
+var timerCount = 1;
+var turn_del = 300;
+var timer_del = 10;
+
+function cwSignal(){
+	console.log("CW LOW");
+	cwCount=0;
+	msgPack.Turn = 0;
+	clearInterval(cwInterval);
+	clearInterval(timerInterval);
+}
+function ccwSignal(){
+	console.log("CCW LOW");
+	ccwCount=0;
+	msgPack.Turn = 0;
+	clearInterval(ccwInterval);
+	clearInterval(timerInterval);
+}
+
+function timerSignal(){
+	timerCount=timerCount+1;
+}
 // /// Rotary Events /////
 var rotaryEventHandler = function(e) {
 	var _heading = 0;
 	_heading = parseFloat(heading);
 	//rotation = _heading-angle;
 	if (e.detail.direction === "CW") {
+		
+		console.log("CW HIGH " + (cwCount/timerCount).toString());
+		if(mode=="1"){
+			msgPack.Clockwise = 1;
+		}
+		else{
+			var sendVal = -50*(cwCount/timerCount);
+			msgPack.Turn =sendVal.toString();
+		}
+		try{
+			clearInterval(cwInterval);
+		}catch(err){
+			
+		}
+		timerCount = 1;
+
+		cwInterval = setInterval(cwSignal, turn_del);
+		timerInterval = setInterval(timerSignal, timer_del);
 		//console.log("Rotate CW");
-		msgPack.Clockwise = 1;
+		
+		cwCount=cwCount+1;
 		if(angle>0){
 			_heading=0;
 		}
 		//angle+=1;
 		//wheelImg.rotate(angle);
 	} else {
+		
+		console.log("CCW HIGH " + (ccwCount/timerCount).toString());
+		
+		try{
+			clearInterval(ccwInterval);
+		}catch(err){
+			
+		}
+		if(mode=="1"){
+			msgPack.CounterClockwise = 1;
+		}
+		else{
+			sendVal = 50*(ccwCount/timerCount);
+			msgPack.Turn =sendVal.toString();
+		}
+		timerCount = 1;
+
+		ccwInterval = setInterval(ccwSignal, turn_del);
+		timerInterval = setInterval(timerSignal, timer_del);
 		//console.log("Rotate CCW");
 		if(angle<0){
 			_heading=0;
 		}
-		msgPack.CounterClockwise = 1;
+		
+		ccwCount=ccwCount+1
 		//angle-=1;
 		//wheelImg.rotate(angle);
 	}
@@ -423,7 +478,24 @@ ws.onclose = function() {
 	console.error("Websocket Close");
 
 	//clearInterval(sensorInterval);
-	clearInterval(commsInterval);
+	//clearInterval(commsInterval);
+	try{
+		clearInterval(commsInterval);
+		}
+		catch(err){}
+		try{
+			clearInterval(cwInterval);
+		}
+		catch(err){}
+		try{
+			clearInterval(ccwInterval);
+		}
+		catch(err){}
+		
+		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
+		window.removeEventListener("tizenhwkey",control_back,false);
+		window.removeEventListener("devicemotion", onDeviceMotion);
+		document.removeEventListener(visibilityChange, handleVisibilityChange, false);
 };
 
 ws.onerror = function() {
@@ -439,6 +511,19 @@ ws.onerror = function() {
 ws.onopen = function() {
 	console.log("Websocket open confirm!");
 	ws.send('USER'); // Send the message 'Ping' to the server
+	
+	/// Setup Events ///
+	window.addEventListener("devicemotion", onDeviceMotion);
+	page.addEventListener('touchstart', multiTouchHandler, false);
+	page.addEventListener('touchmove', moveTouchHandler, false);
+	page.addEventListener('touchcancel', cancelTouchHandler, false);
+	page.addEventListener('touchend', endTouchHandler, false);
+	document.addEventListener(visibilityChange, handleVisibilityChange, false);
+	window.addEventListener('tizenhwkey', control_back);
+	window.addEventListener('devicemotion', onDeviceMotion);
+
+	window.addEventListener("rotarydetent", rotaryEventHandler, false);
+	console.log("Events added");
 	// startIntervals();
 };
 
@@ -524,15 +609,12 @@ function control_back(ev) {
 		//ws.close();
 		msgPack.ControlLevel = -1;
 		msgPack.BETA = 0;
+		msgPack.Turn = "0";
 		ws.send(JSON.stringify(msgPack));
 		
 		//console.log("back button pressed"); 
 		//clearInterval(sensorInterval);
-		clearInterval(commsInterval);
-		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
-		window.removeEventListener("tizenhwkey",control_back,false);
-		window.removeEventListener("devicemotion", onDeviceMotion);
-		document.removeEventListener(visibilityChange, handleVisibilityChange, false);
+		
 		
 		var page = document.getElementsByClassName( 'ui-page-active' )[0],
 		pageid = page ? page.id : "";
