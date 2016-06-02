@@ -4,7 +4,7 @@
 		<item value="289" key="DIALOG_WIDTH"/>
 		<item value="419" key="DIALOG_Y_ORIGIN"/>
 		<item value="1440" key="DIALOG_X_ORIGIN"/>
-		<item value="513" key="DIALOG_HEIGHT"/>
+		<item value="432" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="" key="selection"/>
+		<item value="wheel3." key="selection"/>
 		<list key="findhistory">
-			<item value="header"/>
-			<item value="blue"/>
-			<item value="headr"/>
-			<item value="index"/>
-			<item value="z"/>
-			<item value="canvas"/>
-			<item value="canvas2"/>
-			<item value="ctx"/>
+			<item value="wheel3."/>
+			<item value="wheel"/>
+			<item value="stop"/>
+			<item value="hw"/>
+			<item value="motion"/>
+			<item value="vibrate"/>
+			<item value="comm="/>
+			<item value="comm"/>
 		</list>
 		<list key="replacehistory">
 			<item value=".Press"/>

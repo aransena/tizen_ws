@@ -16,7 +16,11 @@
    <div class="ui-content">
    	
      <ul class="ui-listview ui-snap-listview expand-list" id="snapList">     	
-
+		<li class="li-has-2line" id="list-setMode_settings">
+	        <div class="ui-marquee ui-marquee-gradient">Set Control Mode</div>
+	        <div class="li-text-sub ui-li-sub-text">Click to set Robot Control Mode</div>
+    	</li>
+    	
     	<li class="li-has-2line" id="list-checkWS_settings">
 	        <div class="ui-marquee ui-marquee-gradient">Check Robot IP</div>
 	        <div class="li-text-sub ui-li-sub-text">Click to see Robot IP</div>
@@ -34,7 +38,13 @@
    </div>
    <script> 
    //console.log("start: ", window.localStorage.getItem('url').length);
-
+	
+	  var ev1 = document.getElementById("list-setMode_settings");
+      ev1.addEventListener("click", function ()
+      {
+    	  tau.changePage("setMode.html");
+      });
+      
       var ev2 = document.getElementById("list-setWS_settings");
       ev2.addEventListener("click", function ()
       {

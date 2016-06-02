@@ -1,15 +1,17 @@
 ////////// Main Variables //////////
 
-var WHEEL_CENTER_X = -(512-360)/2;
+//var WHEEL_CENTER_X = -(512-360)/2;
+var WHEEL_CENTER_X = (360/2)-(256/2);
 var WHEEL_CENTER_Y = WHEEL_CENTER_X;
 var angle = 0;
 var heading = 0
 
 var commsInterval;
 var commsInterval_T = 30;
+var control_mode = window.localStorage.getItem('mode');
 
-var sensorInterval;
-var sensorInterval_T = 1000;
+//var sensorInterval;
+//var sensorInterval_T = 1000;
 
 var touchDownT = 0;
 
@@ -37,13 +39,16 @@ var endTouch = false;
 var ws = '';
 var url = window.localStorage.getItem('url').toString();
 
-var sensorService = tizen.sensorservice	|| (window.webapis && window.webapis.sensorservice) || null;
-var proximitySensor = sensorService.getDefaultSensor("LIGHT");
-var prev_LightSignal = 0;
+//var sensorService = tizen.sensorservice	|| (window.webapis && window.webapis.sensorservice) || null;
+//var proximitySensor = sensorService.getDefaultSensor("LIGHT");
+//var prev_LightSignal = 0;
+
+var bgd_color=""
 
 var msgPack = {
 	'Device' : 'SmartWatch',
-	'ControlLevel' :0,
+	//'ControlLevel' :0,
+	'ControlLevel' :1,
 	'Clockwise' : 0,
 	'CounterClockwise' : 0,
 	'SwipeLeft' : 0,
@@ -56,6 +61,7 @@ var msgPack = {
 	'ALPHA' :0,
 	'BETA' :0,
 	'GAMMA' :0,
+	'Mode':0,
 	'reset' : function(all) {
 
 		this.Clockwise = 0;
@@ -72,6 +78,9 @@ var msgPack = {
 
 	}
 };
+
+
+msgPack.Mode = control_mode;
 /*
 var touchTypes = {
 	SWIPE_L : 1,
@@ -103,7 +112,7 @@ console.log("Events added");
 
 /// Start Events ///
 //startSensor();
-proximitySensor.start(onsuccessCB);
+//proximitySensor.start(onsuccessCB);
 //startRotaryEventHandler();
 
 
@@ -120,14 +129,13 @@ wheelImg.onload = function () {
 	
 	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
 	//draw a box over the top
-    //ctx.fillStyle = "rgba(200, 0, 0, 0.5)";
-    //ctx.fillRect(0, 0, 500, 500);
+    
     
 
 };
 
 //wheelImg.translate(-WHEEL_CENTER_X,-WHEEL_CENTER_Y);
-wheelImg.src = 'img/wheel2.png';
+wheelImg.src = 'img/wheel.png';
 
 /*ctx.beginPath();
 ctx.arc(180, 70, 50, 0, 2 * Math.PI);
@@ -159,6 +167,50 @@ function onDeviceMotion(e) {
 	msgPack.ALPHA = e.accelerationIncludingGravity.x.toFixed(2);//Math.round(e.accelerationIncludingGravity.x);
 	msgPack.BETA = e.accelerationIncludingGravity.y.toFixed(2);//Math.round(e.accelerationIncludingGravity.y);
 	msgPack.GAMMA = e.accelerationIncludingGravity.z.toFixed(2);//Math.round(e.accelerationIncludingGravity.z);
+	//var BetaTone = (float2int(msgPack.BETA)/10 * 255);
+	//vib = Math.abs(float2int(msgPack.BETA));
+	//console.log(parseInt(vib,10).toString());
+	
+	/*var check = parseInt(vib,10)
+	
+	if(check<4 && check >0){
+			//navigator.vibrate([ 50, 1000, 50, 1000 ]);
+		navigator.vibrate(10);
+	}
+	else if(check<6 && check >4){
+			//navigator.vibrate([ 50, 450, 50, 450 ]);
+		navigator.vibrate(100);
+	}
+	else if(check<8 && check >6){
+			//navigator.vibrate([ 50, 400, 50, 400 ]);
+		navigator.vibrate(500);
+	}
+	else if(check<10 && check >8){
+			//navigator.vibrate([ 50, 350, 50, 350 ]);
+		navigator.vibrate(1000);
+	}
+	
+	else{
+		navigator.vibrate([]);
+	}*/
+	
+	
+	/*if(BetaTone<0){
+		BetaTone= 255 - BetaTone*-1;
+		bgd_color="rgba("+BetaTone.toString()+",255, 255, 1)";
+	}else{
+		BetaTone= 255 - BetaTone;
+		bgd_color= "rgba(255,"+BetaTone.toString()+", 255, 1)";
+	}
+	ctx.fillStyle = bgd_color;*/
+	//ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
+	//console.log(BetaTone.toString());
+	
+	//ctx.fillStyle = "rgba("tone.toString()",255, 255, 1)";
+}
+
+function float2int (value) {
+    return value | 0;
 }
 
 // /// Rotary Events /////
@@ -167,7 +219,7 @@ var rotaryEventHandler = function(e) {
 	_heading = parseFloat(heading);
 	//rotation = _heading-angle;
 	if (e.detail.direction === "CW") {
-		console.log("Rotate CW");
+		//console.log("Rotate CW");
 		msgPack.Clockwise = 1;
 		if(angle>0){
 			_heading=0;
@@ -175,7 +227,7 @@ var rotaryEventHandler = function(e) {
 		//angle+=1;
 		//wheelImg.rotate(angle);
 	} else {
-		console.log("Rotate CCW");
+		//console.log("Rotate CCW");
 		if(angle<0){
 			_heading=0;
 		}
@@ -187,12 +239,15 @@ var rotaryEventHandler = function(e) {
 	_heading = _heading-angle;
 	angle += _heading;
 	
-	console.log("HEADING: ",_heading.toString(), "ANGLE: ", angle.toString());
+	//console.log("HEADING: ",_heading.toString(), "ANGLE: ", angle.toString());
+	/*
+	ctx.fillStyle = bgd_color;
+    ctx.fillRect(0, 0, 500, 500);
 	ctx.translate(180,180);
 	ctx.rotate(_heading*-50 * Math.PI / 180);
 	
 	ctx.translate(-180,-180);
-	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
+	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);*/
     
 };
 
@@ -203,7 +258,7 @@ function startRotaryEventHandler() {
 }*/
 
 // ///// Light Sensor /////////
-
+/*
 function onGetSuccessCB(sensorData) {
 	var lightLevel = sensorData.lightLevel;
 	// console.log("Light Level: " + lightLevel);
@@ -229,7 +284,7 @@ function sensorCheck() {
 function onsuccessCB() {
 	console.log("The sensor started successfully.");
 	sensorInterval = setInterval(sensorCheck, sensorInterval_T);
-}
+}*/
 
 /*function startSensor() {
 	
@@ -321,7 +376,8 @@ function getSwipeType(Pos1, Pos2) {
 	} else {
 		// swipeType= touchTypes.PRESS;//" Press";
 		msgPack.Press = 1;
-		msgPack.ControlLevel = msgPack.ControlLevel===1 ? 0:1;
+		//msgPack.ControlLevel = msgPack.ControlLevel===1 ? 0:1;
+		msgPack.ControlLevel = 1;
 	}
 }
 
@@ -330,7 +386,8 @@ var endTouchHandler = function(e) {
 	document.getElementById("canvas").style.backgroundColor = "white";
 	//document.getElementById("header").style.backgroundColor = "white";
 	if(msgPack.ControlLevel>1){
-		msgPack.ControlLevel = 0;
+		//msgPack.ControlLevel = 0;
+		msgPack.ControlLevel = 1;
 	}
 	else{
 	if (timer) { // if a long press wasn't detected...
@@ -352,7 +409,8 @@ var endTouchHandler = function(e) {
 		} 
 		else{
 			msgPack.Press = 1;
-			msgPack.ControlLevel = msgPack.ControlLevel===1 ? 0:1;
+			//msgPack.ControlLevel = msgPack.ControlLevel===1 ? 0:1;
+			msgPack.ControlLevel=1;
 		}
 	
 	}
@@ -364,7 +422,7 @@ var endTouchHandler = function(e) {
 ws.onclose = function() {
 	console.error("Websocket Close");
 
-	clearInterval(sensorInterval);
+	//clearInterval(sensorInterval);
 	clearInterval(commsInterval);
 };
 
@@ -464,8 +522,12 @@ function control_back(ev) {
 	console.log(ev.keyName);
 	if (ev.keyName === "back") {
 		//ws.close();
-		console.log("back button pressed"); 
-		clearInterval(sensorInterval);
+		msgPack.ControlLevel = -1;
+		msgPack.BETA = 0;
+		ws.send(JSON.stringify(msgPack));
+		
+		//console.log("back button pressed"); 
+		//clearInterval(sensorInterval);
 		clearInterval(commsInterval);
 		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
 		window.removeEventListener("tizenhwkey",control_back,false);
@@ -483,6 +545,7 @@ function control_back(ev) {
 		} else {
 			window.history.back();
 		}
+		ws.close();
 	} 
 	
 }
