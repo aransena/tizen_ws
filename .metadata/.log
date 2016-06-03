@@ -12015,3 +12015,573 @@ java.util.ConcurrentModificationException
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2016-06-03 11:11:34.516 -----------------------------------------------
+eclipse.buildId=2.4.0_Rev5                    
+java.version=1.7.0_80
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-06-03 11:12:08.508
+!MESSAGE Error: Cannot run program "clang": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-06-03 11:12:08.634
+!MESSAGE Error: Cannot run program "clang++": Unknown reason
+!STACK 0
+java.io.IOException: Cannot run program "clang++": Unknown reason
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:347)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:89)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:89)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2016-06-03 11:12:20.847
+!MESSAGE SDK Information: Path [/home/aransena/tizen-sdk], Data Path [/home/aransena/tizen-sdk-data], Platform Path [/home/aransena/tizen-sdk/platforms/tizen-2.4/mobile]
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:32:15.947
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:36:20.290
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:37:36.900
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:40:11.650
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:41:24.698
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:45:03.109
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:46:27.190
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:48:16.516
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:51:09.848
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:56:08.285
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 11:58:30.162
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:01:22.201
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:03:59.689
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:05:31.997
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:06:59.625
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:10:20.329
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:12:26.115
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:16:01.038
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:18:10.620
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:19:42.106
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:20:55.036
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:22:51.247
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:27:46.174
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:31:10.304
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:33:33.511
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:38:56.983
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:40:39.059
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:42:09.720
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:43:07.870
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:45:22.940
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:48:13.511
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:51:35.595
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2016-06-03 12:53:38.208
+!MESSAGE 
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:859)
+	at java.util.ArrayList$Itr.next(ArrayList.java:831)
+	at org.tizen.web.zimlaunch.debug.core.InspectorManager.killInspector(InspectorManager.java:83)
+	at org.tizen.web.zimlaunch.step.KillStep.executeStep(KillStep.java:92)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:112)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:287)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)

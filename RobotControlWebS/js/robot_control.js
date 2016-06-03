@@ -210,18 +210,21 @@ var ccwCount=0;
 var timerCount = 1;
 var turn_del = 300;
 var timer_del = 10;
+var sendVal = 0;
 
 function cwSignal(){
 	console.log("CW LOW");
 	cwCount=0;
-	msgPack.Turn = 0;
+	sendVal = 0;
+	msgPack.Turn = sendVal.toString();
 	clearInterval(cwInterval);
 	clearInterval(timerInterval);
 }
 function ccwSignal(){
 	console.log("CCW LOW");
 	ccwCount=0;
-	msgPack.Turn = 0;
+	sendVal = 0;
+	msgPack.Turn = sendVal.toString();
 	clearInterval(ccwInterval);
 	clearInterval(timerInterval);
 }
@@ -236,12 +239,17 @@ var rotaryEventHandler = function(e) {
 	//rotation = _heading-angle;
 	if (e.detail.direction === "CW") {
 		
-		console.log("CW HIGH " + (cwCount/timerCount).toString());
+		//console.log("CW HIGH " + (cwCount/timerCount).toString());
 		if(mode=="1"){
 			msgPack.Clockwise = 1;
 		}
 		else{
-			var sendVal = -50*(cwCount/timerCount);
+			//sendVal = -50*(cwCount/timerCount);
+			sendVal = -500/timerCount;
+			if (sendVal < -1){
+				sendVal = -1;
+			}
+			
 			msgPack.Turn =sendVal.toString();
 		}
 		try{
@@ -263,7 +271,7 @@ var rotaryEventHandler = function(e) {
 		//wheelImg.rotate(angle);
 	} else {
 		
-		console.log("CCW HIGH " + (ccwCount/timerCount).toString());
+		//console.log("CCW HIGH " + (ccwCount/timerCount).toString());
 		
 		try{
 			clearInterval(ccwInterval);
@@ -274,7 +282,11 @@ var rotaryEventHandler = function(e) {
 			msgPack.CounterClockwise = 1;
 		}
 		else{
-			sendVal = 50*(ccwCount/timerCount);
+			//sendVal = 50*(ccwCount/timerCount);
+			sendVal = 500/timerCount;
+			if (sendVal > 1){
+				sendVal = 1;
+			}
 			msgPack.Turn =sendVal.toString();
 		}
 		timerCount = 1;
@@ -305,6 +317,44 @@ var rotaryEventHandler = function(e) {
 	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);*/
     
 };
+var center = 0;
+var rezero = 0;
+var rezero_step_size = 10;
+var rezero_step = rezero_step_size;
+var run_avg = 0;
+
+function wheelImgInterval(){
+	//ctx.fillStyle = bgd_color;
+    //ctx.fillRect(0, 0, 500, 500);
+	ctx.clearRect(0,0,ctx.width, ctx.height);
+	ctx.translate(180,180);
+	if(mode == "1"){
+		ctx.rotate(_heading*-50 * Math.PI / 180);
+		}
+	else{
+		var rot = sendVal* 120 * (Math.PI / 180)*-1;
+		run_avg = ((run_avg*10)+rot)/11;
+		
+		rot = run_avg;
+		console.log("RUN: " + rot.toString());
+		/*if(rot == 0){
+			rezero = center*-1
+			ctx.rotate(rezero);
+			center = 0;
+		}
+		else{*/
+			ctx.rotate(center*-1);
+			center = 0;
+			center = center + rot;
+			
+			ctx.rotate(rot);
+		//}
+		//console.log("Rotation: " + rot.toString());
+	}
+	
+	ctx.translate(-180,-180);
+	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
+}
 
 /*
 
@@ -365,11 +415,11 @@ var multiTouchHandler = function(e) {
 
 		if (touchCount === 2) {
 			// touchType = "Two Finger";
-			document.getElementById("canvas").style.backgroundColor = "blue";
+			document.getElementById("canvas").style.backgroundColor = "#26a69a";
 		//	document.getElementById("header").style.backgroundColor = "blue";
 		} else if (touchCount === 1) {
 			// touchType = "One Finger";
-			document.getElementById("canvas").style.backgroundColor = "red";
+			document.getElementById("canvas").style.backgroundColor = "#80cbc4";
 			//document.getElementById("header").style.backgroundColor = "red";
 		} else {
 			console.log("Error");
@@ -492,6 +542,11 @@ ws.onclose = function() {
 		}
 		catch(err){}
 		
+		try{
+			clearInterval(uiInterval);
+		}
+		catch(err){}
+		
 		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
 		window.removeEventListener("tizenhwkey",control_back,false);
 		window.removeEventListener("devicemotion", onDeviceMotion);
@@ -568,6 +623,7 @@ function startIntervals() {
 	// startComms();
 	console.log("Starting comms");
 	commsInterval = setInterval(sysComms, commsInterval_T);
+	uiInterval = setInterval(wheelImgInterval, 30);
 	console.log("comms interval set");
 	// setInterval(commsInterval, commsInterval_T);
 }
