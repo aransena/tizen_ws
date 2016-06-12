@@ -445,35 +445,16 @@ function startIntervals() {
 //// System Events ///
 function handleVisibilityChange() {
 	console.log("Visibility Change");
-
 	if (document[hidden]) {
 		exitPage();
 	}
-//		console.log("Page is now hidden.");
-//		
-//		clearInterval(commsInterval);
-//		clearInterval(timeOutInterval);
-//		clearInterval(timeOutInterval);
-//		clearInterval(uiInterval);
-//
-//		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
-//		window.removeEventListener("devicemotion", onDeviceMotion);
-//
-//	} else {
-//		console.log("Page is now visible. " + ws.readyState);
-//		window.addEventListener("rotarydetent", rotaryEventHandler, false);
-//		window.addEventListener("devicemotion", onDeviceMotion);
-//
-//		ws.send("USER");
-//	}
 }
 
 function control_back(ev) {
 	console.log(ev.keyName);
 	if (ev.keyName === "back") {
 		exitPage();
-	} 
-	
+	} 	
 }
 
 
