@@ -168,7 +168,11 @@ AlarmManager.PERIOD_WEEK = new Number();
  * Adds an alarm to the storage.
             <p>
 Sets an alarm with the application ID to be run. You should definitely provide the application ID to run
+<<<<<<< HEAD
 and the <a href=" http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/application_service.htm">application control </a>information if it is necessary. 
+=======
+and the <a href=" http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/application_service.htm">application control </a>information if it is necessary. 
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
 For more information about the application control, see <a href="application.html">The Application API</a>.
             </p>
            
@@ -240,7 +244,11 @@ Each application has its own individual alarm storage, that is, applications can
  * <p>
 Once an alarm goes off, it will be removed from the alarm storage automatically.
 <em>AlarmManager</em> provides methods to manage alarms such as adding and removing. 
+<<<<<<< HEAD
 For more information on the Alarm features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/alarm.htm">Alarm Guide</a>.
+=======
+For more information on the Alarm features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/alarm.htm">Alarm Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type AlarmManager
@@ -255,7 +263,11 @@ Each application has its own individual alarm storage, that is, applications can
  * <p>
 Once an alarm goes off, it will be removed from the alarm storage automatically.
 <em>AlarmManager</em> provides methods to manage alarms such as adding and removing. 
+<<<<<<< HEAD
 For more information on the Alarm features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/alarm.htm">Alarm Guide</a>.
+=======
+For more information on the Alarm features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/alarm.htm">Alarm Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type AlarmManager
@@ -671,7 +683,11 @@ The <em>Application</em> interface defines the current application's information
 the basic operations for the current application such as exit or hide.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Application features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/application.htm">Application Guide</a>.
+=======
+For more information on the Application features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/application.htm">Application Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type ApplicationManager
@@ -1105,7 +1121,11 @@ The <em>Application</em> interface defines the current application's information
 the basic operations for the current application such as exit or hide.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Application features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/application.htm">Application Guide</a>.
+=======
+For more information on the Application features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/app_guide/application.htm">Application Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type ApplicationManager
@@ -1199,7 +1219,11 @@ ArchiveFileProgressCallback.prototype = new Object();
 /**
  * The Archive API provides functions to create and manage archive files. You can extract files, add a file to an archive file, and so on.
  * <p>
+<<<<<<< HEAD
 For more information about how to use Archive API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/archive.htm">Archive Guide</a>.
+=======
+For more information about how to use Archive API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/archive.htm">Archive Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type ArchiveManager
@@ -1587,7 +1611,11 @@ ArchiveFileProgressCallback.prototype.onprogress = function(operationIdentifier,
 /**
  * The Archive API provides functions to create and manage archive files. You can extract files, add a file to an archive file, and so on.
  * <p>
+<<<<<<< HEAD
 For more information about how to use Archive API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/archive.htm">Archive Guide</a>.
+=======
+For more information about how to use Archive API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/archive.htm">Archive Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type ArchiveManager
@@ -1631,7 +1659,11 @@ BadgeManager.prototype = new Object();
 /**
  * The Badge API provides Badge management functionality. It provides functions for creating and updating a badge. The application with new unread information has a number in the upper right hand corner of the app icon. This number is called a badge. For example, when a new message is received the badge count appears on the app icon. The badge remains until the message is read by the user.
  * <p>
+<<<<<<< HEAD
 For more information about how to use Badge API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/ui_guide/badge.htm">Badge Guide</a>.
+=======
+For more information about how to use Badge API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/ui_guide/badge.htm">Badge Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type BadgeManager
@@ -1701,7 +1733,11 @@ BadgeManager.prototype.removeChangeListener = function(appIdList){ return; };
 /**
  * The Badge API provides Badge management functionality. It provides functions for creating and updating a badge. The application with new unread information has a number in the upper right hand corner of the app icon. This number is called a badge. For example, when a new message is received the badge count appears on the app icon. The badge remains until the message is read by the user.
  * <p>
+<<<<<<< HEAD
 For more information about how to use Badge API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/ui_guide/badge.htm">Badge Guide</a>.
+=======
+For more information about how to use Badge API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/ui_guide/badge.htm">Badge Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type BadgeManager
@@ -2273,7 +2309,11 @@ The following Bluetooth functionalities are provided:
  * <li>Registers a service (RFCOMM) on a local device, which can be consumed by remote devices to exchange data
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information on the Bluetooth features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/bluetooth.htm">Bluetooth Guide</a>.
+=======
+For more information on the Bluetooth features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/bluetooth.htm">Bluetooth Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.bluetooth
@@ -3620,7 +3660,11 @@ The following Bluetooth functionalities are provided:
  * <li>Registers a service (RFCOMM) on a local device, which can be consumed by remote devices to exchange data
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information on the Bluetooth features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/bluetooth.htm">Bluetooth Guide</a>.
+=======
+For more information on the Bluetooth features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/bluetooth.htm">Bluetooth Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.bluetooth
@@ -3962,10 +4006,17 @@ It is possible to search for specific content using filters.
 The API also supports setting the attributes of specific content.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Content features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/mediacontent.htm">Content Guide</a>.
         </p>
  * <p>
 For more information about how to use the playlist feature of the Content API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/playlist.htm">Playlist Guide</a>.
+=======
+For more information on the Content features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/mediacontent.htm">Content Guide</a>.
+        </p>
+ * <p>
+For more information about how to use the playlist feature of the Content API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/playlist.htm">Playlist Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  * <p>
 Playlist functionality has been added in Tizen 2.3.
@@ -4602,10 +4653,17 @@ It is possible to search for specific content using filters.
 The API also supports setting the attributes of specific content.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Content features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/mediacontent.htm">Content Guide</a>.
         </p>
  * <p>
 For more information about how to use the playlist feature of the Content API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/playlist.htm">Playlist Guide</a>.
+=======
+For more information on the Content features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/mediacontent.htm">Content Guide</a>.
+        </p>
+ * <p>
+For more information about how to use the playlist feature of the Content API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/playlist.htm">Playlist Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  * <p>
 Playlist functionality has been added in Tizen 2.3.
@@ -4740,7 +4798,11 @@ DownloadManager.prototype.setListener = function(downloadId, downloadCallback){ 
 /**
  * This API provides methods to asynchronously download the contents of a URL to a storage.
  * <p>
+<<<<<<< HEAD
 For more information on the Download features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/download.htm">Download Guide</a>.
+=======
+For more information on the Download features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/download.htm">Download Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/download
@@ -4863,7 +4925,11 @@ DownloadCallback.prototype.onfailed = function(downloadId, error){ return; };
 /**
  * This API provides methods to asynchronously download the contents of a URL to a storage.
  * <p>
+<<<<<<< HEAD
 For more information on the Download features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/download.htm">Download Guide</a>.
+=======
+For more information on the Download features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/download.htm">Download Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/download
@@ -5110,7 +5176,11 @@ ExifInformation.prototype.userComment = new String();
 /**
  * The Exif API provides interfaces and methods for manipulating data from a JPEG file. The object provides methods to retrieve the object from a JPEG file and save the Exif data from the object in the JPEG file. The object provides functionality to get and set the Exif attributes corresponding to the Exif tag. Changing the value of the attribute in the object stores the Exif data in the object. It does not change data in the JPEG file. For applying the modified Exif data to the JPEG file, the saveExifInfo() method of the object should be called with the object that has the modified Exif data.
  * <p>
+<<<<<<< HEAD
 For more information about how to use Exif API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/exif.htm">Exif Guide</a>.
+=======
+For more information about how to use Exif API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/exif.htm">Exif Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type ExifManager
@@ -5214,7 +5284,11 @@ ExifManager.prototype.getThumbnail = function(uri, successCallback, errorCallbac
 /**
  * The Exif API provides interfaces and methods for manipulating data from a JPEG file. The object provides methods to retrieve the object from a JPEG file and save the Exif data from the object in the JPEG file. The object provides functionality to get and set the Exif attributes corresponding to the Exif tag. Changing the value of the attribute in the object stores the Exif data in the object. It does not change data in the JPEG file. For applying the modified Exif data to the JPEG file, the saveExifInfo() method of the object should be called with the object that has the modified Exif data.
  * <p>
+<<<<<<< HEAD
 For more information about how to use Exif API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/exif.htm">Exif Guide</a>.
+=======
+For more information about how to use Exif API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/content_guide/exif.htm">Exif Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type ExifManager
@@ -6279,7 +6353,11 @@ on aspects that cannot be supported across multiple platforms.
 When a path is used to interact with the underlying filesystem, the encoding used for the file path should be the platform default.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Filesystem features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/filesystem.htm">File System Guide</a>.
+=======
+For more information on the Filesystem features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/filesystem.htm">File System Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type FileSystemManager
@@ -6392,7 +6470,11 @@ on aspects that cannot be supported across multiple platforms.
 When a path is used to interact with the underlying filesystem, the encoding used for the file path should be the platform default.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Filesystem features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/filesystem.htm">File System Guide</a>.
+=======
+For more information on the Filesystem features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/filesystem.htm">File System Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type FileSystemManager
@@ -6620,7 +6702,11 @@ The following human activity monitor functionality is provided:
  * <li>Get current human activity monitor data
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information about how to use Human Activity Monitor API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/ham.htm">HumanActivityMonitor Guide</a>.
+=======
+For more information about how to use Human Activity Monitor API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/ham.htm">HumanActivityMonitor Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/humanactivitymonitor
@@ -6816,7 +6902,11 @@ The following human activity monitor functionality is provided:
  * <li>Get current human activity monitor data
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information about how to use Human Activity Monitor API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/ham.htm">HumanActivityMonitor Guide</a>.
+=======
+For more information about how to use Human Activity Monitor API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/ham.htm">HumanActivityMonitor Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/humanactivitymonitor
@@ -6864,7 +6954,11 @@ MediaKeyEventCallback.prototype = new Object();
 Media keys are the keys of a Bluetooth headset which control multimedia playback.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the MediaKey features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/media_guide/mediakey.htm">MediaKey Guide</a>.
+=======
+For more information on the MediaKey features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/media_guide/mediakey.htm">MediaKey Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.bluetooth.audio.media
@@ -6917,7 +7011,11 @@ MediaKeyEventCallback.prototype.onreleased = function(type){ return; };
 Media keys are the keys of a Bluetooth headset which control multimedia playback.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the MediaKey features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/media_guide/mediakey.htm">MediaKey Guide</a>.
+=======
+For more information on the MediaKey features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/media_guide/mediakey.htm">MediaKey Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.bluetooth.audio.media
@@ -6982,7 +7080,11 @@ MessagePortManager.prototype = new Object();
 /**
  * The MessagePort API provides the functionality for communicating with other applications.
  * <p>
+<<<<<<< HEAD
 For more information on the MessagePort features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/messageport.htm">MessagePort Guide</a>.
+=======
+For more information on the MessagePort features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/messageport.htm">MessagePort Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type MessagePortManager
@@ -7128,7 +7230,11 @@ MessagePortManager.prototype.requestTrustedRemoteMessagePort = function(appId, r
 /**
  * The MessagePort API provides the functionality for communicating with other applications.
  * <p>
+<<<<<<< HEAD
 For more information on the MessagePort features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/messageport.htm">MessagePort Guide</a>.
+=======
+For more information on the MessagePort features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/io_guide/messageport.htm">MessagePort Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type MessagePortManager
@@ -7597,7 +7703,11 @@ There are three groups of application scenarios for NFC:
  * <li>Making payments by holding mobile phones close to point of sales terminals instead of swiping smart cards.
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information on the NFC features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/nfc.htm">NFC Guide</a>.
+=======
+For more information on the NFC features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/nfc.htm">NFC Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.nfc
@@ -8239,7 +8349,11 @@ There are three groups of application scenarios for NFC:
  * <li>Making payments by holding mobile phones close to point of sales terminals instead of swiping smart cards.
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information on the NFC features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/nfc.htm">NFC Guide</a>.
+=======
+For more information on the NFC features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/nfc.htm">NFC Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.nfc
@@ -8743,7 +8857,11 @@ PowerManager.prototype.turnScreenOff = function(){ return; };
 /**
  * The Power API provides support for requesting power management related resource states.
  * <p>
+<<<<<<< HEAD
 For more information on the Power features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/power.htm">Power Guide</a>.
+=======
+For more information on the Power features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/power.htm">Power Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type PowerManager
@@ -8753,7 +8871,11 @@ PowerManagerObject.prototype.power = new PowerManager();
 /**
  * The Power API provides support for requesting power management related resource states.
  * <p>
+<<<<<<< HEAD
 For more information on the Power features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/power.htm">Power Guide</a>.
+=======
+For more information on the Power features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/power.htm">Power Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type PowerManager
@@ -8839,10 +8961,17 @@ To receive push notifications, follow the steps below:
  * <li>Get notification data
  * </ul>
  * <p>
+<<<<<<< HEAD
 To use Push features, the application needs the <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.native.appprogramming/html/tutorials/messaging_tutorial/push_tutorial.htm#start">permission to access the Tizen Push servers</a>.
         </p>
  * <p>
 For more information on the Push features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/push.htm">Push Guide</a>.
+=======
+To use Push features, the application needs the <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.native.appprogramming/html/tutorials/messaging_tutorial/push_tutorial.htm#start">permission to access the Tizen Push servers</a>.
+        </p>
+ * <p>
+For more information on the Push features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/push.htm">Push Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.push
@@ -9002,10 +9131,17 @@ To receive push notifications, follow the steps below:
  * <li>Get notification data
  * </ul>
  * <p>
+<<<<<<< HEAD
 To use Push features, the application needs the <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.native.appprogramming/html/tutorials/messaging_tutorial/push_tutorial.htm#start">permission to access the Tizen Push servers</a>.
         </p>
  * <p>
 For more information on the Push features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/push.htm">Push Guide</a>.
+=======
+To use Push features, the application needs the <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.native.appprogramming/html/tutorials/messaging_tutorial/push_tutorial.htm#start">permission to access the Tizen Push servers</a>.
+        </p>
+ * <p>
+For more information on the Push features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/communication_guide/push.htm">Push Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.push
@@ -9821,7 +9957,11 @@ The following sensor functionality is provided:
  * <li>Get current sensor data
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information about how to use Sensor API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/sensor.htm">Sensor Guide</a>.
+=======
+For more information about how to use Sensor API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/sensor.htm">Sensor Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/sensor.photometer
@@ -10028,7 +10168,11 @@ The following sensor functionality is provided:
  * <li>Get current sensor data
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information about how to use Sensor API, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/sensor.htm">Sensor Guide</a>.
+=======
+For more information about how to use Sensor API, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/sensor.htm">Sensor Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/sensor.photometer
@@ -10118,7 +10262,11 @@ You can get the maximum volume level for system, notifications, alarm, media and
 Also, you can change or get the current volume level.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Sound features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/media_guide/sound.htm">Sound Guide</a>.
+=======
+For more information on the Sound features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/media_guide/sound.htm">Sound Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type SoundManager
@@ -10310,7 +10458,11 @@ You can get the maximum volume level for system, notifications, alarm, media and
 Also, you can change or get the current volume level.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Sound features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/media_guide/sound.htm">Sound Guide</a>.
+=======
+For more information on the Sound features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/media_guide/sound.htm">Sound Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type SoundManager
@@ -10635,7 +10787,11 @@ Not all above properties may be available on every Tizen device. For instance, a
  * <li>SIM - tizen.systeminfo.getCapability()
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information on the SystemInfo features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/systeminfo.htm">System Information Guide</a>.
+=======
+For more information on the SystemInfo features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/systeminfo.htm">System Information Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.wifi
@@ -11683,7 +11839,11 @@ Not all above properties may be available on every Tizen device. For instance, a
  * <li>SIM - tizen.systeminfo.getCapability()
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information on the SystemInfo features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/systeminfo.htm">System Information Guide</a>.
+=======
+For more information on the SystemInfo features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/systeminfo.htm">System Information Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @feature http://tizen.org/feature/network.wifi
@@ -11804,7 +11964,11 @@ In addition, not all the above properties may be available even though a device 
  * <li>NOTIFICATION_EMAIL - tizen.systeminfo.getCapability()
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information on the SystemSetting features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/systemsetting.htm">System Setting Guide</a>.
+=======
+For more information on the SystemSetting features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/systemsetting.htm">System Setting Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type SystemSettingManager
@@ -11836,7 +12000,11 @@ In addition, not all the above properties may be available even though a device 
  * <li>NOTIFICATION_EMAIL - tizen.systeminfo.getCapability()
  * </ul>
  * <p>
+<<<<<<< HEAD
 For more information on the SystemSetting features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/systemsetting.htm">System Setting Guide</a>.
+=======
+For more information on the SystemSetting features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/systemsetting.htm">System Setting Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type SystemSettingManager
@@ -11922,7 +12090,11 @@ This API can be used to get TZDate objects with full time zone support, convert 
 between timezones, retrieve available timezones.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Time features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/time.htm">Time Guide</a>.
+=======
+For more information on the Time features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/time.htm">Time Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type TimeUtil
@@ -12786,7 +12958,11 @@ This API can be used to get TZDate objects with full time zone support, convert 
 between timezones, retrieve available timezones.
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Time features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/time.htm">Time Guide</a>.
+=======
+For more information on the Time features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/sys_guide/time.htm">Time Guide</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type TimeUtil
@@ -13180,7 +13356,11 @@ WebAPIException.DATA_CLONE_ERR = new Number();
 /**
  * 16-bit error code.
  * <p>
+<<<<<<< HEAD
 For the possible values of this attribute, see <a href="http://www.w3.ohttp://127.0.0.1:54196/help/topic/dom/#domexception">DOMException</a>.
+=======
+For the possible values of this attribute, see <a href="http://www.w3.ohttp://127.0.0.1:59439/help/topic/dom/#domexception">DOMException</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
             </p>
  *
  * @type Number
@@ -13199,7 +13379,11 @@ This attribute can have one of the following values:
  * <li>ServiceNotAvailableError - The requested service is not available.
  * </ul>
  * <p>
+<<<<<<< HEAD
 For other possible values of this attribute, see the values defined in <a href="http://www.w3.ohttp://127.0.0.1:54196/help/topic/dom/#error-names-0">DOM error names</a>            </p>
+=======
+For other possible values of this attribute, see the values defined in <a href="http://www.w3.ohttp://127.0.0.1:59439/help/topic/dom/#error-names-0">DOM error names</a>            </p>
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
  *
  * @type String
  */
@@ -13307,7 +13491,11 @@ AttributeFilter.prototype.matchValue = new any();
 /**
  * 16-bit error code.
  * <p>
+<<<<<<< HEAD
 Possible values are defined in <a href="http://www.w3.ohttp://127.0.0.1:54196/help/topic/dom/#domexception">DOMException</a>.
+=======
+Possible values are defined in <a href="http://www.w3.ohttp://127.0.0.1:59439/help/topic/dom/#domexception">DOMException</a>.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
             </p>
  *
  * @type Number
@@ -13326,7 +13514,11 @@ This attribute can have one of the following values:
  * <li>ServiceNotAvailableError - The requested service is not available.
  * </ul>
  * <p>
+<<<<<<< HEAD
 For other possible values of this attribute, see the values defined in <a href="http://www.w3.ohttp://127.0.0.1:54196/help/topic/dom/#error-names-0">DOM error names</a>            </p>
+=======
+For other possible values of this attribute, see the values defined in <a href="http://www.w3.ohttp://127.0.0.1:59439/help/topic/dom/#error-names-0">DOM error names</a>            </p>
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
  *
  * @type String
  */
@@ -13365,7 +13557,11 @@ Additionally, this API specifies the location in the ECMAScript hierarchy in whi
 the Tizen Web Device API is instantiated (<em>window.tizen</em>).
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Tizen features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/tizen_guide/tizen.htm">Tizen Guide</a>.  
+=======
+For more information on the Tizen features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/tizen_guide/tizen.htm">Tizen Guide</a>.  
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type Tizen
@@ -13402,7 +13598,11 @@ Additionally, this API specifies the location in the ECMAScript hierarchy in whi
 the Tizen Web Device API is instantiated (<em>window.tizen</em>).
         </p>
  * <p>
+<<<<<<< HEAD
 For more information on the Tizen features, see <a href="http://127.0.0.1:54196/help/topic/org.tizen.wearable.web.appprogramming/html/guide/tizen_guide/tizen.htm">Tizen Guide</a>.  
+=======
+For more information on the Tizen features, see <a href="http://127.0.0.1:59439/help/topic/org.tizen.wearable.web.appprogramming/html/guide/tizen_guide/tizen.htm">Tizen Guide</a>.  
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
         </p>
  *
  * @type Tizen

@@ -11,7 +11,11 @@ W3CWidget.prototype = new Object();
 /**
  * W3C Widget.
  * <p>
+<<<<<<< HEAD
 The Widget Interface &lt;a href="http://www.w3.ohttp://127.0.0.1:43733/help/topic/widgets-apis/"&gt;http://www.w3.ohttp://127.0.0.1:43733/help/topic/widgets-apis/&lt;/a&gt;.
+=======
+The Widget Interface &lt;a href="http://www.w3.ohttp://127.0.0.1:59439/help/topic/widgets-apis/"&gt;http://www.w3.ohttp://127.0.0.1:59439/help/topic/widgets-apis/&lt;/a&gt;.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
             </p>
  *
  * @type W3CWidget
@@ -98,7 +102,11 @@ W3CWidget.prototype.width = new Number();
 /**
  * W3C Widget.
  * <p>
+<<<<<<< HEAD
 The Widget Interface &lt;a href="http://www.w3.ohttp://127.0.0.1:43733/help/topic/widgets-apis/"&gt;http://www.w3.ohttp://127.0.0.1:43733/help/topic/widgets-apis/&lt;/a&gt;.
+=======
+The Widget Interface &lt;a href="http://www.w3.ohttp://127.0.0.1:59439/help/topic/widgets-apis/"&gt;http://www.w3.ohttp://127.0.0.1:59439/help/topic/widgets-apis/&lt;/a&gt;.
+>>>>>>> 9a0c1c5fe7e159a14521aedec8aa6df8933cc1f4
             </p>
  *
  * @type W3CWidget
