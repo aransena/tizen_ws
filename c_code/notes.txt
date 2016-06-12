@@ -1,3 +1,0 @@
-http://www.microhowto.info/howto/send_a_udp_datagram_in_c.html
-
-https://developer.tizen.org/es/development/getting-started/web-application/understanding-tizen-programming/security-and-api-privileges?langredirect=1

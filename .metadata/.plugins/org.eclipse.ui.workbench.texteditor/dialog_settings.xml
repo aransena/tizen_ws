@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="289" key="DIALOG_WIDTH"/>
-		<item value="419" key="DIALOG_Y_ORIGIN"/>
-		<item value="1440" key="DIALOG_X_ORIGIN"/>
-		<item value="513" key="DIALOG_HEIGHT"/>
+		<item value="309" key="DIALOG_WIDTH"/>
+		<item value="420" key="DIALOG_Y_ORIGIN"/>
+		<item value="1442" key="DIALOG_X_ORIGIN"/>
+		<item value="564" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -15,14 +15,14 @@
 		<item value="false" key="wholeword"/>
 		<item value="" key="selection"/>
 		<list key="findhistory">
-			<item value="header"/>
-			<item value="blue"/>
-			<item value="headr"/>
-			<item value="index"/>
-			<item value="z"/>
-			<item value="canvas"/>
-			<item value="canvas2"/>
-			<item value="ctx"/>
+			<item value="data.txt"/>
+			<item value="does"/>
+			<item value="doess "/>
+			<item value="timeOut ="/>
+			<item value="timertime"/>
+			<item value="timercount"/>
+			<item value="console.log"/>
+			<item value="con"/>
 		</list>
 		<list key="replacehistory">
 			<item value=".Press"/>

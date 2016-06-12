@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<manifest xmlns="http://tizen.org/ns/packages" api-version="2.3.1" package="org.example.rotaryinputexample" version="1.0.0">
-    <profile name="wearable"/>
-    <ui-application appid="org.example.rotaryinputexample" exec="rotaryinputexample" multiple="false" nodisplay="false" taskmanage="true" type="capp">
-        <label>rotaryinputexample</label>
-        <icon>rotaryinputexample.png</icon>
-    </ui-application>
-</manifest>

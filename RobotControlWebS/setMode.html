@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>Hello TAU</title>
+		<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.css"/>
+		<link rel="stylesheet" media="all" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+		<!--load theme file for your application-->
+		<link rel="stylesheet"href="css/style.css"/>
+	</head>
+	<body>
+	
+	<div class="ui-page ui-page-active" id="setMode">
+	   <div class="ui-content">
+		<input type="text" id="ctl_mode" size="11'>Mode<br>
+	   </div>
+   <footer class="ui-footer ui-bottom-button">
+      <a href="" class="ui-btn" id="btn-setMode">Set</a>
+   </footer>
+	  
+	<script>
+      var ev = document.getElementById("btn-setMode");
+      ev.addEventListener("click", function ()
+      {
+    	  var mode = document.getElementById("ctl_mode").value;
+    	  console.log("Control Mode: "+mode);
+    	  window.localStorage.setItem('mode', mode.toString());
+    	  console.log("saved: "+window.localStorage.getItem('mode').toString());
+    	  alert("Mode Updated!")
+      });
+	    window.addEventListener( 'tizenhwkey', function( ev ) {
+			if( ev.keyName === "back" ) {
+				var page = document.getElementsByClassName( 'ui-page-active' )[0],
+					pageid = page ? page.id : "";
+				
+				if( pageid === "pageMain" ) {
+					try {
+						tizen.application.getCurrentApplication().exit();
+					} catch (ignore) {
+						console.error("error exiting program");
+					}
+				} 
+				else {
+					window.history.back();
+				}
+			}
+		} ); 
+   </script>
+   
+	</div>
+	
+	</body>
+</html>
