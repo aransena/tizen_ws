@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 1 elements(s) to &apos;RobotControlWebS&apos;&#x0A;- Original project: &apos;RobotControlWebS&apos;&#x0A;- Destination element: &apos;RobotControlWebS&apos;&#x0A;- Original element: &apos;robotControl.html&apos;" description="Copy file" element1="robotControl.html" files="1" flags="589830" folders="0" id="org.eclipse.wst.jsdt.ui.copy" log="robotControl.html&#x09;true&#x09;true&#x09;robotControl_old.html" policy="org.eclipse.wst.jsdt.ui.copyResources" stamp="1462746588508" target="/RobotControlWebS" units="0" version="1.0"/>
-</session>
