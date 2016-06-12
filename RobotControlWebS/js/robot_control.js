@@ -1,20 +1,33 @@
 ////////// Main Variables //////////
 
+// Drawing constants //
 var WHEEL_CENTER_X = (360/2)-(256/2);
 var WHEEL_CENTER_Y = WHEEL_CENTER_X;
 
-var commsInterval;
+// Steering //
 var timeOutInterval;
-var timeOutInterval;
-var uiInterval;
-
-var commsInterval_T = 5;
 var control_mode = window.localStorage.getItem('mode');
 
-var touchDownT = 0;
+// System Timeout //
+var sysTimeoutInterval;
+var sysTimeout = 10000;
 
+// Comms //
+var commsInterval;
+var commsInterval_T = 5;
+var ws = '';
+var url = window.localStorage.getItem('url').toString();
+
+// UI  //
+var center = 0;
+var run_avg = 0.0;
+
+var canv = document.getElementById("canvas");
+var ctx = canv.getContext("2d");
+var page = document.getElementById("robotControl");
+
+var uiInterval;
 var hidden, visibilityChange;
-
 if (typeof document.hidden !== "undefined") {
 	hidden = "hidden";
 	visibilityChange = "visibilitychange";
@@ -25,6 +38,7 @@ if (typeof document.hidden !== "undefined") {
 
 // Multitouch vars //
 var touchDownT = 0;
+
 var touchDownXY = [ 0, 0 ];
 var lastPos = [ 0, 0 ];
 
@@ -34,12 +48,6 @@ var touchduration = 1000; // length of time we want the user to touch before
 
 var endTouch = false;
 
-var ws = '';
-var url = window.localStorage.getItem('url').toString();
-var mode = window.localStorage.getItem('mode').toString();
-
-var center = 0;
-var run_avg = 0.0;
 
 
 var msgPack = {
@@ -74,9 +82,6 @@ var msgPack = {
 
 msgPack.Mode = control_mode;
 
-var canv = document.getElementById("canvas");
-var ctx = canv.getContext("2d");
-var page = document.getElementById("robotControl");
 
 ////////// Start  //////////
 console.log("START: " + run_avg.toString());
@@ -95,11 +100,55 @@ wheelImg.onload = function () {
 
 wheelImg.src = 'img/wheel.png';
 
+function exitPage(){
+	//ws.close();
+	clearInterval(commsInterval);
+	clearInterval(timeOutInterval);
+	clearInterval(timeOutInterval);
+	clearInterval(uiInterval);
+	
+	msgPack.ControlLevel = -1;
+	msgPack.BETA = 0;
+	msgPack.Turn = "0";
+	ws.send(JSON.stringify(msgPack));
+	
+	window.removeEventListener("rotarydetent", rotaryEventHandler, false);
+	window.removeEventListener("devicemotion", onDeviceMotion);
+	
+	var page = document.getElementsByClassName( 'ui-page-active' )[0],
+	pageid = page ? page.id : "";
+
+	if( pageid === "pageMain" ) {
+		try {
+			tizen.application.getCurrentApplication().exit();
+		} catch (ignore) {
+		}
+	} else {
+		window.history.back();
+	}
+	ws.close();
+}
+
+function sysTimeoutSignal(){
+	clearInterval(sysTimeoutInterval);
+	console.log("System Timeout");
+	exitPage();
+}
+sysTimeoutInterval = setInterval(sysTimeoutSignal, sysTimeout);
+
+
 //// Motion Events ////
 function onDeviceMotion(e) {
 	msgPack.ALPHA = e.accelerationIncludingGravity.x.toFixed(2);//Math.round(e.accelerationIncludingGravity.x);
 	msgPack.BETA = e.accelerationIncludingGravity.y.toFixed(2);//Math.round(e.accelerationIncludingGravity.y);
 	msgPack.GAMMA = e.accelerationIncludingGravity.z.toFixed(2);//Math.round(e.accelerationIncludingGravity.z);
+	if (Math.abs(msgPack.BETA) > 2){
+		try{
+			clearInterval(sysTimeoutInterval);
+		}
+		catch(err){}
+		sysTimeoutInterval = setInterval(sysTimeoutSignal, sysTimeout);
+	}
 }
 
 var timeOut = 300;
@@ -121,8 +170,14 @@ function timeOutSignal(){
 }
 
 // /// Rotary Events /////
-var rotaryEventHandler = function(e) {	
-	if(mode==="1"){
+var rotaryEventHandler = function(e) {
+	try{
+		clearInterval(sysTimeoutInterval);
+	}
+	catch(err){}
+	sysTimeoutInterval = setInterval(sysTimeoutSignal, sysTimeout);
+
+	if(control_mode==="1"){
 		if (e.detail.direction === "CW") {
 			msgPack.Clockwise = 1;
 		}
@@ -130,7 +185,7 @@ var rotaryEventHandler = function(e) {
 			msgPack.CounterClockwise = 1;
 		}
 	}
-	else if(mode==="2"){
+	else if(control_mode==="2"){
 		time = new Date();
 		curr_time = time.getTime();		
 		try{
@@ -175,7 +230,7 @@ var rotaryEventHandler = function(e) {
 function wheelImgInterval(){
 	ctx.clearRect(0,0,ctx.width, ctx.height);
 	ctx.translate(180,180);
-	if(mode === "1"){
+	if(control_mode === "1"){
 		//ctx.rotate(_heading*-50 * Math.PI / 180);
 	}
 	else{
@@ -202,6 +257,11 @@ function wheelImgInterval(){
 
 // //// Touch Events //////
 var multiTouchHandler = function(e) {
+	try{
+		clearInterval(sysTimeoutInterval);
+	}
+	catch(err){}
+	
 	longtouch_chk = false;
 	if (ws.readyState === 1) {
 		timer = setTimeout(longtouch, touchduration);
@@ -272,6 +332,8 @@ function getSwipeType(Pos1, Pos2) {
 }
 
 var endTouchHandler = function(e) {
+	sysTimeoutInterval = setInterval(sysTimeoutSignal, sysTimeout);
+	
 	endTouch = true;
 	document.getElementById("canvas").style.backgroundColor = "white";
 	if(msgPack.ControlLevel>1){
@@ -371,6 +433,7 @@ function sysComms() {
 	endTouch = false;
 }
 
+
 function startIntervals() {
 	console.log("Starting comms");
 	commsInterval = setInterval(sysComms, commsInterval_T);
@@ -384,50 +447,31 @@ function handleVisibilityChange() {
 	console.log("Visibility Change");
 
 	if (document[hidden]) {
-		console.log("Page is now hidden.");
-		
-		clearInterval(commsInterval);
-		clearInterval(timeOutInterval);
-		clearInterval(timeOutInterval);
-		clearInterval(uiInterval);
-
-		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
-		window.removeEventListener("devicemotion", onDeviceMotion);
-
-	} else {
-		console.log("Page is now visible. " + ws.readyState);
-		window.addEventListener("rotarydetent", rotaryEventHandler, false);
-		window.addEventListener("devicemotion", onDeviceMotion);
-
-		ws.send("USER");
+		exitPage();
 	}
+//		console.log("Page is now hidden.");
+//		
+//		clearInterval(commsInterval);
+//		clearInterval(timeOutInterval);
+//		clearInterval(timeOutInterval);
+//		clearInterval(uiInterval);
+//
+//		window.removeEventListener("rotarydetent", rotaryEventHandler, false);
+//		window.removeEventListener("devicemotion", onDeviceMotion);
+//
+//	} else {
+//		console.log("Page is now visible. " + ws.readyState);
+//		window.addEventListener("rotarydetent", rotaryEventHandler, false);
+//		window.addEventListener("devicemotion", onDeviceMotion);
+//
+//		ws.send("USER");
+//	}
 }
 
 function control_back(ev) {
 	console.log(ev.keyName);
 	if (ev.keyName === "back") {
-		//ws.close();
-		msgPack.ControlLevel = -1;
-		msgPack.BETA = 0;
-		msgPack.Turn = "0";
-		ws.send(JSON.stringify(msgPack));
-		
-		//console.log("back button pressed"); 
-		//clearInterval(sensorInterval);
-		
-		
-		var page = document.getElementsByClassName( 'ui-page-active' )[0],
-		pageid = page ? page.id : "";
-	
-		if( pageid === "pageMain" ) {
-			try {
-				tizen.application.getCurrentApplication().exit();
-			} catch (ignore) {
-			}
-		} else {
-			window.history.back();
-		}
-		ws.close();
+		exitPage();
 	} 
 	
 }
