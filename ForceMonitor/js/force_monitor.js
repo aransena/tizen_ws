@@ -420,11 +420,29 @@ ws.onmessage = function(msg) {
 	// console.log("message: " + msg.data);
 	var ROSmsg = JSON.parse(msg.data);
 	ROSmsg = ROSmsg.msg.data.split(",");
-	console.log(ROSmsg[0]);
+	//console.log(ROSmsg[0]);
+	var val = parseFloat(ROSmsg[0]);
+	console.log(val);
 	ctx.clearRect(0, 0, canv.width, canv.height);
 	ctx.font = "100px Arial";
-	ctx.fillText(ROSmsg[0], 70, 230);
+	ctx.fillText(val, 70, 230);
 
+	console.log(val.toString())
+	if(val<5.00){
+		canv.style.backgroundColor = "rgb(255, 0, 0)";
+//		canv.style.backgroundColor = "red";
+		
+	}	
+	else if(val<10){
+		canv.style.backgroundColor = "rgb(0, 0, 255)";
+//		canv.style.backgroundColor = "blue";
+	}
+	else if(val<15){
+		canv.style.backgroundColor = "rgb(0, 255, 0)";
+//		canv.style.backgroundColor = "green";
+	}
+	
+	
 	// if (msg.data === "USER") {
 	// console.log("CONNECTED");
 	// ws.send("RUN");
