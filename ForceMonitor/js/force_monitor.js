@@ -428,18 +428,21 @@ ws.onmessage = function(msg) {
 	ctx.fillText(val, 70, 230);
 
 	console.log(val.toString())
-	if(val<5.00){
+	if(val<50.00){
 		canv.style.backgroundColor = "rgb(255, 0, 0)";
-//		canv.style.backgroundColor = "red";
-		
+//		canv.style.backgroundColor = "red";	
 	}	
-	else if(val<10){
+	else if(val<100){
 		canv.style.backgroundColor = "rgb(0, 0, 255)";
 //		canv.style.backgroundColor = "blue";
 	}
-	else if(val<15){
+	else if(val<150){
 		canv.style.backgroundColor = "rgb(0, 255, 0)";
 //		canv.style.backgroundColor = "green";
+	}
+	else{
+		canv.style.backgroundColor = "rgb(255, 0, 0)";
+//		canv.style.backgroundColor = "red";	
 	}
 	
 	

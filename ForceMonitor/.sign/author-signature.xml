@@ -56,7 +56,7 @@
 </Reference>
 <Reference URI="js%2Fforce_monitor.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>6db787jV/4h5Hbd/pHX5z+R0Cx05lJz5mO8g/32nuVk=</DigestValue>
+<DigestValue>fIkodwERMgsUDIgSLT0k3sEyna6tFcg1mhSy7fEeTWw=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmarquee-helper.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -1075,11 +1075,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-gvd4q1jKauplpqMrHCj3eYmEKBZr70ptKowbUstlA88tm+A8cZEiWIft1JYF1DOo37bg5dLVJCvN
-UAMFX1KlZsCkUziOo3FJP8ci8jTkgPk9546IoSZZm2yERh5oEYSXNiTX3fL8Ugjft0N4hLjzawNi
-F92z8JeZbVAVpi9EACkZTPv+Ki5y3Hveith5lftdvDGV2RVZ/O7xHnQdiv7XzJDR5QhKZEzj74Ws
-oYnmY0E3zEaQNd2TFcjgO+iEPpJZVnFmJ4sLRbUDSRhVAEb6sRjH8lVgLSXizaA08ddYlcjDVBCb
-KJ1szp+LLp8fkVpDx2tNbmqwrsP5emEJAHmN/g==
+Ks7ajdBrqntjWXYMEZoHVSjZ/9sBy9QykY0PP7ETGUOc+kEQNZmOS0llmh3O87r6m8fTbVDZ7usg
+Z4HU3pLJZk6GM+q3Q6ainsSn2FI5GYfa/28g/CffJrQDjCs5wYLlksIet74aUuj240ORSM1unmG8
+iajcztALDQpog2RosoVOSngFm4W3qUXOT8pEpGJBmSsHO2vLZhH2eiC634NxJlxH26cGeKUAEfmP
+M0u3LXGEZ0LyHVFwdFX6FqLfIuRGewXFii7wucnQAtkyC1dy6sL2IUgN6a33mqxar9aAjYZLrEWd
+PBOS/0D/l2sCto45UOS9eaw+avkXKl/1X3eDTw==
 </SignatureValue>
 <KeyInfo>
 <X509Data>
