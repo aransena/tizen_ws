@@ -1,32 +1,8 @@
 ////////// Main Variables //////////
-
-//// Drawing constants //
-//var WHEEL_CENTER_X = (360/2)-(256/2);
-//var WHEEL_CENTER_Y = WHEEL_CENTER_X;
-
-//// Steering //
-//var timeOutInterval;
-//var control_mode = window.localStorage.getItem('mode');
-
-//// System Timeout //
-//var sysTimeoutInterval;
-//var sysTimeout = 10000;
-
-// Comms //
-var commsInterval;
-var commsInterval_T = 5;
-var ws = '';
-var url = window.localStorage.getItem('url').toString();
-
-// // UI //
-// var center = 0;
-// var run_avg = 0.0;
-
 var canv = document.getElementById("canvas");
 var ctx = canv.getContext("2d");
-var page = document.getElementById("forceMonitor");
+var target_force = 0;
 
-var uiInterval;
 var hidden, visibilityChange;
 if (typeof document.hidden !== "undefined") {
 	hidden = "hidden";
@@ -36,84 +12,19 @@ if (typeof document.hidden !== "undefined") {
 	visibilityChange = "webkitvisibilitychange";
 }
 
-// // Multitouch vars //
-// var touchDownT = 0;
-//
-// var touchDownXY = [ 0, 0 ];
-// var lastPos = [ 0, 0 ];
-//
-// var timer; // long press timer
-// var longtouch_chk = false;
-// var touchduration = 1000; // length of time we want the user to touch before
-//
-// var endTouch = false;
-
-// var msgPack = {
-// 'Device' : 'SmartWatch',
-// 'ControlLevel' :1,
-// 'Clockwise' : 0,
-// 'CounterClockwise' : 0,
-// 'SwipeLeft' : 0,
-// 'SwipeRight' : 0,
-// 'Press' : 0,
-// 'LongHold' : 0,
-// 'NumFingers' : 0,
-// 'LightLevel' : 0,
-// 'LightSignal' : 0,
-// 'ALPHA' :0,
-// 'BETA' :0,
-// 'GAMMA' :0,
-// 'Mode':0,
-// 'Turn':'0.0',
-// 'reset' : function(all) {
-// this.Clockwise = 0;
-// this.CounterClockwise = 0;
-// this.SwipeLeft = 0;
-// this.SwipeRight = 0;
-// this.Press = 0;
-// if (all) {
-// this.LongHold = 0;
-// this.NumFingers = 0;
-// }
-// }
-// };
-
-// msgPack.Mode = control_mode;
-
 // //////// Start //////////
-// console.log("START: " + run_avg.toString());
 console.log("START");
 
+var url = window.localStorage.getItem('url').toString();
 console.log("connecting: " + url);
-ws = new WebSocket(url);
+var ws = new WebSocket(url);
 
-// /////// Control Screen GUI Setup ////////
 canv.style.backgroundColor = "white";
 
-// Loading of the home test image - img1
-// var wheelImg = new Image();
-// wheelImg.onload = function () {
-// ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
-// };
 
-// wheelImg.src = 'img/wheel.png';
+///////// Functions ////////
 
 function exitPage() {
-	// ws.close();
-
-	// clearInterval(timeOutInterval);
-	// clearInterval(timeOutInterval);
-	clearInterval(commsInterval);
-	clearInterval(uiInterval);
-
-	// msgPack.ControlLevel = -1;
-	// msgPack.BETA = 0;
-	// msgPack.Turn = "0";
-	// ws.send(JSON.stringify(msgPack));
-
-	window.removeEventListener("rotarydetent", rotaryEventHandler, false);
-	window.removeEventListener("devicemotion", onDeviceMotion);
-
 	var page = document.getElementsByClassName('ui-page-active')[0], pageid = page ? page.id
 			: "";
 
@@ -128,256 +39,12 @@ function exitPage() {
 	ws.close();
 }
 
-// function sysTimeoutSignal(){
-// clearInterval(sysTimeoutInterval);
-// console.log("System Timeout");
-// exitPage();
-// }
-// sysTimeoutInterval = setInterval(sysTimeoutSignal, sysTimeout);
-
-// // Motion Events ////
-function onDeviceMotion(e) {
-	// msgPack.ALPHA = e.accelerationIncludingGravity.x.toFixed(2);//
-	// Math.round(e.accelerationIncludingGravity.x);
-	// msgPack.BETA = e.accelerationIncludingGravity.y.toFixed(2);//
-	// Math.round(e.accelerationIncludingGravity.y);
-	// msgPack.GAMMA = e.accelerationIncludingGravity.z.toFixed(2);//
-	// Math.round(e.accelerationIncludingGravity.z);
-	// if (Math.abs(msgPack.BETA) > 2) {
-	// try {
-	// clearInterval(sysTimeoutInterval);
-	// } catch (err) {
-	// }
-	// sysTimeoutInterval = setInterval(sysTimeoutSignal, sysTimeout);
-	// }
-}
-
-var timeOut = 300;
-var sendVal = 0;
-var maxTick = 150;// timeOut/timer_del;
-var timerCount = maxTick;
-var incrementSize = 15; // 15 degrees per bezel click
-var time = new Date();
-var curr_time = time.getTime;
-var prev_time = time.getTime;
-var abs_max_vel = 1;
-
-function timeOutSignal() {
-	timerCount = maxTick;
-	sendVal = 0.0;
-	msgPack.Turn = sendVal.toString();
-	clearInterval(timeOutInterval);
-	console.log("Timeout");
-}
-
-// /// Rotary Events /////
-var rotaryEventHandler = function(e) {
-	// try {
-	// clearInterval(sysTimeoutInterval);
-	// } catch (err) {
-	// }
-	// sysTimeoutInterval = setInterval(sysTimeoutSignal, sysTimeout);
-
-	if (control_mode === "1") {
-		if (e.detail.direction === "CW") {
-			// msgPack.Clockwise = 1;
-		} else {
-			// msgPack.CounterClockwise = 1;
-		}
-	} else if (control_mode === "2") {
-		time = new Date();
-		curr_time = time.getTime();
-		try {
-			// clearInterval(timeOutInterval);
-		} catch (err) {
-		}
-
-		if (e.detail.direction === "CW") {
-			if (curr_time === prev_time) {
-				sendVal = -abs_max_vel;
-			} else {
-				sendVal = -incrementSize / (curr_time - prev_time);
-			}
-
-			if (sendVal < -abs_max_vel) {
-				sendVal = -abs_max_vel;
-			}
-		} else {
-			if (curr_time === prev_time) {
-				sendVal = abs_max_vel;
-			} else {
-				sendVal = incrementSize / (curr_time - prev_time);
-			}
-
-			if (sendVal > abs_max_vel) {
-				sendVal = abs_max_vel;
-			}
-		}
-		// console.log("TURN: "+ sendVal.toString()); //+ "\t\tCNT: "+
-		// timerCount.toString());
-
-		// msgPack.Turn = sendVal.toString();
-		prev_time = curr_time;
-
-		timerCount = 95;
-		// timeOutInterval = setInterval(timeOutSignal, timeOut);
-	}
-
-};
-
-function wheelImgInterval() {
-	ctx.clearRect(0, 0, ctx.width, ctx.height);
-	ctx.translate(180, 180);
-	if (control_mode === "1") {
-		// ctx.rotate(_heading*-50 * Math.PI / 180);
-	} else {
-		var rot = 0.0;
-		rot = -sendVal * 120 * (Math.PI / 180);
-		if (isNaN(run_avg)) {
-			run_avg = 0.0;
-		}
-		run_avg = (run_avg * 10 + rot) / 11;
-		console.log("RUN1: " + run_avg.toString() + "\t\tRotation: "
-				+ rot.toString());
-		ctx.rotate(center * -1);
-		center = 0;
-		center = center + run_avg;
-
-		ctx.rotate(run_avg);
-
-		if (Math.abs(run_avg) < 0.1) {
-			run_avg = 0;
-		}
-	}
-	ctx.translate(-180, -180);
-	ctx.drawImage(wheelImg, WHEEL_CENTER_X, WHEEL_CENTER_Y);
-}
-
-// //// Touch Events //////
-var multiTouchHandler = function(e) {
-	// try {
-	// clearInterval(sysTimeoutInterval);
-	// } catch (err) {
-	// }
-
-	longtouch_chk = false;
-	if (ws.readyState === 1) {
-		timer = setTimeout(longtouch, touchduration);
-		touchDownT = Date.now();
-		e.preventDefault();
-		touchDownXY[0] = e.touches[0].pageX;
-		touchDownXY[1] = e.touches[0].pageY;
-		lastPos[0] = touchDownXY[0];
-		lastPos[1] = touchDownXY[1];
-
-		var touchCount = e.touches.length;
-		console.log("touches: " + touchCount);
-
-		// msgPack.NumFingers = touchCount;
-
-		if (touchCount === 2) {
-			document.getElementById("canvas").style.backgroundColor = "#26a69a";
-		} else if (touchCount === 1) {
-			document.getElementById("canvas").style.backgroundColor = "#80cbc4";
-		} else {
-			console.log("Error");
-		}
-	} else {
-		console.log("Websocket not ready for touch event");
-	}
-};
-
-var longtouch = function() {
-	longtouch_chk = true;
-	// msgPack.LongHold = 1;
-
-	// if (msgPack.NumFingers === 1) {
-	// msgPack.ControlLevel = 2;
-	// } else {
-	// msgPack.ControlLevel = 3;
-	// }
-
-	navigator.vibrate(400);
-};
-
-var cancelTouchHandler = function() {
-};
-
-var moveTouchHandler = function(e) {
-	e.preventDefault();
-	lastPos[0] = e.touches[0].pageX;
-	lastPos[1] = e.touches[0].pageY;
-};
-
-function getSwipeType(Pos1, Pos2) {
-	var dist_lim = 30;
-
-	var dist = Math.sqrt(Math.pow(Pos1[0] - Pos2[0], 2)
-			+ Math.pow(Pos1[1] - Pos2[1], 2));
-
-	if (dist > dist_lim) {
-		if (Math.abs(Pos1[0] - Pos2[0]) > dist_lim) {
-			if (Pos1[0] > Pos2[0]) {
-				// msgPack.SwipeRight = 1;
-			} else {
-				// msgPack.SwipeLeft = 1;
-			}
-		}
-	} else {
-		// msgPack.Press = 1;
-		// msgPack.ControlLevel = 1;
-	}
-}
-
-var endTouchHandler = function(e) {
-	// sysTimeoutInterval = setInterval(sysTimeoutSignal, sysTimeout);
-
-	endTouch = true;
-	document.getElementById("canvas").style.backgroundColor = "white";
-	// if (msgPack.ControlLevel > 1) {
-	// msgPack.ControlLevel = 1;
-	// } else {
-	// if (timer) { // if a long press wasn't detected...
-	// clearTimeout(timer);
-	// msgPack.LongHold = 0;
-	// }
-	//
-	// if (!longtouch_chk) {
-	// e.preventDefault();
-	// var dt_lim = 400;
-	//
-	// var dur = Date.now() - touchDownT;
-	//
-	// console.log("Touch event duration: " + dur);
-	//
-	// if (dur < dt_lim) {
-	// getSwipeType(lastPos, touchDownXY);
-	//
-	// } else {
-	// msgPack.Press = 1;
-	// msgPack.ControlLevel = 1;
-	// }
-	// }
-	// }
-
-};
 
 // //////////////// Comms ////////////
 ws.onclose = function() {
 	console.error("Websocket Close");
-	// try {
-	// clearInterval(commsInterval);
-	// } catch (err) {
-	// }
 
-	// try {
-	// clearInterval(uiInterval);
-	// } catch (err) {
-	// }
-
-	window.removeEventListener("rotarydetent", rotaryEventHandler, false);
 	window.removeEventListener("tizenhwkey", control_back, false);
-	window.removeEventListener("devicemotion", onDeviceMotion);
 	document.removeEventListener(visibilityChange, handleVisibilityChange,
 			false);
 };
@@ -394,81 +61,76 @@ ws.onerror = function() {
 
 ws.onopen = function() {
 	console.log("Websocket open confirm!");
-	// var text = '{ "employees" : [' +
-	// '{ "firstName":"John" , "lastName":"Doe" },' +
-	// '{ "firstName":"Anna" , "lastName":"Smith" },' +
-	// '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
-	// ws.send('USER'); // Send the message 'Ping' to the server
-	// ws.send(JSON.parse('{"op":"subscribe", "topic":"/uarm_read"}'));
+	
 	ws.send('{"op":"subscribe", "topic":"/uarm_read"}');
+	ws.send('{"op":"subscribe", "topic":"/target_force"}');
 
-	// / Setup Events ///
-	// window.addEventListener("devicemotion", onDeviceMotion);
-	// page.addEventListener('touchstart', multiTouchHandler, false);
-	// page.addEventListener('touchmove', moveTouchHandler, false);
-	// page.addEventListener('touchcancel', cancelTouchHandler, false);
-	// page.addEventListener('touchend', endTouchHandler, false);
 	document.addEventListener(visibilityChange, handleVisibilityChange, false);
 	window.addEventListener('tizenhwkey', control_back);
-	// window.addEventListener('devicemotion', onDeviceMotion);
-
-	// window.addEventListener("rotarydetent", rotaryEventHandler, false);
+	
 	console.log("Events added");
 };
 
 ws.onmessage = function(msg) {
-	// console.log("message: " + msg.data);
+//	console.log("message: " + msg.data);
 	var ROSmsg = JSON.parse(msg.data);
+	var topic = ROSmsg.topic;
+//	console.log("source topic: " + topic);
 	ROSmsg = ROSmsg.msg.data.split(",");
-	//console.log(ROSmsg[0]);
 	var val = parseFloat(ROSmsg[0]);
-	console.log(val);
-	ctx.clearRect(0, 0, canv.width, canv.height);
-	ctx.font = "100px Arial";
-	ctx.fillText(val, 70, 230);
-
-	console.log(val.toString())
-	if(val<50.00){
-		canv.style.backgroundColor = "rgb(255, 0, 0)";
-//		canv.style.backgroundColor = "red";	
-	}	
-	else if(val<100){
-		canv.style.backgroundColor = "rgb(0, 0, 255)";
-//		canv.style.backgroundColor = "blue";
-	}
-	else if(val<150){
-		canv.style.backgroundColor = "rgb(0, 255, 0)";
-//		canv.style.backgroundColor = "green";
-	}
-	else{
-		canv.style.backgroundColor = "rgb(255, 0, 0)";
-//		canv.style.backgroundColor = "red";	
-	}
 	
-	
-	// if (msg.data === "USER") {
-	// console.log("CONNECTED");
-	// ws.send("RUN");
-	// startIntervals();
-	// }
+	if (topic === "/target_force"){
+		target_force = val;
+	}
+	else if(topic === "/uarm_read"){
+		processForceData(val);
+	}
+		
 };
 
-function sysComms() {
-	// console.log("sysComms Send");
-	// ws.send(JSON.stringify(msgPack));
-	// if (!endTouch) {
-	// msgPack.reset(false);
-	// } else {
-	// msgPack.reset(true);
-	// }
-	// endTouch = false;
-}
 
-function startIntervals() {
-	// console.log("Starting comms");
-	// commsInterval = setInterval(sysComms, commsInterval_T);
-	// uiInterval = setInterval(wheelImgInterval, 30);
-	// console.log("comms interval set");
+function processForceData(force){
+//	console.log(force);
+	ctx.clearRect(0, 0, canv.width, canv.height);
+	ctx.font = "100px Arial";
+	
+	if(force<0){
+		ctx.fillText(force, 110, 230);
+	}
+	else if(force<10){
+		ctx.fillText(force, 148, 230);
+	}
+	else if(force<100){
+		ctx.fillText(force, 125, 230);
+	}
+	else{
+		ctx.fillText(force, 90, 230);
+	}
+
+	console.log(force.toString())
+//	var upper_limit = 1.3;
+	var lower_limit = 0.7;
+	var limit_range = 0.1;
+	
+	var upper_limit_plus = Math.max(target_force*(1+limit_range),target_force+10);
+	var upper_limit_minus = Math.min(target_force*(1-limit_range),target_force-10);
+	
+	if(force>=(upper_limit_plus)){
+//		canv.style.backgroundColor = "rgb(255, 0, 0)";
+		canv.style.backgroundColor = "red";	
+	}	
+	else if((force>=upper_limit_minus) && (force<(upper_limit_plus))){
+//		canv.style.backgroundColor = "rgb(0, 0, 255)";
+		canv.style.backgroundColor = "green";
+	}
+	else if((force>=target_force*lower_limit) && (force<(upper_limit_minus))){
+//		canv.style.backgroundColor = "rgb(0, 255, 0)";
+		canv.style.backgroundColor = "yellow";
+	}
+	else{
+//		canv.style.backgroundColor = "rgb(255, 0, 0)";
+		canv.style.backgroundColor = "blue";	
+	}
 }
 
 // // System Events ///
